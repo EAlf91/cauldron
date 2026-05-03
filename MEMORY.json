@@ -1,11 +1,11 @@
 {
   "lastUpdated": "2026-05-03",
-  "heatScore": 85,
+  "heatScore": 86,
   "heatLabel": "Boiling",
-  "summary": "The AI market in early 2026 displays classic speculative bubble hallmarks: extreme valuation multiples, circular financing, keyword-driven stock surges, and physical energy grid constraints. Heat score reflects multi-factor analysis across financial, infrastructure, and sentiment indicators.",
+  "summary": "The AI market in May 2026 shows intensifying bubble characteristics: hyperscaler capex confirmed at $700B for 2026 (up from $600B initial projection, ~40% YoY), OpenAI revenue doubled to $25B annualised run rate against $1.5T committed infrastructure spend, and 81% of global VC ($242B of $297B) still floods into AI. Valuation multiples have modestly moderated with S&P 500 forward P/E declining to 21× but CAPE remains extreme at 39×. Grid connection delays worsened to 5–10 year average with 50% of 2026 US data centre capacity at risk. FTC Operation AI Comply escalated to active enforcement with real investigations and settlements in April 2026. Earnings call AI mentions hit a record 60%+ of S&P 500 firms in Q1 2026.",
   "kpis": {
     "capeRatio": {
-      "value": 40.0,
+      "value": 39.3,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
@@ -15,78 +15,78 @@
       "score": 17
     },
     "sp500ForwardPE": {
-      "value": 23,
+      "value": 21,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for S&P 500",
+      "description": "Forward price-to-earnings ratio for S&P 500 (5-yr median 21.1×, 10-yr median 19.8×)",
       "weight": 10,
-      "score": 9
+      "score": 8
     },
     "top7StocksPE": {
-      "value": 27,
+      "value": 28.3,
       "historicalAvg": 20,
       "unit": "x",
       "label": "Top 7 Stocks P/E",
-      "description": "Average P/E of the Magnificent 7 tech stocks",
+      "description": "Average forward P/E of the Magnificent 7 tech stocks (range: META ~18× to AAPL ~34×)",
       "weight": 10,
       "score": 8
     },
     "vcAiConcentration": {
-      "value": 80,
+      "value": 81,
       "unit": "%",
       "label": "VC → AI Share",
-      "description": "Share of global Q1 2026 VC investment flowing into AI ($242B of $300B)",
-      "totalVcBn": 300,
+      "description": "Share of global Q1 2026 VC investment flowing into AI ($242B of $297B) — record high",
+      "totalVcBn": 297,
       "aiVcBn": 242,
       "weight": 20,
       "score": 16
     },
     "hyperscalerCapexBn": {
-      "value": 600,
-      "yoyGrowth": 36,
+      "value": 700,
+      "yoyGrowth": 40,
       "unit": "billion USD",
       "label": "Hyperscaler Capex 2026",
-      "description": "Projected 2026 data center / AI capex across major hyperscalers",
+      "description": "Confirmed 2026 data center / AI capex across major hyperscalers (Amazon $200B, Google $185B, Microsoft $130B, Meta $130B, Oracle $55B) — largest capex cycle in tech history",
       "weight": 10,
-      "score": 9
+      "score": 10
     },
     "openAiRevenueBn": {
-      "value": 13,
+      "value": 25,
       "unit": "billion USD (annual)",
       "label": "OpenAI Annual Revenue",
-      "description": "Current annualised revenue vs $1.5T committed infrastructure spend through 2031",
+      "description": "Current annualised revenue run rate ($25B as of Feb 2026, doubled from $13B in 2025) vs $1.5T committed infrastructure spend through 2031",
       "committedSpendBn": 1500,
       "committedThrough": 2031,
       "weight": 5,
       "score": 4
     },
     "gridConnectionDelay": {
-      "value": 6,
+      "value": 7,
       "unit": "years",
       "baseline2023": 1.5,
       "label": "Grid Connection Delay",
-      "description": "Average delay to connect a large-scale data center to the electricity grid",
+      "description": "Average delay to connect a large-scale data center to the electricity grid (range 5–10 yrs); ~50% of 2026 US capacity at risk",
       "weight": 10,
-      "score": 9
+      "score": 10
     },
     "dataCenterPowerDemandTWh": {
       "value2023": 460,
-      "value2026": 1050,
-      "value2030": 1350,
+      "value2026": 600,
+      "value2030": 945,
       "unit": "TWh",
       "label": "DC Power Demand",
-      "description": "Global data center electricity consumption",
+      "description": "Global data center electricity consumption (IEA revised estimates; ~3% of global power use by 2030)",
       "weight": 5,
-      "score": 4
+      "score": 3
     },
     "aiUnicornsSince2024": {
-      "value": 207,
+      "value": 308,
       "unit": "companies",
-      "label": "New AI Unicorns",
-      "description": "AI-focused companies reaching $1B+ valuation since 2024 — 50% of all new unicorns",
+      "label": "AI Unicorns (Global)",
+      "description": "AI-focused companies with $1B+ valuation globally as of early 2026 — ~50% of all new unicorn formation",
       "weight": 5,
-      "score": 4
+      "score": 5
     },
     "narrativeSurgeNewbird": {
       "value": 582,
@@ -100,17 +100,38 @@
   "historical": [
     {
       "date": "2026-05-03",
-      "heatScore": 85,
+      "heatScore": 86,
       "heatLabel": "Boiling",
-      "capeRatio": 40.0,
-      "sp500ForwardPE": 23,
-      "vcAiSharePct": 80,
-      "hyperscalerCapexBn": 600,
-      "gridDelayYears": 6,
-      "aiUnicorns": 207
+      "capeRatio": 39.3,
+      "sp500ForwardPE": 21,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 700,
+      "gridDelayYears": 7,
+      "aiUnicorns": 308
     }
   ],
   "topStories": [
+    {
+      "date": "2026-04-30",
+      "headline": "Big Tech Q1 2026 earnings confirm $700B hyperscaler capex for 2026 — largest annual tech capex in history",
+      "source": "Q1 2026 Earnings Reports (Amazon, Google, Microsoft, Meta)",
+      "type": "Infrastructure Spend",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-02-26",
+      "headline": "OpenAI hits $25B annualised revenue — doubled from $13B in 2025; eyes $1T IPO valuation by late 2026",
+      "source": "The Information / Reuters",
+      "type": "Circular Financing",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-04-30",
+      "headline": "FTC Operation AI Comply escalates to active investigations and consent orders in April 2026; EU AI Act transparency rules take effect Aug 2026",
+      "source": "FTC Press Releases / AI Policy Desk",
+      "type": "Regulatory",
+      "sentiment": "bearish_signal"
+    },
     {
       "date": "2026-04-15",
       "headline": "Allbirds → NewBird AI: +582% in a single trading day",
@@ -120,35 +141,28 @@
     },
     {
       "date": "2026-Q1",
-      "headline": "80% of all global VC ($242B) flowed into AI sector in Q1 2026",
+      "headline": "81% of all global VC ($242B of $297B) flowed into AI sector in Q1 2026 — record concentration",
       "source": "Venture Capital Research",
       "type": "Capital Concentration",
       "sentiment": "extreme_bullish"
     },
     {
       "date": "2026-Q1",
-      "headline": "FTC launches 'Operation AI Comply' targeting deceptive AI marketing",
-      "source": "FTC Press Release",
-      "type": "Regulatory",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-Q1",
-      "headline": "Hyperscaler capex projected at $600B for 2026 — 36% YoY increase",
-      "source": "Industry Analysis",
-      "type": "Infrastructure Spend",
+      "headline": "60%+ of S&P 500 earnings calls mentioned AI in Q1 2026 — record high, up from 47% in Q4 2025",
+      "source": "FactSet / Earnings Call Analysis",
+      "type": "Hype Cycle",
       "sentiment": "extreme_bullish"
     },
     {
       "date": "2026",
-      "headline": "Grid connection delays reach 5–7 years; stranded GPU risk growing",
-      "source": "Energy Sector Research",
+      "headline": "Grid connection delays reach 5–10 years; 50% of 2026 US data centre capacity at risk of delay or cancellation",
+      "source": "Energy Sector Research / Google / ERCOT Data",
       "type": "Infrastructure Constraint",
       "sentiment": "bearish_signal"
     },
     {
       "date": "2026",
-      "headline": "OpenAI revenue $13B/yr vs $1.5T committed infrastructure spend through 2031",
+      "headline": "OpenAI revenue $25B/yr vs $1.5T committed infrastructure spend through 2031",
       "source": "Financial Analysis",
       "type": "Circular Financing",
       "sentiment": "bearish_signal"
@@ -169,14 +183,14 @@
     }
   ],
   "valuationTable": [
-    { "metric": "CAPE Ratio",          "value1999Peak": 43.5, "value2026": 40.0, "historicalAvg": 17.6 },
-    { "metric": "S&P 500 Forward P/E", "value1999Peak": 25,   "value2026": 23,   "historicalAvg": 16   },
-    { "metric": "Top 7 Stocks P/E",    "value1999Peak": 66,   "value2026": 27,   "historicalAvg": 20   }
+    { "metric": "CAPE Ratio",          "value1999Peak": 43.5, "value2026": 39.3, "historicalAvg": 17.6 },
+    { "metric": "S&P 500 Forward P/E", "value1999Peak": 25,   "value2026": 21,   "historicalAvg": 16   },
+    { "metric": "Top 7 Stocks P/E",    "value1999Peak": 66,   "value2026": 28,   "historicalAvg": 20   }
   ],
   "energyTable": [
-    { "metric": "DC Power Use (TWh)",    "y2023": 460,     "y2026": 1050,    "y2030": 1350      },
-    { "metric": "AI Share of DC Power",  "y2023": "10%",   "y2026": "21%",   "y2030": "44%"    },
-    { "metric": "US IT Load (GW)",       "y2023": 60,      "y2026": 100,     "y2030": 150       },
-    { "metric": "Grid Connection Delay", "y2023": "1–2 yrs", "y2026": "5–7 yrs", "y2030": "Worsening" }
+    { "metric": "DC Power Use (TWh)",    "y2023": 460,       "y2026": 600,       "y2030": 945           },
+    { "metric": "AI Share of DC Power",  "y2023": "10%",     "y2026": "21%",     "y2030": "~35%"        },
+    { "metric": "US IT Load (GW)",       "y2023": 60,        "y2026": 100,       "y2030": 150           },
+    { "metric": "Grid Connection Delay", "y2023": "1–2 yrs", "y2026": "5–10 yrs", "y2030": "Worsening" }
   ]
 }
