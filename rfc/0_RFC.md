@@ -8,3 +8,7 @@ I want a sweet little webpage showing a cauldron representing current market hea
 4. create or update if exist the webpage displaying th data over time (just use localdate now per run) 
 5. central element for catch and click baity style should be the cauldron
 6. add more insights as table or similar to display foundations and news or other sources
+7. deploy the webpage as github page.
+
+# Workflows and github page
+create needed worklfow for deploying you created webpage as github page
