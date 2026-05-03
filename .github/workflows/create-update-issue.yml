@@ -1,0 +1,66 @@
+name: Create Memory Update Issue for Copilot
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  create-issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create issue and assign to Copilot
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          TODAY=$(date -u +"%Y-%m-%d")
+
+          BODY=$(cat <<'EOF'
+          ## Task: Update MEMORY.json with today's KPI data
+
+          **Date:** $TODAY
+
+          Using the research questions defined in [RQ.md](./RQ.md), research the current values for every KPI and update [MEMORY.json](./MEMORY.json) accordingly.
+
+          ### Instructions
+
+          1. **Read `RQ.md`** — it contains ten research-question groups (RQ-01 through RQ-10) that map directly to fields in `MEMORY.json`.
+          2. **Look up the latest publicly available data** for each question (valuation ratios, capex figures, grid delays, VC share, regulatory updates, sentiment indicators, etc.).
+          3. **Update `MEMORY.json`** following the *Output Contract* at the bottom of `RQ.md`:
+             - Update `value`, `score`, and sub-fields for each KPI in the `kpis` object.
+             - Append a new entry to the `historical` array for today's date (`$TODAY`).
+             - Recalculate and update `heatScore` and `heatLabel` at the root level.
+             - Update `lastUpdated` to `$TODAY`.
+             - Update `summary` to reflect the most important changes found.
+             - Prepend up to 3 new entries to `topStories` for the most significant recent developments.
+          4. **Do not** remove existing historical entries or change the JSON schema.
+          5. Open a pull request with the updated `MEMORY.json` once the research is complete.
+
+          ### Relevant files
+          - `RQ.md` — research questions and output contract
+          - `MEMORY.json` — structured data store to update
+          - `RESEARCH.md` — original research for context
+          EOF
+          )
+
+          # Substitute the date variable in the body
+          BODY="${BODY//\$TODAY/$TODAY}"
+
+          gh issue create \
+            --repo "$REPO" \
+            --title "[$TODAY] Update MEMORY.json with latest AI bubble KPI data" \
+            --body "$BODY" \
+            --assignee "copilot" \
+            --label "copilot"  || \
+          gh issue create \
+            --repo "$REPO" \
+            --title "[$TODAY] Update MEMORY.json with latest AI bubble KPI data" \
+            --body "$BODY" \
+            --assignee "copilot"
