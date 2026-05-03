@@ -57,8 +57,7 @@ jobs:
             --repo "$REPO" \
             --title "[$TODAY] Update MEMORY.json with latest AI bubble KPI data" \
             --body "$BODY" \
-            --assignee "copilot" \
-            --label "copilot"  || \
+            --assignee "copilot" || \
           gh issue create \
             --repo "$REPO" \
             --title "[$TODAY] Update MEMORY.json with latest AI bubble KPI data" \
