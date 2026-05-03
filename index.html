@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🫧 AI Bubble Cauldron — Market Heat Monitor</title>
+  <style>
+    /* ─── Reset & base ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --heat: 0.85;           /* 0–1, driven by heatScore / 100 */
+      --bg:      #0a0a0f;
+      --surface: #12121a;
+      --border:  #2a2a3a;
+      --text:    #e8e8f0;
+      --muted:   #888899;
+      --red:     #ff3c3c;
+      --orange:  #ff8c00;
+      --yellow:  #ffd700;
+      --green:   #00e676;
+      --blue:    #40c4ff;
+      --purple:  #b388ff;
+      /* dynamic colour that lerps orange→red with heat */
+      --heat-color: color-mix(in srgb, var(--red) calc(var(--heat) * 100%), var(--orange));
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ─── Scrolling ticker ─────────────────────────────────────────── */
+    .ticker-wrap {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+    }
+    .ticker {
+      display: inline-flex;
+      gap: 3rem;
+      white-space: nowrap;
+      animation: ticker-scroll 40s linear infinite;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .ticker span { color: var(--heat-color); font-weight: 700; }
+    @keyframes ticker-scroll {
+      from { transform: translateX(100vw); }
+      to   { transform: translateX(-100%); }
+    }
+
+    /* ─── Header ───────────────────────────────────────────────────── */
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+    header h1 {
+      font-size: clamp(1.6rem, 4vw, 2.8rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--orange), var(--red));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    header p {
+      color: var(--muted);
+      margin-top: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    /* ─── Layout ───────────────────────────────────────────────────── */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem 4rem;
+      display: grid;
+      gap: 2rem;
+    }
+
+    /* ─── Heat gauge + cauldron row ────────────────────────────────── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 2rem;
+    }
+    @media (max-width: 700px) {
+      .hero { grid-template-columns: 1fr; justify-items: center; }
+    }
+
+    /* ─── Cauldron SVG wrapper ──────────────────────────────────────── */
+    .cauldron-wrap {
+      position: relative;
+      width: 260px;
+      height: 280px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .cauldron-wrap:hover { filter: brightness(1.15); }
+
+    /* bubble container clips to cauldron mouth */
+    .bubble-zone {
+      position: absolute;
+      bottom: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 90px;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, rgba(255,255,255,.5), transparent 70%);
+      animation: rise linear infinite;
+      opacity: 0;
+    }
+    @keyframes rise {
+      0%   { transform: translateX(0) translateY(0) scale(1);   opacity: .7; }
+      60%  { opacity: .5; }
+      100% { transform: translateX(var(--drift)) translateY(-110px) scale(.3); opacity: 0; }
+    }
+
+    /* steam puffs above cauldron */
+    .steam-zone {
+      position: absolute;
+      bottom: 158px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 60px;
+      pointer-events: none;
+    }
+    .steam {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,.08);
+      animation: steam-rise linear infinite;
+      opacity: 0;
+    }
+    @keyframes steam-rise {
+      0%   { transform: translateY(0) scale(1); opacity: .4; }
+      100% { transform: translateY(-60px) scale(2.5); opacity: 0; }
+    }
+
+    /* fire flicker */
+    .fire-zone {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 60px;
+      pointer-events: none;
+    }
+    .flame {
+      position: absolute;
+      bottom: 0;
+      border-radius: 50% 50% 20% 20%;
+      animation: flicker ease-in-out infinite alternate;
+      transform-origin: bottom center;
+    }
+    @keyframes flicker {
+      0%   { transform: scaleY(1)   scaleX(1)   rotate(-2deg); }
+      100% { transform: scaleY(1.2) scaleX(.85) rotate(2deg);  }
+    }
+
+    /* ─── Heat gauge (left side) ────────────────────────────────────── */
+    .gauge-panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .5rem;
+    }
+    .gauge-title { font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; }
+    .gauge-score {
+      font-size: 4rem;
+      font-weight: 900;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--orange), var(--red));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .gauge-label {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--heat-color);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+    .gauge-bar-wrap {
+      width: 100%;
+      max-width: 160px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      height: 10px;
+      overflow: hidden;
+    }
+    .gauge-bar {
+      height: 100%;
+      border-radius: 99px;
+      background: linear-gradient(90deg, var(--orange), var(--red));
+      transition: width .6s ease;
+    }
+
+    /* ─── KPI info panel (right side) ──────────────────────────────── */
+    .info-panel {
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      font-size: .85rem;
+    }
+    .info-row .lbl { color: var(--muted); }
+    .info-row .val { font-weight: 700; color: var(--orange); font-variant-numeric: tabular-nums; }
+
+    /* ─── KPI Cards ─────────────────────────────────────────────────── */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+    .kpi-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      transition: transform .2s, border-color .2s;
+    }
+    .kpi-card:hover { transform: translateY(-3px); border-color: var(--orange); }
+    .kpi-card .kpi-label { font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .4rem; }
+    .kpi-card .kpi-value { font-size: 1.6rem; font-weight: 900; line-height: 1; }
+    .kpi-card .kpi-unit  { font-size: .7rem; color: var(--muted); margin-top: .2rem; }
+    .kpi-card .kpi-desc  { font-size: .72rem; color: var(--muted); margin-top: .5rem; border-top: 1px solid var(--border); padding-top: .5rem; }
+    .kpi-card.hot .kpi-value { color: var(--red); }
+    .kpi-card.warm .kpi-value { color: var(--orange); }
+    .kpi-card.cool .kpi-value { color: var(--green); }
+
+    /* ─── Section headings ──────────────────────────────────────────── */
+    .section-title {
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: .5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ─── Tables ────────────────────────────────────────────────────── */
+    .table-wrap { overflow-x: auto; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .85rem;
+    }
+    th {
+      text-align: left;
+      color: var(--muted);
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      padding: .5rem .75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    td {
+      padding: .6rem .75rem;
+      border-bottom: 1px solid rgba(255,255,255,.04);
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(255,255,255,.025); }
+    .badge {
+      display: inline-block;
+      font-size: .65rem;
+      font-weight: 700;
+      padding: .15rem .5rem;
+      border-radius: 99px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+    .badge-red    { background: rgba(255,60,60,.15);  color: var(--red); }
+    .badge-orange { background: rgba(255,140,0,.15);  color: var(--orange); }
+    .badge-blue   { background: rgba(64,196,255,.15); color: var(--blue); }
+    .badge-green  { background: rgba(0,230,118,.15);  color: var(--green); }
+    .badge-purple { background: rgba(179,136,255,.15);color: var(--purple); }
+
+    /* ─── Historical snapshot bar chart ────────────────────────────── */
+    .history-chart {
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+    }
+    .history-row {
+      display: grid;
+      grid-template-columns: 120px 1fr 3rem;
+      align-items: center;
+      gap: .75rem;
+      font-size: .82rem;
+    }
+    .history-bar-bg {
+      background: var(--surface);
+      border-radius: 4px;
+      height: 14px;
+      overflow: hidden;
+    }
+    .history-bar {
+      height: 100%;
+      border-radius: 4px;
+      background: linear-gradient(90deg, var(--orange), var(--red));
+      transition: width .6s ease;
+    }
+    .history-pct { text-align: right; font-weight: 700; color: var(--orange); font-variant-numeric: tabular-nums; }
+    .history-date { color: var(--muted); }
+
+    /* ─── Footer ────────────────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--muted);
+      font-size: .75rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--orange); text-decoration: none; }
+
+    /* ─── Click popup ───────────────────────────────────────────────── */
+    .popup {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      backdrop-filter: blur(4px);
+    }
+    .popup.open { display: flex; }
+    .popup-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 480px;
+      width: 90%;
+      position: relative;
+      animation: pop-in .25s ease;
+    }
+    @keyframes pop-in {
+      from { transform: scale(.85); opacity: 0; }
+      to   { transform: scale(1);   opacity: 1; }
+    }
+    .popup-box h2 { font-size: 1.3rem; margin-bottom: .75rem; color: var(--orange); }
+    .popup-box p  { font-size: .88rem; color: var(--muted); line-height: 1.6; }
+    .popup-close {
+      position: absolute;
+      top: .75rem;
+      right: .75rem;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 1.4rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .popup-close:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+<!-- ── Ticker ── -->
+<div class="ticker-wrap" aria-label="Market ticker">
+  <div class="ticker">
+    <span>🌡 HEAT: 85/100</span> ·
+    CAPE Ratio <span>40×</span> · VC→AI <span>80%</span> ·
+    Hyperscaler Capex <span>$600B</span> · NewBird AI <span>+582% ↑</span> ·
+    Grid Delay <span>5–7 yrs</span> · AI Unicorns <span>207</span> ·
+    OpenAI Revenue <span>$13B</span> vs Committed Spend <span>$1.5T</span> ·
+    <span>🌡 HEAT: 85/100</span> ·
+    CAPE Ratio <span>40×</span> · VC→AI <span>80%</span>
+  </div>
+</div>
+
+<!-- ── Header ── -->
+<header>
+  <h1>🫧 AI Bubble Cauldron</h1>
+  <p>Real-time market heat index for the 2026 Artificial Intelligence bubble</p>
+</header>
+
+<main>
+
+  <!-- ── Hero: gauge + cauldron + info ── -->
+  <section class="hero">
+
+    <!-- Left: heat score gauge -->
+    <div class="gauge-panel">
+      <div class="gauge-title">Bubble Heat Score</div>
+      <div class="gauge-score" id="heatScoreDisplay">85</div>
+      <div class="gauge-label" id="heatLabelDisplay">Boiling</div>
+      <div class="gauge-bar-wrap">
+        <div class="gauge-bar" id="gaugeBar" style="width:85%"></div>
+      </div>
+      <div style="font-size:.72rem;color:var(--muted);margin-top:.3rem;">
+        Last updated: <span id="lastUpdated"></span>
+      </div>
+    </div>
+
+    <!-- Center: animated cauldron -->
+    <div class="cauldron-wrap" id="cauldronBtn" title="Click for bubble insight!">
+
+      <!-- Steam -->
+      <div class="steam-zone" id="steamZone"></div>
+
+      <!-- Bubbles inside pot -->
+      <div class="bubble-zone" id="bubbleZone"></div>
+
+      <!-- Cauldron SVG -->
+      <svg viewBox="0 0 260 280" width="260" height="280"
+           xmlns="http://www.w3.org/2000/svg" aria-label="Animated cauldron">
+        <!-- handles -->
+        <path d="M60 100 Q30 80 35 55 Q40 35 60 40 L75 55"
+              fill="none" stroke="#5a4a3a" stroke-width="10" stroke-linecap="round"/>
+        <path d="M200 100 Q230 80 225 55 Q220 35 200 40 L185 55"
+              fill="none" stroke="#5a4a3a" stroke-width="10" stroke-linecap="round"/>
+        <!-- cauldron body -->
+        <ellipse cx="130" cy="100" rx="100" ry="25" fill="#2c1e10"/>
+        <path d="M30 100 Q20 170 45 205 Q80 240 130 245 Q180 240 215 205 Q240 170 230 100 Z"
+              fill="url(#cauldronGrad)"/>
+        <!-- inner liquid surface -->
+        <ellipse cx="130" cy="103" rx="97" ry="22" fill="url(#liquidGrad)" id="liquidSurface"/>
+        <!-- rim highlight -->
+        <ellipse cx="130" cy="100" rx="100" ry="25" fill="none"
+                 stroke="#6b4c2a" stroke-width="6"/>
+        <!-- sheen -->
+        <path d="M55 115 Q80 108 95 115" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="3" stroke-linecap="round"/>
+        <!-- legs -->
+        <rect x="72"  y="238" width="16" height="36" rx="7" fill="#3a2a1a" transform="rotate(-6 80 238)"/>
+        <rect x="172" y="238" width="16" height="36" rx="7" fill="#3a2a1a" transform="rotate(6 180 238)"/>
+        <rect x="120" y="242" width="16" height="32" rx="7" fill="#3a2a1a"/>
+
+        <defs>
+          <linearGradient id="cauldronGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%"  stop-color="#1a0f06"/>
+            <stop offset="40%" stop-color="#3a2510"/>
+            <stop offset="100%" stop-color="#1a0f06"/>
+          </linearGradient>
+          <radialGradient id="liquidGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"  stop-color="#ff6600" stop-opacity=".9" id="liquidCenter"/>
+            <stop offset="100%" stop-color="#8b0000" stop-opacity=".7" id="liquidEdge"/>
+          </radialGradient>
+        </defs>
+      </svg>
+
+      <!-- Fire underneath -->
+      <div class="fire-zone" id="fireZone"></div>
+    </div>
+
+    <!-- Right: quick KPI list -->
+    <div class="info-panel">
+      <div class="info-row"><span class="lbl">CAPE Ratio</span>       <span class="val">40× <small style="color:var(--muted)">(avg 17.6×)</small></span></div>
+      <div class="info-row"><span class="lbl">S&amp;P 500 Fwd P/E</span><span class="val">23× <small style="color:var(--muted)">(avg 16×)</small></span></div>
+      <div class="info-row"><span class="lbl">VC → AI Share</span>     <span class="val">80% ($242B)</span></div>
+      <div class="info-row"><span class="lbl">Hyperscaler Capex</span> <span class="val">$600B (+36% YoY)</span></div>
+      <div class="info-row"><span class="lbl">OpenAI Revenue</span>    <span class="val">$13B / yr</span></div>
+      <div class="info-row"><span class="lbl">Committed Spend</span>   <span class="val">$1.5T thru 2031</span></div>
+      <div class="info-row"><span class="lbl">Grid Delay</span>        <span class="val">5–7 yrs <small style="color:var(--muted)">(was 1–2)</small></span></div>
+      <div class="info-row"><span class="lbl">AI Unicorns</span>       <span class="val">207 since 2024</span></div>
+    </div>
+
+  </section>
+
+  <!-- ── KPI Cards ── -->
+  <section>
+    <div class="section-title">Key Performance Indicators</div>
+    <div class="kpi-grid" id="kpiGrid">
+      <!-- filled by JS -->
+    </div>
+  </section>
+
+  <!-- ── Historical heat chart ── -->
+  <section>
+    <div class="section-title">Heat Score Over Time</div>
+    <div class="history-chart" id="historyChart">
+      <!-- filled by JS -->
+    </div>
+  </section>
+
+  <!-- ── Valuation table ── -->
+  <section>
+    <div class="section-title">Valuation Multiples: 2026 vs Dot-com Peak vs Average</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>1999 Peak (Dot-com)</th>
+            <th>2026 Current</th>
+            <th>Historical Average</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="valuationBody"><!-- filled by JS --></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── Energy / grid table ── -->
+  <section>
+    <div class="section-title">Energy &amp; Infrastructure Metrics</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>2023 Actual</th>
+            <th>2026 Projected</th>
+            <th>2030 Forecast</th>
+          </tr>
+        </thead>
+        <tbody id="energyBody"><!-- filled by JS --></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── Top stories / news ── -->
+  <section>
+    <div class="section-title">Market Signals &amp; News</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Headline</th>
+            <th>Type</th>
+            <th>Signal</th>
+          </tr>
+        </thead>
+        <tbody id="newsBody"><!-- filled by JS --></tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── Footer ── -->
+<footer>
+  <p>Data sourced from RESEARCH.md · <a href="MEMORY.json">MEMORY.json</a> · Built with 🫧 cauldron energy</p>
+</footer>
+
+<!-- ── Popup ── -->
+<div class="popup" id="popup" role="dialog" aria-modal="true" aria-label="Bubble insight">
+  <div class="popup-box">
+    <button class="popup-close" id="popupClose" aria-label="Close">&times;</button>
+    <h2 id="popupTitle"></h2>
+    <p id="popupBody"></p>
+  </div>
+</div>
+
+<script>
+// ─── Load data & bootstrap ───────────────────────────────────────────
+async function loadData() {
+  try {
+    const resp = await fetch('MEMORY.json');
+    return await resp.json();
+  } catch {
+    // fallback inline data if fetch not available
+    return FALLBACK_DATA;
+  }
+}
+
+const FALLBACK_DATA = {
+  lastUpdated: '2026-05-03',
+  heatScore: 85,
+  heatLabel: 'Boiling',
+  kpis: {
+    capeRatio:          { label: 'CAPE Ratio',         value: 40,   unit: '×',       description: 'Cyclically adjusted P/E — historically average 17.6×, dot-com peak 43.5×' },
+    sp500ForwardPE:     { label: 'S&P 500 Fwd P/E',    value: 23,   unit: '×',       description: 'Forward P/E for S&P 500 (historical avg 16×)' },
+    top7StocksPE:       { label: 'Top-7 Stocks P/E',   value: 27,   unit: '×',       description: 'Average P/E for the Magnificent 7 mega-cap tech names' },
+    vcAiConcentration:  { label: 'VC → AI Share',      value: 80,   unit: '%',       description: '$242B of $300B global Q1-2026 VC flowed into AI' },
+    hyperscalerCapexBn: { label: 'Hyperscaler Capex',  value: 600,  unit: 'B USD',   description: 'Projected 2026 capex, +36% YoY — largely debt-funded' },
+    openAiRevenueBn:    { label: 'OpenAI Revenue',     value: 13,   unit: 'B/yr',    description: '$13B annual revenue vs $1.5T committed spend through 2031' },
+    gridConnectionDelay:{ label: 'Grid Delay',         value: 6,    unit: 'years',   description: 'Time to connect a data center — up from 1–2 yrs in 2023' },
+    aiUnicornsSince2024:{ label: 'New AI Unicorns',    value: 207,  unit: 'co.',     description: '207 AI firms hit $1B+ valuation since 2024 (50% of all new unicorns)' },
+    narrativeSurgeNewbird:{ label: 'NewBird AI Surge', value: 582,  unit: '%',       description: 'Allbirds rebranded as NewBird AI, surged 582% intraday on zero AI revenue' },
+  },
+  historical: [
+    { date: '2026-05-03', heatScore: 85, heatLabel: 'Boiling' }
+  ],
+  topStories: [
+    { date: '2026-04-15', headline: 'Allbirds → NewBird AI: +582% in a single trading day', source: 'Market Data', type: 'AI-Washing',              sentiment: 'extreme_bullish' },
+    { date: '2026-Q1',    headline: '80% of all global VC ($242B) flowed into AI in Q1 2026', source: 'VC Research', type: 'Capital Concentration', sentiment: 'extreme_bullish' },
+    { date: '2026-Q1',    headline: "FTC launches 'Operation AI Comply' vs deceptive AI marketing", source: 'FTC',  type: 'Regulatory',             sentiment: 'bearish_signal'  },
+    { date: '2026-Q1',    headline: 'Hyperscaler capex hits $600B — 36% YoY', source: 'Industry Analysis', type: 'Infrastructure Spend',           sentiment: 'extreme_bullish' },
+    { date: '2026',       headline: 'Grid connection delays reach 5–7 years; stranded GPU risk', source: 'Energy Research', type: 'Constraint',    sentiment: 'bearish_signal'  },
+    { date: '2026',       headline: 'OpenAI $13B revenue vs $1.5T committed spend through 2031', source: 'Financial', type: 'Circular Financing',  sentiment: 'bearish_signal'  },
+    { date: '2025-2026',  headline: 'AI coding tools made programming 19% slower on average', source: 'Academic Study', type: 'Counter-Evidence',  sentiment: 'bearish_signal'  },
+    { date: '2025',       headline: 'CAIO postings +478% then collapsed into CIO/CTO roles', source: 'Forrester', type: 'Hype Cycle',              sentiment: 'bearish_signal'  },
+  ],
+  valuationTable: [
+    { metric: 'CAPE Ratio',          value1999Peak: 43.5, value2026: 40.0, historicalAvg: 17.6 },
+    { metric: 'S&P 500 Forward P/E', value1999Peak: 25,   value2026: 23,   historicalAvg: 16   },
+    { metric: 'Top 7 Stocks P/E',    value1999Peak: 66,   value2026: 27,   historicalAvg: 20   },
+  ],
+  energyTable: [
+    { metric: 'DC Power Use (TWh)',    y2023: 460,      y2026: 1050,      y2030: 1350        },
+    { metric: 'AI Share of DC Power',  y2023: '10%',    y2026: '21%',     y2030: '44%'       },
+    { metric: 'US IT Load (GW)',       y2023: 60,       y2026: 100,       y2030: 150         },
+    { metric: 'Grid Connection Delay', y2023: '1–2 yrs', y2026: '5–7 yrs', y2030: 'Worsening'},
+  ],
+};
+
+// ─── Bubble insights ──────────────────────────────────────────────────
+const INSIGHTS = [
+  { title: '🫧 Recursive Financing Loop',
+    body: 'NVIDIA invests in OpenAI → OpenAI buys NVIDIA GPUs → NVIDIA records revenue. This closed loop means $1.5T in committed hyperscaler spend may simply be recycled capital, not real demand.' },
+  { title: '🐦 NewBird AI: Narrative > Reality',
+    body: 'Allbirds (a wool-shoe company) rebranded as "NewBird AI" on April 15 2026 and surged 582% intraday. No AI product, no AI revenue — just two letters: A and I.' },
+  { title: '⚡ The Hard Stop: Power Grid',
+    body: 'A single large-scale AI data center can require 300 MW+. Grid connection now takes 5–7 years. Billions in GPUs are sitting idle waiting for power they may never get.' },
+  { title: '📉 CAPE at 40 — Second Highest Ever',
+    body: 'The CAPE ratio has only been higher once: the dot-com peak of 43.5 in 1999–2000. That correction resulted in a 78% drawdown in the Nasdaq.' },
+  { title: '🤖 AI Slop & Productivity Paradox',
+    body: 'Studies show AI coding assistants made programming 19% slower due to time spent fixing AI-generated bugs. Up to 95% of enterprise Gen AI implementations have reportedly failed.' },
+  { title: '💰 "Chief AI Officer" is Already Dead',
+    body: 'CAIO job postings surged 478% in 2024 then collapsed. Boards realised AI is a company-wide capability, not a siloed C-suite role — a classic hype-cycle signal.' },
+];
+
+// ─── DOM helpers ─────────────────────────────────────────────────────
+function heatClass(score) {
+  if (score >= 75) return 'hot';
+  if (score >= 50) return 'warm';
+  return 'cool';
+}
+
+function sentimentBadge(sentiment) {
+  switch (sentiment) {
+    case 'extreme_bullish': return '<span class="badge badge-red">🔥 Extreme Bullish</span>';
+    case 'bearish_signal':  return '<span class="badge badge-blue">⚠️ Bear Signal</span>';
+    default: return `<span class="badge badge-purple">${sentiment}</span>`;
+  }
+}
+
+function typeBadge(type) {
+  const map = {
+    'AI-Washing':          'badge-orange',
+    'Capital Concentration':'badge-red',
+    'Regulatory':          'badge-blue',
+    'Infrastructure Spend':'badge-orange',
+    'Constraint':          'badge-green',
+    'Circular Financing':  'badge-purple',
+    'Counter-Evidence':    'badge-green',
+    'Hype Cycle':          'badge-purple',
+    'Infrastructure Constraint': 'badge-green',
+    'Productivity Counter-Evidence': 'badge-green',
+  };
+  return `<span class="badge ${map[type] || 'badge-purple'}">${type}</span>`;
+}
+
+// ─── Cauldron animation ───────────────────────────────────────────────
+function buildCauldronAnimation(heat) {
+  const bubbleZone = document.getElementById('bubbleZone');
+  const steamZone  = document.getElementById('steamZone');
+  const fireZone   = document.getElementById('fireZone');
+
+  const count   = Math.round(3 + heat * 18);   // 3–21 bubbles
+  const minDur  = 2.5 - heat * 1.8;            // 2.5s → 0.7s
+  const maxDur  = 5   - heat * 3.2;            // 5s → 1.8s
+
+  // Bubbles
+  bubbleZone.innerHTML = '';
+  for (let i = 0; i < count; i++) {
+    const b = document.createElement('div');
+    b.className = 'bubble';
+    const size  = 6 + Math.random() * 18;
+    const left  = Math.random() * 100;
+    const dur   = Math.max(0.7, minDur + Math.random() * (maxDur - minDur));
+    const delay = Math.random() * dur;
+    const drift = (Math.random() - .5) * 30;
+    const h     = Math.round(10 + heat * 20);  // hue: orange→red
+    b.style.cssText = `
+      width:${size}px; height:${size}px;
+      left:${left}%;
+      bottom:0;
+      --drift:${drift}px;
+      animation-duration:${dur}s;
+      animation-delay:-${delay}s;
+      background: radial-gradient(circle at 35% 35%,
+        rgba(255,255,255,.4), hsla(${h},100%,55%,.6) 60%, transparent 80%);
+    `;
+    bubbleZone.appendChild(b);
+  }
+
+  // Steam
+  steamZone.innerHTML = '';
+  const steamCount = Math.round(2 + heat * 6);
+  for (let i = 0; i < steamCount; i++) {
+    const s = document.createElement('div');
+    s.className = 'steam';
+    const size  = 20 + Math.random() * 30;
+    const left  = 20 + Math.random() * 60;
+    const dur   = 2 + Math.random() * 2;
+    s.style.cssText = `
+      width:${size}px; height:${size}px;
+      left:${left}%;
+      bottom:0;
+      animation-duration:${dur}s;
+      animation-delay:-${Math.random() * dur}s;
+    `;
+    steamZone.appendChild(s);
+  }
+
+  // Fire
+  fireZone.innerHTML = '';
+  const flames = [
+    { x: 35, w: 50, h: 55, hue: 25, delay: 0 },
+    { x: 20, w: 30, h: 35, hue: 15, delay: .3 },
+    { x: 65, w: 35, h: 40, hue: 30, delay: .5 },
+    { x: 50, w: 20, h: 50, hue: 50, delay: .15 },
+  ];
+  flames.forEach(f => {
+    const el = document.createElement('div');
+    el.className = 'flame';
+    const scale  = 0.5 + heat * 0.8;
+    const dur    = 0.4 + (1 - heat) * 0.4;
+    el.style.cssText = `
+      left:${f.x}%;
+      width:${f.w * scale}px;
+      height:${f.h * scale}px;
+      background: radial-gradient(ellipse at 50% 100%,
+        hsl(${f.hue},100%,65%) 0%,
+        hsl(${f.hue - 5},100%,50%) 40%,
+        hsl(${f.hue - 15},90%,35%) 70%,
+        transparent 100%);
+      animation-duration:${dur}s;
+      animation-delay:-${f.delay}s;
+      opacity:${0.6 + heat * 0.4};
+    `;
+    fireZone.appendChild(el);
+  });
+
+  // Pulse the liquid colour
+  const doc = document.documentElement;
+  doc.style.setProperty('--heat', heat);
+}
+
+// ─── Render KPI cards ─────────────────────────────────────────────────
+function renderKpiCards(data) {
+  const grid = document.getElementById('kpiGrid');
+  const order = [
+    'capeRatio','sp500ForwardPE','top7StocksPE','vcAiConcentration',
+    'hyperscalerCapexBn','openAiRevenueBn','gridConnectionDelay',
+    'aiUnicornsSince2024','narrativeSurgeNewbird'
+  ];
+  order.forEach(key => {
+    const k = data.kpis[key];
+    if (!k) return;
+    const heatPct = ((k.score || 5) / (k.weight || 10)) * 100;
+    const cls = heatPct >= 80 ? 'hot' : heatPct >= 60 ? 'warm' : 'cool';
+    const div = document.createElement('div');
+    div.className = `kpi-card ${cls}`;
+    div.innerHTML = `
+      <div class="kpi-label">${k.label}</div>
+      <div class="kpi-value">${typeof k.value === 'number' && k.value >= 1000
+        ? k.value.toLocaleString() : k.value}</div>
+      <div class="kpi-unit">${k.unit || ''}</div>
+      <div class="kpi-desc">${k.description || ''}</div>
+    `;
+    grid.appendChild(div);
+  });
+}
+
+// ─── Render history chart ─────────────────────────────────────────────
+function renderHistory(data) {
+  const container = document.getElementById('historyChart');
+  data.historical.forEach(row => {
+    const pct = row.heatScore;
+    const div = document.createElement('div');
+    div.className = 'history-row';
+    div.innerHTML = `
+      <span class="history-date">${row.date}</span>
+      <div class="history-bar-bg">
+        <div class="history-bar" style="width:${pct}%"></div>
+      </div>
+      <span class="history-pct">${pct}</span>
+    `;
+    container.appendChild(div);
+  });
+}
+
+// ─── Render valuation table ───────────────────────────────────────────
+function renderValuation(data) {
+  const tbody = document.getElementById('valuationBody');
+  data.valuationTable.forEach(row => {
+    const ratio = row.value2026 / row.historicalAvg;
+    const status = ratio >= 2
+      ? '<span class="badge badge-red">Extreme</span>'
+      : ratio >= 1.5
+        ? '<span class="badge badge-orange">Elevated</span>'
+        : '<span class="badge badge-green">Normal</span>';
+    tbody.insertAdjacentHTML('beforeend', `
+      <tr>
+        <td>${row.metric}</td>
+        <td>${row.value1999Peak}×</td>
+        <td style="font-weight:700;color:var(--orange)">${row.value2026}×</td>
+        <td>${row.historicalAvg}×</td>
+        <td>${status}</td>
+      </tr>
+    `);
+  });
+}
+
+// ─── Render energy table ──────────────────────────────────────────────
+function renderEnergy(data) {
+  const tbody = document.getElementById('energyBody');
+  data.energyTable.forEach(row => {
+    tbody.insertAdjacentHTML('beforeend', `
+      <tr>
+        <td>${row.metric}</td>
+        <td>${row.y2023}</td>
+        <td style="font-weight:700;color:var(--orange)">${row.y2026}</td>
+        <td style="color:var(--red)">${row.y2030}</td>
+      </tr>
+    `);
+  });
+}
+
+// ─── Render news/stories table ────────────────────────────────────────
+function renderNews(data) {
+  const tbody = document.getElementById('newsBody');
+  data.topStories.forEach(story => {
+    tbody.insertAdjacentHTML('beforeend', `
+      <tr>
+        <td style="white-space:nowrap;color:var(--muted)">${story.date}</td>
+        <td>${story.headline}</td>
+        <td>${typeBadge(story.type)}</td>
+        <td>${sentimentBadge(story.sentiment)}</td>
+      </tr>
+    `);
+  });
+}
+
+// ─── Popup ────────────────────────────────────────────────────────────
+let insightIdx = 0;
+function openPopup(title, body) {
+  document.getElementById('popupTitle').textContent = title;
+  document.getElementById('popupBody').textContent  = body;
+  document.getElementById('popup').classList.add('open');
+}
+function closePopup() {
+  document.getElementById('popup').classList.remove('open');
+}
+document.getElementById('popupClose').addEventListener('click', closePopup);
+document.getElementById('popup').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closePopup();
+});
+document.getElementById('cauldronBtn').addEventListener('click', () => {
+  const insight = INSIGHTS[insightIdx % INSIGHTS.length];
+  insightIdx++;
+  openPopup(insight.title, insight.body);
+});
+
+// ─── Bootstrap ────────────────────────────────────────────────────────
+(async () => {
+  const data = await loadData();
+  const heat = (data.heatScore || 85) / 100;
+
+  document.getElementById('heatScoreDisplay').textContent = data.heatScore;
+  document.getElementById('heatLabelDisplay').textContent = data.heatLabel;
+  document.getElementById('gaugeBar').style.width = `${data.heatScore}%`;
+  document.getElementById('lastUpdated').textContent = data.lastUpdated || new Date().toISOString().slice(0,10);
+
+  buildCauldronAnimation(heat);
+  renderKpiCards(data);
+  renderHistory(data);
+  renderValuation(data);
+  renderEnergy(data);
+  renderNews(data);
+})();
+</script>
+</body>
+</html>
