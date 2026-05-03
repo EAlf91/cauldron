@@ -253,6 +253,37 @@
     .kpi-card.warm .kpi-value { color: var(--orange); }
     .kpi-card.cool .kpi-value { color: var(--green); }
 
+    /* ─── Tooltip ────────────────────────────────────────────────────── */
+    [data-tooltip] { position: relative; cursor: help; }
+    [data-tooltip]::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: #120d05;
+      color: var(--fg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: .55rem .8rem;
+      font-size: .72rem;
+      line-height: 1.5;
+      white-space: normal;
+      width: 260px;
+      z-index: 200;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity .2s;
+      box-shadow: 0 6px 20px rgba(0,0,0,.5);
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 400;
+    }
+    [data-tooltip]:hover::after { opacity: 1; }
+    /* keep tooltip inside viewport when card is near right edge */
+    .kpi-card[data-tooltip]::after { left: auto; right: 0; transform: none; }
+    .info-row[data-tooltip]::after { left: 0; transform: none; }
+
     /* ─── Section headings ──────────────────────────────────────────── */
     .section-title {
       font-size: 1rem;
@@ -473,14 +504,14 @@
 
     <!-- Right: quick KPI list -->
     <div class="info-panel">
-      <div class="info-row"><span class="lbl">CAPE Ratio</span>       <span class="val">39.3× <small style="color:var(--muted)">(avg 17.6×)</small></span></div>
-      <div class="info-row"><span class="lbl">S&amp;P 500 Fwd P/E</span><span class="val">21× <small style="color:var(--muted)">(avg 16×)</small></span></div>
-      <div class="info-row"><span class="lbl">VC → AI Share</span>     <span class="val">81% ($242B)</span></div>
-      <div class="info-row"><span class="lbl">Hyperscaler Capex</span> <span class="val">$700B (+40% YoY)</span></div>
-      <div class="info-row"><span class="lbl">OpenAI Revenue</span>    <span class="val">$25B / yr</span></div>
-      <div class="info-row"><span class="lbl">Committed Spend</span>   <span class="val">$1.5T thru 2031</span></div>
-      <div class="info-row"><span class="lbl">Grid Delay</span>        <span class="val">5–10 yrs <small style="color:var(--muted)">(was 1–2)</small></span></div>
-      <div class="info-row"><span class="lbl">AI Unicorns</span>       <span class="val">308 since 2024</span></div>
+      <div class="info-row" data-tooltip="Cyclically Adjusted P/E: measures stock market valuation using 10-year average earnings. Historical average 17.6×; dot-com peak was 43.5×. At 39.3× this is the second-highest level ever recorded."><span class="lbl">CAPE Ratio</span>       <span class="val">39.3× <small style="color:var(--muted)">(avg 17.6×)</small></span></div>
+      <div class="info-row" data-tooltip="Forward Price-to-Earnings ratio for the S&P 500 index based on next-12-month expected earnings. Long-term historical average ~16×; recent 5-yr median 21.1×, 10-yr median 19.8×. Currently at the top of its historical range."><span class="lbl">S&amp;P 500 Fwd P/E</span><span class="val">21× <small style="color:var(--muted)">(avg 16×)</small></span></div>
+      <div class="info-row" data-tooltip="Share of global Venture Capital investment that flowed into AI companies in Q1 2026. $242B of $297B total — the highest concentration in a single sector ever recorded."><span class="lbl">VC → AI Share</span>     <span class="val">81% ($242B)</span></div>
+      <div class="info-row" data-tooltip="Total confirmed 2026 capital expenditure on AI/cloud infrastructure by the five largest hyperscalers: Amazon $200B, Google $185B, Microsoft $130B, Meta $130B, Oracle $55B. The largest capex cycle in tech history."><span class="lbl">Hyperscaler Capex</span> <span class="val">$700B (+40% YoY)</span></div>
+      <div class="info-row" data-tooltip="OpenAI's current annualised revenue run rate as of Feb 2026 — doubled from $13B in 2025. Compare to $1.5T in committed industry-wide AI infrastructure spend through 2031."><span class="lbl">OpenAI Revenue</span>    <span class="val">$25B / yr</span></div>
+      <div class="info-row" data-tooltip="Total capital committed by hyperscalers and cloud providers to AI infrastructure through 2031. Much of this may be recycled spend inside a closed NVIDIA → OpenAI → NVIDIA loop."><span class="lbl">Committed Spend</span>   <span class="val">$1.5T thru 2031</span></div>
+      <div class="info-row" data-tooltip="Average time for a new large-scale data center to receive a grid power connection. Rose from 1–2 years in 2023 to 5–10 years in 2026. ~50% of planned 2026 US data center capacity is at risk."><span class="lbl">Grid Delay</span>        <span class="val">5–10 yrs <small style="color:var(--muted)">(was 1–2)</small></span></div>
+      <div class="info-row" data-tooltip="Number of AI-focused companies globally that have reached a $1B+ valuation since 2024. Represents ~50% of all new unicorn formation — an unprecedented concentration in one sector."><span class="lbl">AI Unicorns</span>       <span class="val">308 since 2024</span></div>
     </div>
 
   </section>
@@ -776,6 +807,7 @@ function renderKpiCards(data) {
     const cls = heatPct >= 80 ? 'hot' : heatPct >= 60 ? 'warm' : 'cool';
     const div = document.createElement('div');
     div.className = `kpi-card ${cls}`;
+    if (k.description) div.setAttribute('data-tooltip', k.description);
     div.innerHTML = `
       <div class="kpi-label">${k.label}</div>
       <div class="kpi-value">${typeof k.value === 'number' && k.value >= 1000
