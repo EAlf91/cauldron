@@ -473,14 +473,14 @@
 
     <!-- Right: quick KPI list -->
     <div class="info-panel">
-      <div class="info-row"><span class="lbl">CAPE Ratio</span>       <span class="val">40× <small style="color:var(--muted)">(avg 17.6×)</small></span></div>
-      <div class="info-row"><span class="lbl">S&amp;P 500 Fwd P/E</span><span class="val">23× <small style="color:var(--muted)">(avg 16×)</small></span></div>
-      <div class="info-row"><span class="lbl">VC → AI Share</span>     <span class="val">80% ($242B)</span></div>
-      <div class="info-row"><span class="lbl">Hyperscaler Capex</span> <span class="val">$600B (+36% YoY)</span></div>
-      <div class="info-row"><span class="lbl">OpenAI Revenue</span>    <span class="val">$13B / yr</span></div>
+      <div class="info-row"><span class="lbl">CAPE Ratio</span>       <span class="val">39.3× <small style="color:var(--muted)">(avg 17.6×)</small></span></div>
+      <div class="info-row"><span class="lbl">S&amp;P 500 Fwd P/E</span><span class="val">21× <small style="color:var(--muted)">(avg 16×)</small></span></div>
+      <div class="info-row"><span class="lbl">VC → AI Share</span>     <span class="val">81% ($242B)</span></div>
+      <div class="info-row"><span class="lbl">Hyperscaler Capex</span> <span class="val">$700B (+40% YoY)</span></div>
+      <div class="info-row"><span class="lbl">OpenAI Revenue</span>    <span class="val">$25B / yr</span></div>
       <div class="info-row"><span class="lbl">Committed Spend</span>   <span class="val">$1.5T thru 2031</span></div>
-      <div class="info-row"><span class="lbl">Grid Delay</span>        <span class="val">5–7 yrs <small style="color:var(--muted)">(was 1–2)</small></span></div>
-      <div class="info-row"><span class="lbl">AI Unicorns</span>       <span class="val">207 since 2024</span></div>
+      <div class="info-row"><span class="lbl">Grid Delay</span>        <span class="val">5–10 yrs <small style="color:var(--muted)">(was 1–2)</small></span></div>
+      <div class="info-row"><span class="lbl">AI Unicorns</span>       <span class="val">308 since 2024</span></div>
     </div>
 
   </section>
@@ -586,42 +586,44 @@ async function loadData() {
 
 const FALLBACK_DATA = {
   lastUpdated: '2026-05-03',
-  heatScore: 85,
+  heatScore: 86,
   heatLabel: 'Boiling',
   kpis: {
-    capeRatio:          { label: 'CAPE Ratio',         value: 40,   unit: '×',       description: 'Cyclically adjusted P/E — historically average 17.6×, dot-com peak 43.5×' },
-    sp500ForwardPE:     { label: 'S&P 500 Fwd P/E',    value: 23,   unit: '×',       description: 'Forward P/E for S&P 500 (historical avg 16×)' },
-    top7StocksPE:       { label: 'Top-7 Stocks P/E',   value: 27,   unit: '×',       description: 'Average P/E for the Magnificent 7 mega-cap tech names' },
-    vcAiConcentration:  { label: 'VC → AI Share',      value: 80,   unit: '%',       description: '$242B of $300B global Q1-2026 VC flowed into AI' },
-    hyperscalerCapexBn: { label: 'Hyperscaler Capex',  value: 600,  unit: 'B USD',   description: 'Projected 2026 capex, +36% YoY — largely debt-funded' },
-    openAiRevenueBn:    { label: 'OpenAI Revenue',     value: 13,   unit: 'B/yr',    description: '$13B annual revenue vs $1.5T committed spend through 2031' },
-    gridConnectionDelay:{ label: 'Grid Delay',         value: 6,    unit: 'years',   description: 'Time to connect a data center — up from 1–2 yrs in 2023' },
-    aiUnicornsSince2024:{ label: 'New AI Unicorns',    value: 207,  unit: 'co.',     description: '207 AI firms hit $1B+ valuation since 2024 (50% of all new unicorns)' },
+    capeRatio:          { label: 'CAPE Ratio',         value: 39.3, unit: '×',       description: 'Cyclically adjusted P/E — historically average 17.6×, dot-com peak 43.5×' },
+    sp500ForwardPE:     { label: 'S&P 500 Fwd P/E',    value: 21,   unit: '×',       description: 'Forward P/E for S&P 500 (5-yr median 21.1×, 10-yr median 19.8×)' },
+    top7StocksPE:       { label: 'Top-7 Stocks P/E',   value: 28.3, unit: '×',       description: 'Average forward P/E of the Magnificent 7 tech stocks (range: META ~18× to AAPL ~34×)' },
+    vcAiConcentration:  { label: 'VC → AI Share',      value: 81,   unit: '%',       description: '$242B of $297B global Q1-2026 VC flowed into AI — record high' },
+    hyperscalerCapexBn: { label: 'Hyperscaler Capex',  value: 700,  unit: 'B USD',   description: 'Confirmed 2026 capex (Amazon $200B, Google $185B, Microsoft $130B, Meta $130B, Oracle $55B) — largest capex cycle in tech history' },
+    openAiRevenueBn:    { label: 'OpenAI Revenue',     value: 25,   unit: 'B/yr',    description: '$25B annual revenue run rate (doubled from $13B in 2025) vs $1.5T committed spend through 2031' },
+    gridConnectionDelay:{ label: 'Grid Delay',         value: 7,    unit: 'years',   description: 'Time to connect a data center (range 5–10 yrs); ~50% of 2026 US capacity at risk' },
+    aiUnicornsSince2024:{ label: 'New AI Unicorns',    value: 308,  unit: 'co.',     description: 'AI-focused companies with $1B+ valuation globally as of early 2026 — ~50% of all new unicorn formation' },
     narrativeSurgeNewbird:{ label: 'NewBird AI Surge', value: 582,  unit: '%',       description: 'Allbirds rebranded as NewBird AI, surged 582% intraday on zero AI revenue' },
   },
   historical: [
-    { date: '2026-05-03', heatScore: 85, heatLabel: 'Boiling' }
+    { date: '2026-05-03', heatScore: 86, heatLabel: 'Boiling', capeRatio: 39.3, sp500ForwardPE: 21, vcAiSharePct: 81, hyperscalerCapexBn: 700, gridDelayYears: 7, aiUnicorns: 308 }
   ],
   topStories: [
-    { date: '2026-04-15', headline: 'Allbirds → NewBird AI: +582% in a single trading day', source: 'Market Data', type: 'AI-Washing',              sentiment: 'extreme_bullish' },
-    { date: '2026-Q1',    headline: '80% of all global VC ($242B) flowed into AI in Q1 2026', source: 'VC Research', type: 'Capital Concentration', sentiment: 'extreme_bullish' },
-    { date: '2026-Q1',    headline: "FTC launches 'Operation AI Comply' vs deceptive AI marketing", source: 'FTC',  type: 'Regulatory',             sentiment: 'bearish_signal'  },
-    { date: '2026-Q1',    headline: 'Hyperscaler capex hits $600B — 36% YoY', source: 'Industry Analysis', type: 'Infrastructure Spend',           sentiment: 'extreme_bullish' },
-    { date: '2026',       headline: 'Grid connection delays reach 5–7 years; stranded GPU risk', source: 'Energy Research', type: 'Constraint',    sentiment: 'bearish_signal'  },
-    { date: '2026',       headline: 'OpenAI $13B revenue vs $1.5T committed spend through 2031', source: 'Financial', type: 'Circular Financing',  sentiment: 'bearish_signal'  },
-    { date: '2025-2026',  headline: 'AI coding tools made programming 19% slower on average', source: 'Academic Study', type: 'Counter-Evidence',  sentiment: 'bearish_signal'  },
-    { date: '2025',       headline: 'CAIO postings +478% then collapsed into CIO/CTO roles', source: 'Forrester', type: 'Hype Cycle',              sentiment: 'bearish_signal'  },
+    { date: '2026-04-30', headline: 'Big Tech Q1 2026 earnings confirm $700B hyperscaler capex for 2026 — largest annual tech capex in history', source: 'Q1 2026 Earnings Reports', type: 'Infrastructure Spend', sentiment: 'extreme_bullish' },
+    { date: '2026-02-26', headline: 'OpenAI hits $25B annualised revenue — doubled from $13B in 2025; eyes $1T IPO valuation by late 2026', source: 'The Information / Reuters', type: 'Circular Financing', sentiment: 'extreme_bullish' },
+    { date: '2026-04-30', headline: 'FTC Operation AI Comply escalates to active investigations and consent orders in April 2026; EU AI Act transparency rules take effect Aug 2026', source: 'FTC Press Releases / AI Policy Desk', type: 'Regulatory', sentiment: 'bearish_signal' },
+    { date: '2026-04-15', headline: 'Allbirds → NewBird AI: +582% in a single trading day', source: 'SEC Filing / Market Data', type: 'AI-Washing', sentiment: 'extreme_bullish' },
+    { date: '2026-Q1',    headline: '81% of all global VC ($242B of $297B) flowed into AI sector in Q1 2026 — record concentration', source: 'Venture Capital Research', type: 'Capital Concentration', sentiment: 'extreme_bullish' },
+    { date: '2026-Q1',    headline: '60%+ of S&P 500 earnings calls mentioned AI in Q1 2026 — record high, up from 47% in Q4 2025', source: 'FactSet / Earnings Call Analysis', type: 'Hype Cycle', sentiment: 'extreme_bullish' },
+    { date: '2026',       headline: 'Grid connection delays reach 5–10 years; 50% of 2026 US data centre capacity at risk of delay or cancellation', source: 'Energy Sector Research / Google / ERCOT Data', type: 'Infrastructure Constraint', sentiment: 'bearish_signal' },
+    { date: '2026',       headline: 'OpenAI revenue $25B/yr vs $1.5T committed infrastructure spend through 2031', source: 'Financial Analysis', type: 'Circular Financing', sentiment: 'bearish_signal' },
+    { date: '2025-2026',  headline: 'AI coding assistants made programming 19% slower due to refactoring AI-generated code', source: 'Academic Study', type: 'Productivity Counter-Evidence', sentiment: 'bearish_signal' },
+    { date: '2025',       headline: 'Chief AI Officer postings surged 478% then collapsed as boards absorb role into CIO/CTO', source: 'Job Market Analysis / Forrester', type: 'Hype Cycle', sentiment: 'bearish_signal' },
   ],
   valuationTable: [
-    { metric: 'CAPE Ratio',          value1999Peak: 43.5, value2026: 40.0, historicalAvg: 17.6 },
-    { metric: 'S&P 500 Forward P/E', value1999Peak: 25,   value2026: 23,   historicalAvg: 16   },
-    { metric: 'Top 7 Stocks P/E',    value1999Peak: 66,   value2026: 27,   historicalAvg: 20   },
+    { metric: 'CAPE Ratio',          value1999Peak: 43.5, value2026: 39.3, historicalAvg: 17.6 },
+    { metric: 'S&P 500 Forward P/E', value1999Peak: 25,   value2026: 21,   historicalAvg: 16   },
+    { metric: 'Top 7 Stocks P/E',    value1999Peak: 66,   value2026: 28,   historicalAvg: 20   },
   ],
   energyTable: [
-    { metric: 'DC Power Use (TWh)',    y2023: 460,      y2026: 1050,      y2030: 1350        },
-    { metric: 'AI Share of DC Power',  y2023: '10%',    y2026: '21%',     y2030: '44%'       },
-    { metric: 'US IT Load (GW)',       y2023: 60,       y2026: 100,       y2030: 150         },
-    { metric: 'Grid Connection Delay', y2023: '1–2 yrs', y2026: '5–7 yrs', y2030: 'Worsening'},
+    { metric: 'DC Power Use (TWh)',    y2023: 460,       y2026: 600,        y2030: 945          },
+    { metric: 'AI Share of DC Power',  y2023: '10%',     y2026: '21%',      y2030: '~35%'       },
+    { metric: 'US IT Load (GW)',       y2023: 60,        y2026: 100,        y2030: 150          },
+    { metric: 'Grid Connection Delay', y2023: '1–2 yrs', y2026: '5–10 yrs', y2030: 'Worsening' },
   ],
 };
 
@@ -632,8 +634,8 @@ const INSIGHTS = [
   { title: '🐦 NewBird AI: Narrative > Reality',
     body: 'Allbirds (a wool-shoe company) rebranded as "NewBird AI" on April 15 2026 and surged 582% intraday. No AI product, no AI revenue — just two letters: A and I.' },
   { title: '⚡ The Hard Stop: Power Grid',
-    body: 'A single large-scale AI data center can require 300 MW+. Grid connection now takes 5–7 years. Billions in GPUs are sitting idle waiting for power they may never get.' },
-  { title: '📉 CAPE at 40 — Second Highest Ever',
+    body: 'A single large-scale AI data center can require 300 MW+. Grid connection now takes 5–10 years. Billions in GPUs are sitting idle waiting for power they may never get.' },
+  { title: '📉 CAPE at 39.3 — Second Highest Ever',
     body: 'The CAPE ratio has only been higher once: the dot-com peak of 43.5 in 1999–2000. That correction resulted in a 78% drawdown in the Nasdaq.' },
   { title: '🤖 AI Slop & Productivity Paradox',
     body: 'Studies show AI coding assistants made programming 19% slower due to time spent fixing AI-generated bugs. Up to 95% of enterprise Gen AI implementations have reportedly failed.' },
