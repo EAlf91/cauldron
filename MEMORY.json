@@ -28,7 +28,7 @@
       "historicalAvg": 20,
       "unit": "x",
       "label": "Top 7 Stocks P/E",
-      "description": "Average TTM P/E of the Magnificent 7 tech stocks (NVDA 38.6×, AMZN 33.4×, AAPL 32.8×, GOOGL 29.8×, META 27.0×, MSFT 24.0×; Tesla excluded as outlier at 326×)",
+      "description": "Average TTM P/E of 6 Magnificent 7 tech stocks (NVDA 38.6×, AMZN 33.4×, AAPL 32.8×, GOOGL 29.8×, META 27.0×, MSFT 24.0×; Tesla at 326× excluded as structural outlier — inclusion would distort index mean)",
       "weight": 10,
       "score": 9
     },
@@ -47,7 +47,7 @@
       "yoyGrowth": 80,
       "unit": "billion USD",
       "label": "Hyperscaler Capex 2026",
-      "description": "Revised 2026 data center / AI capex across major hyperscalers (Amazon $200B, Google $185B, Microsoft ~$165B, Meta ~$135B, Oracle $55B) — guidance raised by Microsoft and Meta after Q1 2026 earnings",
+      "description": "Revised 2026 data center / AI capex across major hyperscalers (Amazon $200B, Google $185B, Microsoft ~$165B, Meta ~$135B, Oracle $55B) — up ~80% YoY vs 2025's $410B aggregate; Microsoft and Meta raised guidance after Q1 2026 earnings",
       "weight": 10,
       "score": 10
     },
@@ -76,7 +76,7 @@
       "value2030": 1200,
       "unit": "TWh",
       "label": "DC Power Demand",
-      "description": "Global data center electricity consumption (latest 2026 estimates revised sharply upward to ~945 TWh; 2030 now projected ~1,200 TWh; ~3% of global power use by 2026)",
+      "description": "Global data center electricity consumption — 2026 estimate revised sharply upward to ~945 TWh (from prior 600 TWh; source: industry analysts April 2026 citing AI racks at 30–100 kW each, exceeding IEA's earlier forecast); 2030 now projected ~1,200 TWh",
       "weight": 5,
       "score": 4
     },
