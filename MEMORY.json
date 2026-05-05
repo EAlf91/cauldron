@@ -1,34 +1,34 @@
 {
-  "lastUpdated": "2026-05-04",
-  "heatScore": 89,
+  "lastUpdated": "2026-05-05",
+  "heatScore": 88,
   "heatLabel": "Boiling",
-  "summary": "The AI bubble cauldron continues to heat up as of 4 May 2026: the Shiller CAPE ratio climbed to 41.1×, just 2.4 points below the all-time dot-com peak of 43.5×. Hyperscaler capex guidance was revised upward to ~$740B for 2026 (Microsoft now tracking $150–190B, Meta raised to $125–145B). Nvidia deployed OpenAI's Codex agent across all 10,000 employees, heralding what Jensen Huang calls 'the age of AI'. Global data-centre power demand projections for 2026 were revised sharply upward to ~945 TWh, nearly matching prior 2030 estimates. VC AI concentration holds at 81% ($242B of $297B) and AI unicorn count holds at 308. FTC Operation AI Comply remains in active enforcement with ongoing compliance monitoring. Enterprise AI failure rates persist at 80–95% with only 48% of projects reaching production (Gartner).",
+  "summary": "As of 5 May 2026, the AI bubble cauldron remains at 'Boiling' intensity with a heat score of 88. The Shiller CAPE ratio eased slightly to 39.19×—still 90% of the way to the 2000 dot-com peak of 43.5×—as the Q1 2026 earnings season closes. The S&P 500 forward P/E settled back to 20.9×. OpenAI and Anthropic simultaneously launched competing enterprise AI joint ventures backed by Wall Street (Blackstone/Goldman Sachs), signalling a shift from lab hype to institutionalised AI infrastructure. OpenAI released GPT-5.5 with advanced agentic capabilities. Hyperscaler capex commitment for 2026 remains ~$740B. FTC Operation AI Comply continues expanding into active consent orders and penalty enforcement. Enterprise AI failure rates persist at 80–85% with over 50% of GenAI projects abandoned after proof-of-concept (Gartner/MIT).",
   "kpis": {
     "capeRatio": {
-      "value": 41.1,
+      "value": 39.19,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — 41.1× in May 2026, just 2.4 pts below the dot-com all-time peak of 43.5×",
+      "description": "Cyclically adjusted P/E for US market — 39.19× as of 5 May 2026, easing slightly from 41.1× but still 90% of the way to the dot-com all-time peak of 43.5×",
       "weight": 20,
-      "score": 18
+      "score": 17
     },
     "sp500ForwardPE": {
-      "value": 21.5,
+      "value": 20.9,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for S&P 500 (5-yr median 21.1×, 10-yr median 19.8×)",
+      "description": "Forward price-to-earnings ratio for S&P 500 — 20.9× as of May 2026 (5-yr median 21.1×, 10-yr median 19.8×; source: FactSet)",
       "weight": 10,
       "score": 8
     },
     "top7StocksPE": {
-      "value": 30.8,
+      "value": 30.1,
       "historicalAvg": 20,
       "unit": "x",
       "label": "Top 7 Stocks P/E",
-      "description": "Average TTM P/E of 6 Magnificent 7 tech stocks (NVDA 38.6×, AMZN 33.4×, AAPL 32.8×, GOOGL 29.8×, META 27.0×, MSFT 24.0×; Tesla at 326× excluded as structural outlier — inclusion would distort index mean)",
+      "description": "Average TTM P/E of 6 Magnificent 7 tech stocks (NVDA 37×, AMZN 32×, AAPL 32.5×, GOOGL 29×, META 25×, MSFT 25×; Tesla at 300×+ excluded as structural outlier — inclusion would distort index mean)",
       "weight": 10,
       "score": 9
     },
@@ -119,9 +119,41 @@
       "hyperscalerCapexBn": 740,
       "gridDelayYears": 7,
       "aiUnicorns": 308
+    },
+    {
+      "date": "2026-05-05",
+      "heatScore": 88,
+      "heatLabel": "Boiling",
+      "capeRatio": 39.19,
+      "sp500ForwardPE": 20.9,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 740,
+      "gridDelayYears": 7,
+      "aiUnicorns": 308
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-04",
+      "headline": "OpenAI and Anthropic simultaneously launch competing enterprise AI joint ventures backed by Wall Street (Blackstone/Goldman Sachs), raising billions to wire AI directly into institutional infrastructure",
+      "source": "TechCrunch / Anthropic / OpenAI",
+      "type": "Circular Financing",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-05",
+      "headline": "OpenAI releases GPT-5.5 with advanced agentic and coding capabilities; xAI launches Grok 4.3 API — AI lab model arms race continues to accelerate",
+      "source": "OpenAI / xAI / The AI Track",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-05",
+      "headline": "Shiller CAPE ratio eases to 39.19× — still 90% of the way to the dot-com all-time peak of 43.5×; S&P 500 forward P/E settles at 20.9×",
+      "source": "Multpl / FactSet",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
     {
       "date": "2026-05-04",
       "headline": "CAPE ratio climbs to 41.1× in May 2026 — within 2.4 points of the dot-com all-time peak of 43.5×",
@@ -215,9 +247,9 @@
     }
   ],
   "valuationTable": [
-    { "metric": "CAPE Ratio",          "value1999Peak": 43.5, "value2026": 41.1, "historicalAvg": 17.6 },
-    { "metric": "S&P 500 Forward P/E", "value1999Peak": 25,   "value2026": 21.5, "historicalAvg": 16   },
-    { "metric": "Top 7 Stocks P/E",    "value1999Peak": 66,   "value2026": 30.8, "historicalAvg": 20   }
+    { "metric": "CAPE Ratio",          "value1999Peak": 43.5, "value2026": 39.19, "historicalAvg": 17.6 },
+    { "metric": "S&P 500 Forward P/E", "value1999Peak": 25,   "value2026": 20.9,  "historicalAvg": 16   },
+    { "metric": "Top 7 Stocks P/E",    "value1999Peak": 66,   "value2026": 30.1,  "historicalAvg": 20   }
   ],
   "energyTable": [
     { "metric": "DC Power Use (TWh)",    "y2023": 460,       "y2026": 945,       "y2030": 1200          },
