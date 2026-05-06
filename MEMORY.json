@@ -1,25 +1,25 @@
 {
-  "lastUpdated": "2026-05-05",
+  "lastUpdated": "2026-05-06",
   "heatScore": 88,
   "heatLabel": "Boiling",
-  "summary": "As of 5 May 2026, the AI bubble cauldron remains at 'Boiling' intensity with a heat score of 88. The Shiller CAPE ratio eased slightly to 39.19×—still 90% of the way to the 2000 dot-com peak of 43.5×—as the Q1 2026 earnings season closes. The S&P 500 forward P/E settled back to 20.9×. OpenAI and Anthropic simultaneously launched competing enterprise AI joint ventures backed by Wall Street (Blackstone/Goldman Sachs), signalling a shift from lab hype to institutionalised AI infrastructure. OpenAI released GPT-5.5 with advanced agentic capabilities. Hyperscaler capex commitment for 2026 remains ~$740B. FTC Operation AI Comply continues expanding into active consent orders and penalty enforcement. Enterprise AI failure rates persist at 80–85% with over 50% of GenAI projects abandoned after proof-of-concept (Gartner/MIT).",
+  "summary": "As of 6 May 2026, the AI bubble cauldron remains at 'Boiling' intensity with a heat score of 88. The Shiller CAPE ratio edged up to 39.27×—still over 90% of the way to the 2000 dot-com peak of 43.5×. The S&P 500 forward P/E stands at 20.8×. Anthropic has overtaken OpenAI in revenue, reaching a $30B annual run rate (up from $9B at end-2025), and is planning an IPO for October 2026 at a potential $380–500B valuation. Alphabet issued a 'century bond' worth $32B to fund AI capex as hyperscalers increasingly finance infrastructure beyond free cash flow capacity. Microsoft raised its 2026 capex guidance to ~$190B (from ~$165B), pushing the five-company hyperscaler aggregate to ~$765B — up ~87% YoY from 2025's $410B. Enterprise GenAI failure rate persists at ~95% per MIT studies, with only 5% of pilots delivering measurable bottom-line impact.",
   "kpis": {
     "capeRatio": {
-      "value": 39.19,
+      "value": 39.27,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — 39.19× as of 5 May 2026, easing slightly from 41.1× but still 90% of the way to the dot-com all-time peak of 43.5×",
+      "description": "Cyclically adjusted P/E for US market — 39.27× as of 6 May 2026, edging up slightly from 39.19×; still over 90% of the way to the dot-com all-time peak of 43.5×",
       "weight": 20,
       "score": 17
     },
     "sp500ForwardPE": {
-      "value": 20.9,
+      "value": 20.8,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for S&P 500 — 20.9× as of May 2026 (5-yr median 21.1×, 10-yr median 19.8×; source: FactSet)",
+      "description": "Forward price-to-earnings ratio for S&P 500 — 20.8× as of May 2026 (5-yr median 21.1×, 10-yr median 19.8×; source: FactSet / StreetStats)",
       "weight": 10,
       "score": 8
     },
@@ -43,11 +43,11 @@
       "score": 16
     },
     "hyperscalerCapexBn": {
-      "value": 740,
-      "yoyGrowth": 80,
+      "value": 765,
+      "yoyGrowth": 87,
       "unit": "billion USD",
       "label": "Hyperscaler Capex 2026",
-      "description": "Revised 2026 data center / AI capex across major hyperscalers (Amazon $200B, Google $185B, Microsoft ~$165B, Meta ~$135B, Oracle $55B) — up ~80% YoY vs 2025's $410B aggregate; Microsoft and Meta raised guidance after Q1 2026 earnings",
+      "description": "Revised 2026 data center / AI capex across major hyperscalers (Amazon $200B, Google $185B, Microsoft ~$190B, Meta ~$135B, Oracle $55B) — up ~87% YoY vs 2025's $410B aggregate; Microsoft raised guidance after additional chip-cost disclosures",
       "weight": 10,
       "score": 10
     },
@@ -130,9 +130,41 @@
       "hyperscalerCapexBn": 740,
       "gridDelayYears": 7,
       "aiUnicorns": 308
+    },
+    {
+      "date": "2026-05-06",
+      "heatScore": 88,
+      "heatLabel": "Boiling",
+      "capeRatio": 39.27,
+      "sp500ForwardPE": 20.8,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 765,
+      "gridDelayYears": 7,
+      "aiUnicorns": 308
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-06",
+      "headline": "Anthropic overtakes OpenAI in revenue: $30B ARR (up from $9B in late 2025) — plans October 2026 IPO at $380–500B valuation on Nasdaq; fastest revenue ramp in enterprise software history",
+      "source": "Vucense / Analytics India Magazine / TechMarketBriefs",
+      "type": "Circular Financing",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-06",
+      "headline": "Alphabet issues $32B 'century bond' to finance AI capex as hyperscalers go into historic debt — aggregate 2026 AI infrastructure spend now ~$765B (+87% YoY)",
+      "source": "Yahoo Finance / European Business Magazine",
+      "type": "Infrastructure Spend",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-06",
+      "headline": "Microsoft raises 2026 capex guidance to ~$190B (from ~$165B) citing higher chip costs and supply constraints — S&P 500 forward P/E eases to 20.8×; CAPE holds at 39.27×",
+      "source": "Yahoo Finance / StreetStats / MacroMicro",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
     {
       "date": "2026-05-04",
       "headline": "OpenAI and Anthropic simultaneously launch competing enterprise AI joint ventures backed by Wall Street (Blackstone/Goldman Sachs), raising billions to wire AI directly into institutional infrastructure",
@@ -247,8 +279,8 @@
     }
   ],
   "valuationTable": [
-    { "metric": "CAPE Ratio",          "value1999Peak": 43.5, "value2026": 39.19, "historicalAvg": 17.6 },
-    { "metric": "S&P 500 Forward P/E", "value1999Peak": 25,   "value2026": 20.9,  "historicalAvg": 16   },
+    { "metric": "CAPE Ratio",          "value1999Peak": 43.5, "value2026": 39.27, "historicalAvg": 17.6 },
+    { "metric": "S&P 500 Forward P/E", "value1999Peak": 25,   "value2026": 20.8,  "historicalAvg": 16   },
     { "metric": "Top 7 Stocks P/E",    "value1999Peak": 66,   "value2026": 30.1,  "historicalAvg": 20   }
   ],
   "energyTable": [
