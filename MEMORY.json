@@ -1,34 +1,34 @@
 {
-  "lastUpdated": "2026-05-06",
-  "heatScore": 88,
+  "lastUpdated": "2026-05-07",
+  "heatScore": 89,
   "heatLabel": "Boiling",
-  "summary": "As of 6 May 2026, the AI bubble cauldron remains at 'Boiling' intensity with a heat score of 88. The Shiller CAPE ratio edged up to 39.27×—still over 90% of the way to the 2000 dot-com peak of 43.5×. The S&P 500 forward P/E stands at 20.8×. Anthropic has overtaken OpenAI in revenue, reaching a $30B annual run rate (up from $9B at end-2025), and is planning an IPO for October 2026 at a potential $380–500B valuation. Alphabet issued a 'century bond' worth $32B to fund AI capex as hyperscalers increasingly finance infrastructure beyond free cash flow capacity. Microsoft raised its 2026 capex guidance to ~$190B (from ~$165B), pushing the five-company hyperscaler aggregate to ~$765B — up ~87% YoY from 2025's $410B. Enterprise GenAI failure rate persists at ~95% per MIT studies, with only 5% of pilots delivering measurable bottom-line impact.",
+  "summary": "As of 7 May 2026, the AI bubble cauldron heats further to 89 — 'Boiling'. The Shiller CAPE surged to 41.2×, now within 5.3% of the dot-com all-time peak of 43.5×. The S&P 500 forward P/E rose back to 21.0×. OpenAI ended its Azure cloud exclusivity and partnered with AWS, while launching 'The Deployment Company' — a $10B enterprise AI venture backed by TPG and Bain Capital. Anthropic previewed Claude Mythos (10-trillion-parameter model); Google pledged up to $40B in investment and Anthropic's ARR surpassed $30B with a potential $900B+ valuation. Hyperscaler aggregate 2026 capex holds at ~$765B (+87% YoY). Enterprise GenAI failure rate persists at ~95% per MIT Project NANDA, with only 5% of pilots delivering measurable bottom-line impact.",
   "kpis": {
     "capeRatio": {
-      "value": 39.27,
+      "value": 41.2,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — 39.27× as of 6 May 2026, edging up slightly from 39.19×; still over 90% of the way to the dot-com all-time peak of 43.5×",
+      "description": "Cyclically adjusted P/E for US market — 41.2× as of 7 May 2026, surging from 39.27× on May 6; now within 5.3% of the dot-com all-time peak of 43.5×",
       "weight": 20,
-      "score": 17
+      "score": 18
     },
     "sp500ForwardPE": {
-      "value": 20.8,
+      "value": 21.0,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for S&P 500 — 20.8× as of May 2026 (5-yr median 21.1×, 10-yr median 19.8×; source: FactSet / StreetStats)",
+      "description": "Forward price-to-earnings ratio for S&P 500 — 21.0× as of 7 May 2026 (5-yr median 21.1×, 10-yr median 19.8×; source: FactSet / StreetStats)",
       "weight": 10,
       "score": 8
     },
     "top7StocksPE": {
-      "value": 30.1,
+      "value": 29.8,
       "historicalAvg": 20,
       "unit": "x",
       "label": "Top 7 Stocks P/E",
-      "description": "Average TTM P/E of 6 Magnificent 7 tech stocks (NVDA 37×, AMZN 32×, AAPL 32.5×, GOOGL 29×, META 25×, MSFT 25×; Tesla at 300×+ excluded as structural outlier — inclusion would distort index mean)",
+      "description": "Average TTM P/E of 6 Magnificent 7 tech stocks (NVDA 37×, AMZN 31×, AAPL 32.5×, GOOGL 29×, META 24.5×, MSFT 24.5×; Tesla at 300×+ excluded as structural outlier — inclusion would distort index mean)",
       "weight": 10,
       "score": 9
     },
@@ -141,9 +141,41 @@
       "hyperscalerCapexBn": 765,
       "gridDelayYears": 7,
       "aiUnicorns": 308
+    },
+    {
+      "date": "2026-05-07",
+      "heatScore": 89,
+      "heatLabel": "Boiling",
+      "capeRatio": 41.2,
+      "sp500ForwardPE": 21.0,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 765,
+      "gridDelayYears": 7,
+      "aiUnicorns": 308
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-07",
+      "headline": "OpenAI ends Azure cloud exclusivity, expands to AWS; launches 'The Deployment Company' — $10B enterprise AI joint venture backed by TPG and Bain Capital embedding forward-deployed engineers at client firms",
+      "source": "TechCrunch / SiliconAngle / The Information",
+      "type": "Circular Financing",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-07",
+      "headline": "Anthropic previews Claude Mythos (10-trillion-parameter model for cybersecurity and research); Google pledges up to $40B investment; Anthropic ARR surpasses $30B with potential $900B+ valuation",
+      "source": "ChatFin AI / TheAITrack / SiliconAngle",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-07",
+      "headline": "CAPE ratio surges to 41.2× — now within 5.3% of the dot-com all-time peak (43.5×); S&P 500 forward P/E rises to 21.0×; heat score climbs to 89",
+      "source": "Finanzapedia / LongTermTrends / StreetStats",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
     {
       "date": "2026-05-06",
       "headline": "Anthropic overtakes OpenAI in revenue: $30B ARR (up from $9B in late 2025) — plans October 2026 IPO at $380–500B valuation on Nasdaq; fastest revenue ramp in enterprise software history",
@@ -279,9 +311,9 @@
     }
   ],
   "valuationTable": [
-    { "metric": "CAPE Ratio",          "value1999Peak": 43.5, "value2026": 39.27, "historicalAvg": 17.6 },
-    { "metric": "S&P 500 Forward P/E", "value1999Peak": 25,   "value2026": 20.8,  "historicalAvg": 16   },
-    { "metric": "Top 7 Stocks P/E",    "value1999Peak": 66,   "value2026": 30.1,  "historicalAvg": 20   }
+    { "metric": "CAPE Ratio",          "value1999Peak": 43.5, "value2026": 41.2,  "historicalAvg": 17.6 },
+    { "metric": "S&P 500 Forward P/E", "value1999Peak": 25,   "value2026": 21.0,  "historicalAvg": 16   },
+    { "metric": "Top 7 Stocks P/E",    "value1999Peak": 66,   "value2026": 29.8,  "historicalAvg": 20   }
   ],
   "energyTable": [
     { "metric": "DC Power Use (TWh)",    "y2023": 460,       "y2026": 945,       "y2030": 1200          },
