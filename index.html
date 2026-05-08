@@ -616,13 +616,13 @@ async function loadData() {
 }
 
 const FALLBACK_DATA = {
-  lastUpdated: '2026-05-07',
-  heatScore: 89,
+  lastUpdated: '2026-05-08',
+  heatScore: 90,
   heatLabel: 'Boiling',
   kpis: {
-    capeRatio:          { label: 'CAPE Ratio',         value: 41.2,  unit: '×',      description: 'Cyclically adjusted P/E — 41.2× as of 7 May 2026, now within 5.3% of the dot-com all-time peak of 43.5×' },
-    sp500ForwardPE:     { label: 'S&P 500 Fwd P/E',    value: 21.0, unit: '×',       description: 'Forward P/E for S&P 500 — 21.0× (5-yr median 21.1×, 10-yr median 19.8×; source: FactSet / StreetStats)' },
-    top7StocksPE:       { label: 'Top-7 Stocks P/E',   value: 29.8, unit: '×',       description: 'Average TTM P/E of 6 Magnificent 7 stocks (NVDA 37×, AMZN 31×, AAPL 32.5×, GOOGL 29×, META 24.5×, MSFT 24.5×; Tesla excluded as structural outlier)' },
+    capeRatio:          { label: 'CAPE Ratio',         value: 41.8,  unit: '×',      description: 'Cyclically adjusted P/E — 41.8× as of 8 May 2026, now within 3.9% of the dot-com all-time peak of 43.5×' },
+    sp500ForwardPE:     { label: 'S&P 500 Fwd P/E',    value: 20.9, unit: '×',       description: 'Forward P/E for S&P 500 — 20.9× (5-yr median 19.9×, 10-yr median 18.9×; source: FactSet)' },
+    top7StocksPE:       { label: 'Top-7 Stocks P/E',   value: 30.4, unit: '×',       description: 'Average TTM P/E of 6 Magnificent 7 stocks (NVDA 40.5×, AAPL 33.5×, AMZN 32.5×, GOOGL 29.2×, MSFT 24.6×, META 22.2×; Tesla excluded as structural outlier)' },
     vcAiConcentration:  { label: 'VC → AI Share',      value: 81,   unit: '%',       description: '$242B of $297B global Q1-2026 VC flowed into AI — record high' },
     hyperscalerCapexBn: { label: 'Hyperscaler Capex',  value: 765,  unit: 'B USD',   description: 'Revised 2026 capex after Microsoft raised guidance to ~$190B (Amazon $200B, Google $185B, Microsoft ~$190B, Meta ~$135B, Oracle $55B) — up ~87% YoY vs 2025\'s $410B' },
     openAiRevenueBn:    { label: 'OpenAI Revenue',     value: 25,   unit: 'B/yr',    description: '$25B annual revenue run rate (doubled from $13B in 2025) vs $1.5T committed spend through 2031' },
@@ -636,11 +636,12 @@ const FALLBACK_DATA = {
     { date: '2026-05-05', heatScore: 88, heatLabel: 'Boiling', capeRatio: 39.19, sp500ForwardPE: 20.9, vcAiSharePct: 81, hyperscalerCapexBn: 740, gridDelayYears: 7, aiUnicorns: 308 },
     { date: '2026-05-06', heatScore: 88, heatLabel: 'Boiling', capeRatio: 39.27, sp500ForwardPE: 20.8, vcAiSharePct: 81, hyperscalerCapexBn: 765, gridDelayYears: 7, aiUnicorns: 308 },
     { date: '2026-05-07', heatScore: 89, heatLabel: 'Boiling', capeRatio: 41.2,  sp500ForwardPE: 21.0, vcAiSharePct: 81, hyperscalerCapexBn: 765, gridDelayYears: 7, aiUnicorns: 308 },
+    { date: '2026-05-08', heatScore: 90, heatLabel: 'Boiling', capeRatio: 41.8,  sp500ForwardPE: 20.9, vcAiSharePct: 81, hyperscalerCapexBn: 765, gridDelayYears: 7, aiUnicorns: 308 },
   ],
   topStories: [
-    { date: '2026-05-07', headline: 'OpenAI ends Azure cloud exclusivity, expands to AWS; launches \'The Deployment Company\' — $10B enterprise AI joint venture backed by TPG and Bain Capital embedding forward-deployed engineers at client firms', source: 'TechCrunch / SiliconAngle / The Information', type: 'Circular Financing', sentiment: 'extreme_bullish' },
-    { date: '2026-05-07', headline: 'Anthropic previews Claude Mythos (10-trillion-parameter model for cybersecurity and research); Google pledges up to $40B investment; Anthropic ARR surpasses $30B with potential $900B+ valuation', source: 'ChatFin AI / TheAITrack / SiliconAngle', type: 'Hype Cycle', sentiment: 'extreme_bullish' },
-    { date: '2026-05-07', headline: 'CAPE ratio surges to 41.2× — within 5.3% of the dot-com all-time peak (43.5×); S&P 500 forward P/E rises to 21.0×; heat score climbs to 89', source: 'Finanzapedia / LongTermTrends / StreetStats', type: 'Hype Cycle', sentiment: 'extreme_bullish' },
+    { date: '2026-05-08', headline: 'Anthropic raises $50B at $900B+ valuation — largest private AI funding event in history, surpassing OpenAI\'s $852B post-money valuation; ARR accelerating toward ~$40B; investors given 48-hour window; IPO planned for October 2026', source: 'Forbes / aibusinessreview.org / unite.ai / WinBuzzer', type: 'Circular Financing', sentiment: 'extreme_bullish' },
+    { date: '2026-05-08', headline: 'Amazon deepens Anthropic commitment: new $5B equity stake + up to $20B milestone-linked funding; Anthropic pledges $100B+ to AWS over a decade — mirroring and intensifying Google\'s $40B infrastructure pledge', source: 'CNBC / unite.ai / kersai.com', type: 'Circular Financing', sentiment: 'extreme_bullish' },
+    { date: '2026-05-08', headline: 'CAPE ratio climbs to 41.8× — now within 3.9% of the dot-com all-time peak (43.5×); Top-7 P/E expands to 30.4× (NVDA 40.5×, AAPL 33.5×); heat score rises to new record high of 90/100', source: 'marketcrash.net / multpl.com / financecharts.com', type: 'Hype Cycle', sentiment: 'extreme_bullish' },
     { date: '2026-05-04', headline: 'OpenAI and Anthropic simultaneously launch competing enterprise AI joint ventures backed by Wall Street (Blackstone/Goldman Sachs), raising billions to wire AI directly into institutional infrastructure', source: 'TechCrunch / Anthropic / OpenAI', type: 'Circular Financing', sentiment: 'extreme_bullish' },
     { date: '2026-05-05', headline: 'OpenAI releases GPT-5.5 with advanced agentic and coding capabilities; xAI launches Grok 4.3 API — AI lab model arms race continues to accelerate', source: 'OpenAI / xAI / The AI Track', type: 'Hype Cycle', sentiment: 'extreme_bullish' },
     { date: '2026-05-05', headline: 'Shiller CAPE ratio eases to 39.19× — still 90% of the way to the dot-com all-time peak of 43.5×; S&P 500 forward P/E settles at 20.9×', source: 'Multpl / FactSet', type: 'Hype Cycle', sentiment: 'extreme_bullish' },
@@ -658,9 +659,9 @@ const FALLBACK_DATA = {
     { date: '2025',       headline: 'Chief AI Officer postings surged 478% then collapsed as boards absorb role into CIO/CTO', source: 'Job Market Analysis / Forrester', type: 'Hype Cycle', sentiment: 'bearish_signal' },
   ],
   valuationTable: [
-    { metric: 'CAPE Ratio',          value1999Peak: 43.5, value2026: 41.2,  historicalAvg: 17.6 },
-    { metric: 'S&P 500 Forward P/E', value1999Peak: 25,   value2026: 21.0,  historicalAvg: 16   },
-    { metric: 'Top 7 Stocks P/E',    value1999Peak: 66,   value2026: 29.8,  historicalAvg: 20   },
+    { metric: 'CAPE Ratio',          value1999Peak: 43.5, value2026: 41.8,  historicalAvg: 17.6 },
+    { metric: 'S&P 500 Forward P/E', value1999Peak: 25,   value2026: 20.9,  historicalAvg: 16   },
+    { metric: 'Top 7 Stocks P/E',    value1999Peak: 66,   value2026: 30.4,  historicalAvg: 20   },
   ],
   energyTable: [
     { metric: 'DC Power Use (TWh)',    y2023: 460,       y2026: 945,        y2030: 1200         },
@@ -678,8 +679,8 @@ const INSIGHTS = [
     body: 'Allbirds (a wool-shoe company) rebranded as "NewBird AI" on April 15 2026 and surged 582% intraday. No AI product, no AI revenue — just two letters: A and I.' },
   { title: '⚡ The Hard Stop: Power Grid',
     body: 'A single large-scale AI data center can require 300 MW+. Grid connection now takes 5–10 years. Billions in GPUs are sitting idle waiting for power they may never get.' },
-  { title: '📉 CAPE at 41.1 — Approaching Dot-com Peak',
-    body: 'The CAPE ratio has reached 41.1× in May 2026 — just 2.4 points below the dot-com all-time peak of 43.5×. That 1999–2000 era correction resulted in a 78% drawdown in the Nasdaq.' },
+  { title: '📉 CAPE at 41.8 — Near Dot-com Peak',
+    body: 'The CAPE ratio has reached 41.8× in May 2026 — just 1.7 points below the dot-com all-time peak of 43.5×. That 1999–2000 era correction resulted in a 78% drawdown in the Nasdaq.' },
   { title: '🤖 AI Slop & Productivity Paradox',
     body: 'Studies show AI coding assistants made programming 19% slower due to time spent fixing AI-generated bugs. Up to 95% of enterprise Gen AI implementations have reportedly failed.' },
   { title: '💰 "Chief AI Officer" is Already Dead',
