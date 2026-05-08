@@ -1,34 +1,34 @@
 {
-  "lastUpdated": "2026-05-07",
-  "heatScore": 89,
+  "lastUpdated": "2026-05-08",
+  "heatScore": 90,
   "heatLabel": "Boiling",
-  "summary": "As of 7 May 2026, the AI bubble cauldron heats further to 89 — 'Boiling'. The Shiller CAPE surged to 41.2×, now within 5.3% of the dot-com all-time peak of 43.5×. The S&P 500 forward P/E rose back to 21.0×. OpenAI ended its Azure cloud exclusivity and partnered with AWS, while launching 'The Deployment Company' — a $10B enterprise AI venture backed by TPG and Bain Capital. Anthropic previewed Claude Mythos (10-trillion-parameter model); Google pledged up to $40B in investment and Anthropic's ARR surpassed $30B with a potential $900B+ valuation. Hyperscaler aggregate 2026 capex holds at ~$765B (+87% YoY). Enterprise GenAI failure rate persists at ~95% per MIT Project NANDA, with only 5% of pilots delivering measurable bottom-line impact.",
+  "summary": "As of 8 May 2026, the AI bubble cauldron reaches a new high of 90 — 'Boiling'. The Shiller CAPE climbed further to 41.8×, now within 3.9% of the dot-com all-time peak of 43.5×. Anthropic launched the largest private AI funding event in history: a $50B raise at a $900B+ valuation — surpassing OpenAI's $852B post-money valuation — with ARR accelerating toward ~$40B. Amazon deepened its Anthropic commitment ($5B equity + up to $20B milestone-linked); Anthropic pledged $100B+ to AWS infrastructure. The S&P 500 forward P/E eased slightly to 20.9×. Top 7 tech stock P/Es expanded to an average of 30.4×, led by NVDA at 40.5× and AAPL at 33.5×. Enterprise GenAI failure rate persists at ~95% per MIT Project NANDA, with only 5% of pilots delivering measurable bottom-line impact.",
   "kpis": {
     "capeRatio": {
-      "value": 41.2,
+      "value": 41.8,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — 41.2× as of 7 May 2026, surging from 39.27× on May 6; now within 5.3% of the dot-com all-time peak of 43.5×",
+      "description": "Cyclically adjusted P/E for US market — 41.8× as of 8 May 2026 (up from 41.2× on May 7); now within 3.9% of the dot-com all-time peak of 43.5×",
       "weight": 20,
-      "score": 18
+      "score": 19
     },
     "sp500ForwardPE": {
-      "value": 21.0,
+      "value": 20.9,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for S&P 500 — 21.0× as of 7 May 2026 (5-yr median 21.1×, 10-yr median 19.8×; source: FactSet / StreetStats)",
+      "description": "Forward price-to-earnings ratio for S&P 500 — 20.9× as of 8 May 2026 (5-yr median 19.9×, 10-yr median 18.9×; source: FactSet)",
       "weight": 10,
       "score": 8
     },
     "top7StocksPE": {
-      "value": 29.8,
+      "value": 30.4,
       "historicalAvg": 20,
       "unit": "x",
       "label": "Top 7 Stocks P/E",
-      "description": "Average TTM P/E of 6 Magnificent 7 tech stocks (NVDA 37×, AMZN 31×, AAPL 32.5×, GOOGL 29×, META 24.5×, MSFT 24.5×; Tesla at 300×+ excluded as structural outlier — inclusion would distort index mean)",
+      "description": "Average TTM P/E of 6 Magnificent 7 tech stocks (NVDA 40.5×, AAPL 33.5×, AMZN 32.5×, GOOGL 29.2×, MSFT 24.6×, META 22.2×; Tesla at 300×+ excluded as structural outlier — inclusion would distort index mean)",
       "weight": 10,
       "score": 9
     },
@@ -152,9 +152,41 @@
       "hyperscalerCapexBn": 765,
       "gridDelayYears": 7,
       "aiUnicorns": 308
+    },
+    {
+      "date": "2026-05-08",
+      "heatScore": 90,
+      "heatLabel": "Boiling",
+      "capeRatio": 41.8,
+      "sp500ForwardPE": 20.9,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 765,
+      "gridDelayYears": 7,
+      "aiUnicorns": 308
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-08",
+      "headline": "Anthropic raises $50B at $900B+ valuation — largest private AI funding event in history, surpassing OpenAI's $852B post-money valuation; ARR accelerating toward ~$40B; investors given 48-hour window; IPO planned for October 2026",
+      "source": "Forbes / aibusinessreview.org / unite.ai / WinBuzzer",
+      "type": "Circular Financing",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-08",
+      "headline": "Amazon deepens Anthropic commitment: new $5B equity stake + up to $20B milestone-linked funding; Anthropic pledges $100B+ to AWS over a decade — mirroring and intensifying Google's $40B infrastructure pledge",
+      "source": "CNBC / unite.ai / kersai.com",
+      "type": "Circular Financing",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-08",
+      "headline": "CAPE ratio climbs to 41.8× — now within 3.9% of the dot-com all-time peak (43.5×); Top-7 P/E expands to 30.4× (NVDA 40.5×, AAPL 33.5×); heat score rises to new record high of 90/100",
+      "source": "marketcrash.net / multpl.com / financecharts.com",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
     {
       "date": "2026-05-07",
       "headline": "OpenAI ends Azure cloud exclusivity, expands to AWS; launches 'The Deployment Company' — $10B enterprise AI joint venture backed by TPG and Bain Capital embedding forward-deployed engineers at client firms",
@@ -311,9 +343,9 @@
     }
   ],
   "valuationTable": [
-    { "metric": "CAPE Ratio",          "value1999Peak": 43.5, "value2026": 41.2,  "historicalAvg": 17.6 },
-    { "metric": "S&P 500 Forward P/E", "value1999Peak": 25,   "value2026": 21.0,  "historicalAvg": 16   },
-    { "metric": "Top 7 Stocks P/E",    "value1999Peak": 66,   "value2026": 29.8,  "historicalAvg": 20   }
+    { "metric": "CAPE Ratio",          "value1999Peak": 43.5, "value2026": 41.8,  "historicalAvg": 17.6 },
+    { "metric": "S&P 500 Forward P/E", "value1999Peak": 25,   "value2026": 20.9,  "historicalAvg": 16   },
+    { "metric": "Top 7 Stocks P/E",    "value1999Peak": 66,   "value2026": 30.4,  "historicalAvg": 20   }
   ],
   "energyTable": [
     { "metric": "DC Power Use (TWh)",    "y2023": 460,       "y2026": 945,       "y2030": 1200          },
