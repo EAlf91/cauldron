@@ -2,7 +2,7 @@
   "lastUpdated": "2026-05-09",
   "heatScore": 92,
   "heatLabel": "Boiling",
-  "summary": "As of 9 May 2026, the AI bubble cauldron remains 'Boiling' with heat score 92. Shiller CAPE rose to 42.05× (Multpl), narrowing the gap to the dot-com peak of 43.5× to roughly 3.3%. S&P 500 forward P/E rebounded to 21.5×, still above long-run averages. OpenAI annualized revenue remains around $25B while infrastructure commitments remain near $1.5T through 2031, and grid interconnection delays for large U.S. data centers still cluster around multi-year (4–7+ year) timelines.",
+  "summary": "As of 9 May 2026, the AI bubble cauldron remains 'Boiling' with heat score 92. Shiller CAPE rose to 42.05× (Multpl), narrowing the gap to the dot-com peak of 43.5× to roughly 3.4%. S&P 500 forward P/E rebounded to 21.5×, still above long-run averages. OpenAI annualized revenue remains around $25B while infrastructure commitments remain near $1.5T through 2031, and grid interconnection delays for large U.S. data centers still cluster around multi-year (4–7+ year) timelines.",
   "kpis": {
     "capeRatio": {
       "value": 42.05,
@@ -10,7 +10,7 @@
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — 42.05× as of 9 May 2026; now within ~3.3% of the dot-com all-time peak of 43.5× (Multpl)",
+      "description": "Cyclically adjusted P/E for US market — 42.05× as of 9 May 2026; now within ~3.4% of the dot-com all-time peak of 43.5× (Multpl)",
       "weight": 20,
       "score": 20
     },
