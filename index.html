@@ -496,14 +496,14 @@
 
     <!-- Right: quick KPI list -->
     <div class="info-panel">
-      <div class="info-row" id="infoRowCape"><span class="lbl">CAPE Ratio</span>       <span class="val" id="infoCapeRatio"></span></div>
-      <div class="info-row" id="infoRowSp500"><span class="lbl">S&amp;P 500 Fwd P/E</span><span class="val" id="infoSp500ForwardPE"></span></div>
-      <div class="info-row" id="infoRowVcAi"><span class="lbl">VC → AI Share</span>     <span class="val" id="infoVcAiShare"></span></div>
-      <div class="info-row" id="infoRowCapex"><span class="lbl">Hyperscaler Capex</span> <span class="val" id="infoHyperscalerCapex"></span></div>
-      <div class="info-row" id="infoRowOpenAi"><span class="lbl">OpenAI Revenue</span>    <span class="val" id="infoOpenAiRevenue"></span></div>
-      <div class="info-row" id="infoRowCommittedSpend"><span class="lbl">Committed Spend</span>   <span class="val" id="infoCommittedSpend"></span></div>
-      <div class="info-row" id="infoRowGrid"><span class="lbl">Grid Delay</span>        <span class="val" id="infoGridDelay"></span></div>
-      <div class="info-row" id="infoRowUnicorns"><span class="lbl">AI Unicorns</span>       <span class="val" id="infoAiUnicorns"></span></div>
+      <div class="info-row" id="infoRowCape" data-tooltip="Cyclically adjusted P/E valuation indicator for the US market."><span class="lbl">CAPE Ratio</span>       <span class="val" id="infoCapeRatio"></span></div>
+      <div class="info-row" id="infoRowSp500" data-tooltip="Forward price-to-earnings ratio for the S&P 500."><span class="lbl">S&amp;P 500 Fwd P/E</span><span class="val" id="infoSp500ForwardPE"></span></div>
+      <div class="info-row" id="infoRowVcAi" data-tooltip="Share of global venture capital currently concentrated in AI."><span class="lbl">VC → AI Share</span>     <span class="val" id="infoVcAiShare"></span></div>
+      <div class="info-row" id="infoRowCapex" data-tooltip="Aggregate hyperscaler capex for AI and cloud infrastructure."><span class="lbl">Hyperscaler Capex</span> <span class="val" id="infoHyperscalerCapex"></span></div>
+      <div class="info-row" id="infoRowOpenAi" data-tooltip="OpenAI annualized revenue run rate."><span class="lbl">OpenAI Revenue</span>    <span class="val" id="infoOpenAiRevenue"></span></div>
+      <div class="info-row" id="infoRowCommittedSpend" data-tooltip="Total committed AI infrastructure spend through the forecast horizon."><span class="lbl">Committed Spend</span>   <span class="val" id="infoCommittedSpend"></span></div>
+      <div class="info-row" id="infoRowGrid" data-tooltip="Average delay for grid connection of large data center projects."><span class="lbl">Grid Delay</span>        <span class="val" id="infoGridDelay"></span></div>
+      <div class="info-row" id="infoRowUnicorns" data-tooltip="Count of AI-focused unicorns formed since 2024."><span class="lbl">AI Unicorns</span>       <span class="val" id="infoAiUnicorns"></span></div>
     </div>
 
   </section>
@@ -745,7 +745,8 @@ function renderTopKpis(data) {
   const gridDelay = getGridDelayFromEnergy(data);
   const newBird = data.kpis?.narrativeSurgeNewbird?.value;
   const tickerSegment = `<span>🌡 HEAT: ${data.heatScore}/100</span> · CAPE Ratio <span>${cape}×</span> · VC→AI <span>${vc}%</span> · Hyperscaler Capex <span>${formatBigMoneyFromBn(capexBn)}</span> · NewBird AI <span>+${newBird}% ↑</span> · Grid Delay <span>${gridDelay.y2026}</span> · AI Unicorns <span>${unicorns}</span> · OpenAI Revenue <span>${formatBigMoneyFromBn(openAiBn)}</span> vs Committed Spend <span>${formatBigMoneyFromBn(committedSpendBn)}</span> ·`;
-  document.getElementById('marketTicker').innerHTML = `${tickerSegment} ${tickerSegment}`;
+  const TICKER_REPEAT_COUNT = 2;
+  document.getElementById('marketTicker').innerHTML = Array(TICKER_REPEAT_COUNT).fill(tickerSegment).join(' ');
 
   document.getElementById('infoCapeRatio').innerHTML = `${cape}× <small style="color:var(--muted)">(avg ${capeAvg}×)</small>`;
   document.getElementById('infoSp500ForwardPE').innerHTML = `${sp}× <small style="color:var(--muted)">(avg ${data.kpis?.sp500ForwardPE?.historicalAvg}×)</small>`;
