@@ -1,25 +1,25 @@
 {
-  "lastUpdated": "2026-05-09",
+  "lastUpdated": "2026-05-10",
   "heatScore": 92,
   "heatLabel": "Boiling",
-  "summary": "As of 9 May 2026, the AI bubble cauldron remains 'Boiling' with heat score 92. Shiller CAPE rose to 42.05× (Multpl), narrowing the gap to the dot-com peak of 43.5× to roughly 3.4%. S&P 500 forward P/E rebounded to 21.5×, still above long-run averages. OpenAI annualized revenue remains around $25B while infrastructure commitments remain near $1.5T through 2031, and grid interconnection delays for large U.S. data centers still cluster around multi-year (4–7+ year) timelines.",
+  "summary": "As of 10 May 2026, the AI bubble cauldron remains 'Boiling' with heat score 92. Shiller CAPE eased slightly to 41.9× (Finanzapedia / Multpl), still within ~3.7% of the dot-com all-time peak of 43.5×. S&P 500 forward P/E held near 21.3×, above long-run averages. Anthropic's landmark $200B five-year Google Cloud commitment — covering TPU chips and infrastructure — is the largest cloud deal ever signed by an AI startup, deepening the recursive financing loop. Governments now require frontier AI model developers to submit models for regulatory compliance testing before public release, marking AI's transition to critical-infrastructure status. U.S. courts began treating AI chat logs as legally discoverable business records. OpenAI annualized revenue remains around $25B while committed infrastructure spend stands near $1.5T through 2031.",
   "kpis": {
     "capeRatio": {
-      "value": 42.05,
+      "value": 41.9,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — 42.05× as of 9 May 2026; now within ~3.4% of the dot-com all-time peak of 43.5× (Multpl)",
+      "description": "Cyclically adjusted P/E for US market — 41.9× as of 10 May 2026; now within ~3.7% of the dot-com all-time peak of 43.5× (Multpl / Finanzapedia)",
       "weight": 20,
       "score": 20
     },
     "sp500ForwardPE": {
-      "value": 21.5,
+      "value": 21.3,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for S&P 500 — 21.5× in latest 2026 readings, above 5-yr and 10-yr medians",
+      "description": "Forward price-to-earnings ratio for S&P 500 — 21.3× as of 10 May 2026, above 5-yr and 10-yr medians",
       "weight": 10,
       "score": 9
     },
@@ -174,9 +174,41 @@
       "hyperscalerCapexBn": 765,
       "gridDelayYears": 7,
       "aiUnicorns": 308
+    },
+    {
+      "date": "2026-05-10",
+      "heatScore": 92,
+      "heatLabel": "Boiling",
+      "capeRatio": 41.9,
+      "sp500ForwardPE": 21.3,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 765,
+      "gridDelayYears": 7,
+      "aiUnicorns": 308
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-10",
+      "headline": "US and EU regulators mandate pre-release compliance testing for frontier AI models — OpenAI, Google, Anthropic, Microsoft and xAI must submit models before launch; AI now classified as critical infrastructure",
+      "source": "imfounder.com / kersai.com / AI Policy Desk",
+      "type": "Regulatory",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-05-10",
+      "headline": "US courts rule AI chat logs legally discoverable — confidential ChatGPT, Claude and Gemini conversations can now be subpoenaed as business records, opening new legal and compliance risks for enterprises using AI",
+      "source": "AI News May 2026 Digest / toolscompare.ai",
+      "type": "Regulatory",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-05-06",
+      "headline": "Anthropic commits $200B to Google Cloud over 5 years for TPU chips and compute — largest AI startup cloud deal ever; Alphabet's $40B equity stake further deepens the circular financing loop",
+      "source": "The Information / Yahoo Finance / Engadget / edgen.tech",
+      "type": "Circular Financing",
+      "sentiment": "extreme_bullish"
+    },
     {
       "date": "2026-05-09",
       "headline": "Shiller CAPE reaches 42.05× while S&P 500 forward P/E rebounds to 21.5× — valuation heat remains near dot-com extremes",
@@ -361,8 +393,8 @@
     }
   ],
   "valuationTable": [
-    { "metric": "CAPE Ratio",          "value1999Peak": 43.5, "value2026": 42.05, "historicalAvg": 17.6 },
-    { "metric": "S&P 500 Forward P/E", "value1999Peak": 25,   "value2026": 21.5,  "historicalAvg": 16   },
+    { "metric": "CAPE Ratio",          "value1999Peak": 43.5, "value2026": 41.9,  "historicalAvg": 17.6 },
+    { "metric": "S&P 500 Forward P/E", "value1999Peak": 25,   "value2026": 21.3,  "historicalAvg": 16   },
     { "metric": "Top 7 Stocks P/E",    "value1999Peak": 66,   "value2026": 31.2,  "historicalAvg": 20   }
   ],
   "energyTable": [
