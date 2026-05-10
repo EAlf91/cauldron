@@ -417,15 +417,7 @@
 
 <!-- ── Ticker ── -->
 <div class="ticker-wrap" aria-label="Market ticker">
-  <div class="ticker">
-    <span>🌡 HEAT: 85/100</span> ·
-    CAPE Ratio <span>40×</span> · VC→AI <span>80%</span> ·
-    Hyperscaler Capex <span>$600B</span> · NewBird AI <span>+582% ↑</span> ·
-    Grid Delay <span>5–7 yrs</span> · AI Unicorns <span>207</span> ·
-    OpenAI Revenue <span>$13B</span> vs Committed Spend <span>$1.5T</span> ·
-    <span>🌡 HEAT: 85/100</span> ·
-    CAPE Ratio <span>40×</span> · VC→AI <span>80%</span>
-  </div>
+  <div class="ticker" id="marketTicker"></div>
 </div>
 
 <!-- ── Header ── -->
@@ -504,14 +496,14 @@
 
     <!-- Right: quick KPI list -->
     <div class="info-panel">
-      <div class="info-row" data-tooltip="Cyclically Adjusted P/E: measures stock market valuation using 10-year average earnings. Historical average 17.6×; dot-com peak was 43.5×. At 39.3× this is the second-highest level ever recorded."><span class="lbl">CAPE Ratio</span>       <span class="val">39.3× <small style="color:var(--muted)">(avg 17.6×)</small></span></div>
-      <div class="info-row" data-tooltip="Forward Price-to-Earnings ratio for the S&P 500 index based on next-12-month expected earnings. Long-term historical average ~16×; recent 5-yr median 21.1×, 10-yr median 19.8×. Currently at the top of its historical range."><span class="lbl">S&amp;P 500 Fwd P/E</span><span class="val">21× <small style="color:var(--muted)">(avg 16×)</small></span></div>
-      <div class="info-row" data-tooltip="Share of global Venture Capital investment that flowed into AI companies in Q1 2026. $242B of $297B total — the highest concentration in a single sector ever recorded."><span class="lbl">VC → AI Share</span>     <span class="val">81% ($242B)</span></div>
-      <div class="info-row" data-tooltip="Total confirmed 2026 capital expenditure on AI/cloud infrastructure by the five largest hyperscalers: Amazon $200B, Google $185B, Microsoft $130B, Meta $130B, Oracle $55B. The largest capex cycle in tech history."><span class="lbl">Hyperscaler Capex</span> <span class="val">$700B (+40% YoY)</span></div>
-      <div class="info-row" data-tooltip="OpenAI's current annualised revenue run rate as of Feb 2026 — doubled from $13B in 2025. Compare to $1.5T in committed industry-wide AI infrastructure spend through 2031."><span class="lbl">OpenAI Revenue</span>    <span class="val">$25B / yr</span></div>
-      <div class="info-row" data-tooltip="Total capital committed by hyperscalers and cloud providers to AI infrastructure through 2031. Much of this may be recycled spend inside a closed NVIDIA → OpenAI → NVIDIA loop."><span class="lbl">Committed Spend</span>   <span class="val">$1.5T thru 2031</span></div>
-      <div class="info-row" data-tooltip="Average time for a new large-scale data center to receive a grid power connection. Rose from 1–2 years in 2023 to 5–10 years in 2026. ~50% of planned 2026 US data center capacity is at risk."><span class="lbl">Grid Delay</span>        <span class="val">5–10 yrs <small style="color:var(--muted)">(was 1–2)</small></span></div>
-      <div class="info-row" data-tooltip="Number of AI-focused companies globally that have reached a $1B+ valuation since 2024. Represents ~50% of all new unicorn formation — an unprecedented concentration in one sector."><span class="lbl">AI Unicorns</span>       <span class="val">308 since 2024</span></div>
+      <div class="info-row" id="infoRowCape"><span class="lbl">CAPE Ratio</span>       <span class="val" id="infoCapeRatio"></span></div>
+      <div class="info-row" id="infoRowSp500"><span class="lbl">S&amp;P 500 Fwd P/E</span><span class="val" id="infoSp500ForwardPE"></span></div>
+      <div class="info-row" id="infoRowVcAi"><span class="lbl">VC → AI Share</span>     <span class="val" id="infoVcAiShare"></span></div>
+      <div class="info-row" id="infoRowCapex"><span class="lbl">Hyperscaler Capex</span> <span class="val" id="infoHyperscalerCapex"></span></div>
+      <div class="info-row" id="infoRowOpenAi"><span class="lbl">OpenAI Revenue</span>    <span class="val" id="infoOpenAiRevenue"></span></div>
+      <div class="info-row"><span class="lbl">Committed Spend</span>   <span class="val" id="infoCommittedSpend"></span></div>
+      <div class="info-row" id="infoRowGrid"><span class="lbl">Grid Delay</span>        <span class="val" id="infoGridDelay"></span></div>
+      <div class="info-row" id="infoRowUnicorns"><span class="lbl">AI Unicorns</span>       <span class="val" id="infoAiUnicorns"></span></div>
     </div>
 
   </section>
@@ -623,9 +615,9 @@ const FALLBACK_DATA = {
     capeRatio:          { label: 'CAPE Ratio',         value: 41.9, unit: '×',       description: 'Cyclically adjusted P/E — 41.9× as of 10 May 2026, now within ~3.7% of the dot-com all-time peak of 43.5×' },
     sp500ForwardPE:     { label: 'S&P 500 Fwd P/E',    value: 21.3, unit: '×',       description: 'Forward P/E for S&P 500 — 21.3× as of 10 May 2026, above 5-yr and 10-yr medians' },
     top7StocksPE:       { label: 'Top-7 Stocks P/E',   value: 31.2, unit: '×',       description: 'Average TTM P/E of large-cap AI-linked leaders remains elevated around low-30s to high-30s in 2026 snapshots; tracked at 31.2× for daily heat monitoring' },
-    vcAiConcentration:  { label: 'VC → AI Share',      value: 81,   unit: '%',       description: '$242B of $297B global Q1-2026 VC flowed into AI — record high' },
-    hyperscalerCapexBn: { label: 'Hyperscaler Capex',  value: 765,  unit: 'B USD',   description: 'Revised 2026 capex after Microsoft raised guidance to ~$190B (Amazon $200B, Google $185B, Microsoft ~$190B, Meta ~$135B, Oracle $55B) — up ~87% YoY vs 2025\'s $410B' },
-    openAiRevenueBn:    { label: 'OpenAI Revenue',     value: 25,   unit: 'B/yr',    description: '$25B annual revenue run rate (doubled from $13B in 2025) vs $1.5T committed spend through 2031' },
+    vcAiConcentration:  { label: 'VC → AI Share',      value: 81,   unit: '%',       aiVcBn: 242, totalVcBn: 297, description: '$242B of $297B global Q1-2026 VC flowed into AI — record high' },
+    hyperscalerCapexBn: { label: 'Hyperscaler Capex',  value: 765,  unit: 'B USD',   yoyGrowth: 87, description: 'Revised 2026 capex after Microsoft raised guidance to ~$190B (Amazon $200B, Google $185B, Microsoft ~$190B, Meta ~$135B, Oracle $55B) — up ~87% YoY vs 2025\'s $410B' },
+    openAiRevenueBn:    { label: 'OpenAI Revenue',     value: 25,   unit: 'B/yr',    committedSpendBn: 1500, committedThrough: 2031, description: '$25B annual revenue run rate (doubled from $13B in 2025) vs $1.5T committed spend through 2031' },
     gridConnectionDelay:{ label: 'Grid Delay',         value: 7,    unit: 'years',   description: 'Time to connect a data center (range 5–10 yrs); ~50% of 2026 US capacity at risk' },
     aiUnicornsSince2024:{ label: 'New AI Unicorns',    value: 308,  unit: 'co.',     description: 'AI-focused companies with $1B+ valuation globally as of early 2026 — ~50% of all new unicorn formation' },
     narrativeSurgeNewbird:{ label: 'NewBird AI Surge', value: 582,  unit: '%',       description: 'Allbirds rebranded as NewBird AI, surged 582% intraday on zero AI revenue' },
@@ -722,6 +714,61 @@ function typeBadge(type) {
     'Productivity Counter-Evidence': 'badge-green',
   };
   return `<span class="badge ${map[type] || 'badge-purple'}">${type}</span>`;
+}
+
+function formatBigMoneyFromBn(valueBn) {
+  if (typeof valueBn !== 'number') return '';
+  if (valueBn >= 1000) return `$${(valueBn / 1000).toFixed(1)}T`;
+  return `$${Math.round(valueBn)}B`;
+}
+
+function getGridDelayFromEnergy(data) {
+  const row = data.energyTable?.find(r => r.metric === 'Grid Connection Delay');
+  return {
+    y2026: row?.y2026 || '5–10 yrs',
+    y2023: row?.y2023 || '1–2 yrs',
+  };
+}
+
+function renderTopKpis(data) {
+  const cape = data.kpis?.capeRatio?.value;
+  const capeAvg = data.kpis?.capeRatio?.historicalAvg;
+  const sp = data.kpis?.sp500ForwardPE?.value;
+  const vc = data.kpis?.vcAiConcentration?.value;
+  const vcBn = data.kpis?.vcAiConcentration?.aiVcBn ?? 242;
+  const capexBn = data.kpis?.hyperscalerCapexBn?.value;
+  const capexYoy = data.kpis?.hyperscalerCapexBn?.yoyGrowth ?? 0;
+  const openAiBn = data.kpis?.openAiRevenueBn?.value;
+  const committedSpendBn = data.kpis?.openAiRevenueBn?.committedSpendBn ?? 1500;
+  const committedThrough = data.kpis?.openAiRevenueBn?.committedThrough ?? 2031;
+  const unicorns = data.kpis?.aiUnicornsSince2024?.value;
+  const gridDelay = getGridDelayFromEnergy(data);
+  const newBird = data.kpis?.narrativeSurgeNewbird?.value;
+  const tickerSegment = `<span>🌡 HEAT: ${data.heatScore}/100</span> · CAPE Ratio <span>${cape}×</span> · VC→AI <span>${vc}%</span> · Hyperscaler Capex <span>${formatBigMoneyFromBn(capexBn)}</span> · NewBird AI <span>+${newBird}% ↑</span> · Grid Delay <span>${gridDelay.y2026}</span> · AI Unicorns <span>${unicorns}</span> · OpenAI Revenue <span>${formatBigMoneyFromBn(openAiBn)}</span> vs Committed Spend <span>${formatBigMoneyFromBn(committedSpendBn)}</span> ·`;
+  document.getElementById('marketTicker').innerHTML = `${tickerSegment} ${tickerSegment}`;
+
+  document.getElementById('infoCapeRatio').innerHTML = `${cape}× <small style="color:var(--muted)">(avg ${capeAvg}×)</small>`;
+  document.getElementById('infoSp500ForwardPE').innerHTML = `${sp}× <small style="color:var(--muted)">(avg ${data.kpis?.sp500ForwardPE?.historicalAvg}×)</small>`;
+  document.getElementById('infoVcAiShare').textContent = `${vc}% ($${vcBn}B)`;
+  document.getElementById('infoHyperscalerCapex').textContent = `${formatBigMoneyFromBn(capexBn)} (+${capexYoy}% YoY)`;
+  document.getElementById('infoOpenAiRevenue').textContent = `${formatBigMoneyFromBn(openAiBn)} / yr`;
+  document.getElementById('infoCommittedSpend').textContent = `${formatBigMoneyFromBn(committedSpendBn)} thru ${committedThrough}`;
+  document.getElementById('infoGridDelay').innerHTML = `${gridDelay.y2026} <small style="color:var(--muted)">(was ${gridDelay.y2023})</small>`;
+  document.getElementById('infoAiUnicorns').textContent = `${unicorns} since 2024`;
+
+  const tooltipMap = [
+    ['infoRowCape', data.kpis?.capeRatio?.description],
+    ['infoRowSp500', data.kpis?.sp500ForwardPE?.description],
+    ['infoRowVcAi', data.kpis?.vcAiConcentration?.description],
+    ['infoRowCapex', data.kpis?.hyperscalerCapexBn?.description],
+    ['infoRowOpenAi', data.kpis?.openAiRevenueBn?.description],
+    ['infoRowGrid', data.kpis?.gridConnectionDelay?.description],
+    ['infoRowUnicorns', data.kpis?.aiUnicornsSince2024?.description],
+  ];
+  tooltipMap.forEach(([id, text]) => {
+    if (!text) return;
+    document.getElementById(id).setAttribute('data-tooltip', text);
+  });
 }
 
 // ─── Cauldron animation ───────────────────────────────────────────────
@@ -938,6 +985,7 @@ document.getElementById('cauldronBtn').addEventListener('click', () => {
   document.getElementById('gaugeBar').style.width = `${data.heatScore}%`;
   document.getElementById('lastUpdated').textContent = data.lastUpdated || new Date().toISOString().slice(0,10);
 
+  renderTopKpis(data);
   buildCauldronAnimation(heat);
   renderKpiCards(data);
   renderHistory(data);
