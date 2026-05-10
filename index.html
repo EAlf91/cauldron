@@ -724,9 +724,10 @@ function formatBigMoneyFromBn(valueBn) {
 
 function getGridDelayFromEnergy(data) {
   const row = data.energyTable?.find(r => r.metric === 'Grid Connection Delay');
+  const fallbackRow = FALLBACK_DATA.energyTable.find(r => r.metric === 'Grid Connection Delay') || {};
   return {
-    y2026: row?.y2026 || '5–10 yrs',
-    y2023: row?.y2023 || '1–2 yrs',
+    y2026: row?.y2026 || fallbackRow.y2026 || '',
+    y2023: row?.y2023 || fallbackRow.y2023 || '',
   };
 }
 
@@ -745,6 +746,7 @@ function renderTopKpis(data) {
   const gridDelay = getGridDelayFromEnergy(data);
   const newBird = data.kpis?.narrativeSurgeNewbird?.value;
   const tickerSegment = `<span>🌡 HEAT: ${data.heatScore}/100</span> · CAPE Ratio <span>${cape}×</span> · VC→AI <span>${vc}%</span> · Hyperscaler Capex <span>${formatBigMoneyFromBn(capexBn)}</span> · NewBird AI <span>+${newBird}% ↑</span> · Grid Delay <span>${gridDelay.y2026}</span> · AI Unicorns <span>${unicorns}</span> · OpenAI Revenue <span>${formatBigMoneyFromBn(openAiBn)}</span> vs Committed Spend <span>${formatBigMoneyFromBn(committedSpendBn)}</span> ·`;
+  // Repeat content for seamless marquee loop.
   const TICKER_REPEAT_COUNT = 2;
   document.getElementById('marketTicker').innerHTML = Array(TICKER_REPEAT_COUNT).fill(tickerSegment).join(' ');
 
@@ -763,6 +765,7 @@ function renderTopKpis(data) {
     ['infoRowVcAi', data.kpis?.vcAiConcentration?.description],
     ['infoRowCapex', data.kpis?.hyperscalerCapexBn?.description],
     ['infoRowOpenAi', data.kpis?.openAiRevenueBn?.description],
+    ['infoRowCommittedSpend', 'Total capital committed by hyperscalers and cloud providers to AI infrastructure through the current forecast horizon.'],
     ['infoRowGrid', data.kpis?.gridConnectionDelay?.description],
     ['infoRowUnicorns', data.kpis?.aiUnicornsSince2024?.description],
   ];
