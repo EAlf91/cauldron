@@ -418,6 +418,9 @@
 <!-- ── Ticker ── -->
 <div class="ticker-wrap" aria-label="Market ticker">
   <div class="ticker" id="marketTicker"></div>
+  <noscript>
+    <div class="ticker"><span>🌡 HEAT: 92/100</span> · CAPE Ratio <span>41.9×</span> · VC→AI <span>81%</span> · Hyperscaler Capex <span>$765B</span> · OpenAI Revenue <span>$25B</span> ·</div>
+  </noscript>
 </div>
 
 <!-- ── Header ── -->
@@ -612,8 +615,8 @@ const FALLBACK_DATA = {
   heatScore: 92,
   heatLabel: 'Boiling',
   kpis: {
-    capeRatio:          { label: 'CAPE Ratio',         value: 41.9, unit: '×',       description: 'Cyclically adjusted P/E — 41.9× as of 10 May 2026, now within ~3.7% of the dot-com all-time peak of 43.5×' },
-    sp500ForwardPE:     { label: 'S&P 500 Fwd P/E',    value: 21.3, unit: '×',       description: 'Forward P/E for S&P 500 — 21.3× as of 10 May 2026, above 5-yr and 10-yr medians' },
+    capeRatio:          { label: 'CAPE Ratio',         value: 41.9, historicalAvg: 17.6, unit: '×',       description: 'Cyclically adjusted P/E — 41.9× as of 10 May 2026, now within ~3.7% of the dot-com all-time peak of 43.5×' },
+    sp500ForwardPE:     { label: 'S&P 500 Fwd P/E',    value: 21.3, historicalAvg: 16, unit: '×',       description: 'Forward P/E for S&P 500 — 21.3× as of 10 May 2026, above 5-yr and 10-yr medians' },
     top7StocksPE:       { label: 'Top-7 Stocks P/E',   value: 31.2, unit: '×',       description: 'Average TTM P/E of large-cap AI-linked leaders remains elevated around low-30s to high-30s in 2026 snapshots; tracked at 31.2× for daily heat monitoring' },
     vcAiConcentration:  { label: 'VC → AI Share',      value: 81,   unit: '%',       aiVcBn: 242, totalVcBn: 297, description: '$242B of $297B global Q1-2026 VC flowed into AI — record high' },
     hyperscalerCapexBn: { label: 'Hyperscaler Capex',  value: 765,  unit: 'B USD',   yoyGrowth: 87, description: 'Revised 2026 capex after Microsoft raised guidance to ~$190B (Amazon $200B, Google $185B, Microsoft ~$190B, Meta ~$135B, Oracle $55B) — up ~87% YoY vs 2025\'s $410B' },
@@ -684,6 +687,7 @@ const INSIGHTS = [
   { title: '💰 "Chief AI Officer" is Already Dead',
     body: 'CAIO job postings surged 478% in 2024 then collapsed. Boards realised AI is a company-wide capability, not a siloed C-suite role — a classic hype-cycle signal.' },
 ];
+const TICKER_LOOP_REPETITIONS = 2;
 
 // ─── DOM helpers ─────────────────────────────────────────────────────
 function heatClass(score) {
@@ -732,23 +736,22 @@ function getGridDelayFromEnergy(data) {
 }
 
 function renderTopKpis(data) {
-  const cape = data.kpis?.capeRatio?.value;
-  const capeAvg = data.kpis?.capeRatio?.historicalAvg;
-  const sp = data.kpis?.sp500ForwardPE?.value;
-  const vc = data.kpis?.vcAiConcentration?.value;
+  const cape = data.kpis?.capeRatio?.value ?? FALLBACK_DATA.kpis.capeRatio.value;
+  const capeAvg = data.kpis?.capeRatio?.historicalAvg ?? FALLBACK_DATA.kpis.capeRatio.historicalAvg;
+  const sp = data.kpis?.sp500ForwardPE?.value ?? FALLBACK_DATA.kpis.sp500ForwardPE.value;
+  const vc = data.kpis?.vcAiConcentration?.value ?? FALLBACK_DATA.kpis.vcAiConcentration.value;
   const vcBn = data.kpis?.vcAiConcentration?.aiVcBn ?? FALLBACK_DATA.kpis.vcAiConcentration.aiVcBn;
-  const capexBn = data.kpis?.hyperscalerCapexBn?.value;
+  const capexBn = data.kpis?.hyperscalerCapexBn?.value ?? FALLBACK_DATA.kpis.hyperscalerCapexBn.value;
   const capexYoy = data.kpis?.hyperscalerCapexBn?.yoyGrowth ?? FALLBACK_DATA.kpis.hyperscalerCapexBn.yoyGrowth;
-  const openAiBn = data.kpis?.openAiRevenueBn?.value;
+  const openAiBn = data.kpis?.openAiRevenueBn?.value ?? FALLBACK_DATA.kpis.openAiRevenueBn.value;
   const committedSpendBn = data.kpis?.openAiRevenueBn?.committedSpendBn ?? FALLBACK_DATA.kpis.openAiRevenueBn.committedSpendBn;
   const committedThrough = data.kpis?.openAiRevenueBn?.committedThrough ?? FALLBACK_DATA.kpis.openAiRevenueBn.committedThrough;
-  const unicorns = data.kpis?.aiUnicornsSince2024?.value;
+  const unicorns = data.kpis?.aiUnicornsSince2024?.value ?? FALLBACK_DATA.kpis.aiUnicornsSince2024.value;
   const gridDelay = getGridDelayFromEnergy(data);
-  const newBird = data.kpis?.narrativeSurgeNewbird?.value;
+  const newBird = data.kpis?.narrativeSurgeNewbird?.value ?? FALLBACK_DATA.kpis.narrativeSurgeNewbird.value;
   const tickerSegment = `<span>🌡 HEAT: ${data.heatScore}/100</span> · CAPE Ratio <span>${cape}×</span> · VC→AI <span>${vc}%</span> · Hyperscaler Capex <span>${formatBigMoneyFromBn(capexBn)}</span> · NewBird AI <span>+${newBird}% ↑</span> · Grid Delay <span>${gridDelay.y2026}</span> · AI Unicorns <span>${unicorns}</span> · OpenAI Revenue <span>${formatBigMoneyFromBn(openAiBn)}</span> vs Committed Spend <span>${formatBigMoneyFromBn(committedSpendBn)}</span> ·`;
   // Repeat content for seamless marquee loop.
-  const tickerLoopRepetitions = 2;
-  document.getElementById('marketTicker').innerHTML = Array(tickerLoopRepetitions).fill(tickerSegment).join(' ');
+  document.getElementById('marketTicker').innerHTML = Array(TICKER_LOOP_REPETITIONS).fill(tickerSegment).join(' ');
 
   document.getElementById('infoCapeRatio').innerHTML = `${cape}× <small style="color:var(--muted)">(avg ${capeAvg}×)</small>`;
   document.getElementById('infoSp500ForwardPE').innerHTML = `${sp}× <small style="color:var(--muted)">(avg ${data.kpis?.sp500ForwardPE?.historicalAvg}×)</small>`;
@@ -771,8 +774,9 @@ function renderTopKpis(data) {
     ['infoRowUnicorns', data.kpis?.aiUnicornsSince2024?.description],
   ];
   tooltipMap.forEach(([id, text]) => {
-    if (!text) return;
-    document.getElementById(id).setAttribute('data-tooltip', text);
+    const el = document.getElementById(id);
+    if (!el || !text) return;
+    el.setAttribute('data-tooltip', text);
   });
 }
 
