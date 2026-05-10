@@ -501,7 +501,7 @@
       <div class="info-row" id="infoRowVcAi"><span class="lbl">VC → AI Share</span>     <span class="val" id="infoVcAiShare"></span></div>
       <div class="info-row" id="infoRowCapex"><span class="lbl">Hyperscaler Capex</span> <span class="val" id="infoHyperscalerCapex"></span></div>
       <div class="info-row" id="infoRowOpenAi"><span class="lbl">OpenAI Revenue</span>    <span class="val" id="infoOpenAiRevenue"></span></div>
-      <div class="info-row"><span class="lbl">Committed Spend</span>   <span class="val" id="infoCommittedSpend"></span></div>
+      <div class="info-row" id="infoRowCommittedSpend"><span class="lbl">Committed Spend</span>   <span class="val" id="infoCommittedSpend"></span></div>
       <div class="info-row" id="infoRowGrid"><span class="lbl">Grid Delay</span>        <span class="val" id="infoGridDelay"></span></div>
       <div class="info-row" id="infoRowUnicorns"><span class="lbl">AI Unicorns</span>       <span class="val" id="infoAiUnicorns"></span></div>
     </div>
@@ -735,12 +735,12 @@ function renderTopKpis(data) {
   const capeAvg = data.kpis?.capeRatio?.historicalAvg;
   const sp = data.kpis?.sp500ForwardPE?.value;
   const vc = data.kpis?.vcAiConcentration?.value;
-  const vcBn = data.kpis?.vcAiConcentration?.aiVcBn ?? 242;
+  const vcBn = data.kpis?.vcAiConcentration?.aiVcBn ?? FALLBACK_DATA.kpis.vcAiConcentration.aiVcBn;
   const capexBn = data.kpis?.hyperscalerCapexBn?.value;
-  const capexYoy = data.kpis?.hyperscalerCapexBn?.yoyGrowth ?? 0;
+  const capexYoy = data.kpis?.hyperscalerCapexBn?.yoyGrowth ?? FALLBACK_DATA.kpis.hyperscalerCapexBn.yoyGrowth;
   const openAiBn = data.kpis?.openAiRevenueBn?.value;
-  const committedSpendBn = data.kpis?.openAiRevenueBn?.committedSpendBn ?? 1500;
-  const committedThrough = data.kpis?.openAiRevenueBn?.committedThrough ?? 2031;
+  const committedSpendBn = data.kpis?.openAiRevenueBn?.committedSpendBn ?? FALLBACK_DATA.kpis.openAiRevenueBn.committedSpendBn;
+  const committedThrough = data.kpis?.openAiRevenueBn?.committedThrough ?? FALLBACK_DATA.kpis.openAiRevenueBn.committedThrough;
   const unicorns = data.kpis?.aiUnicornsSince2024?.value;
   const gridDelay = getGridDelayFromEnergy(data);
   const newBird = data.kpis?.narrativeSurgeNewbird?.value;

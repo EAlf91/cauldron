@@ -11,7 +11,7 @@ Use this prompt for daily cauldron updates:
 3. update index.html and add new score to heat score over time
 
 # General Guidelines
-- follow RPI (research, plan implement) process always
+- follow RPI (research, plan, implement) process always
 - ensure that values are consistent across all places:
   - ticker values
   - hero right-side KPI list
