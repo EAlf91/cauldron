@@ -717,7 +717,7 @@ function typeBadge(type) {
 }
 
 function formatBigMoneyFromBn(valueBn) {
-  if (typeof valueBn !== 'number') return '';
+  if (typeof valueBn !== 'number') return '—';
   if (valueBn >= 1000) return `$${(valueBn / 1000).toFixed(1)}T`;
   return `$${Math.round(valueBn)}B`;
 }
@@ -747,8 +747,8 @@ function renderTopKpis(data) {
   const newBird = data.kpis?.narrativeSurgeNewbird?.value;
   const tickerSegment = `<span>🌡 HEAT: ${data.heatScore}/100</span> · CAPE Ratio <span>${cape}×</span> · VC→AI <span>${vc}%</span> · Hyperscaler Capex <span>${formatBigMoneyFromBn(capexBn)}</span> · NewBird AI <span>+${newBird}% ↑</span> · Grid Delay <span>${gridDelay.y2026}</span> · AI Unicorns <span>${unicorns}</span> · OpenAI Revenue <span>${formatBigMoneyFromBn(openAiBn)}</span> vs Committed Spend <span>${formatBigMoneyFromBn(committedSpendBn)}</span> ·`;
   // Repeat content for seamless marquee loop.
-  const TICKER_LOOP_REPETITIONS = 2;
-  document.getElementById('marketTicker').innerHTML = Array(TICKER_LOOP_REPETITIONS).fill(tickerSegment).join(' ');
+  const tickerLoopRepetitions = 2;
+  document.getElementById('marketTicker').innerHTML = Array(tickerLoopRepetitions).fill(tickerSegment).join(' ');
 
   document.getElementById('infoCapeRatio').innerHTML = `${cape}× <small style="color:var(--muted)">(avg ${capeAvg}×)</small>`;
   document.getElementById('infoSp500ForwardPE').innerHTML = `${sp}× <small style="color:var(--muted)">(avg ${data.kpis?.sp500ForwardPE?.historicalAvg}×)</small>`;

@@ -5,7 +5,7 @@ Use this prompt for daily cauldron updates:
 ```md
 # How to update
 
-1. check current state MEMORY.json
+1. check current state of MEMORY.json
 2. research using web-search agent and the research questions from RQ.md
 3. update the MEMORY.json file with newest findings
 4. update index.html and add new score to heat score over time
