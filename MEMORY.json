@@ -1,34 +1,34 @@
 {
-  "lastUpdated": "2026-05-10",
-  "heatScore": 92,
+  "lastUpdated": "2026-05-11",
+  "heatScore": 90,
   "heatLabel": "Boiling",
-  "summary": "As of 10 May 2026, the AI bubble cauldron remains 'Boiling' with heat score 92. Shiller CAPE eased slightly to 41.9× (Finanzapedia / Multpl), still within ~3.7% of the dot-com all-time peak of 43.5×. S&P 500 forward P/E held near 21.3×, above long-run averages. Anthropic's landmark $200B five-year Google Cloud commitment — covering TPU chips and infrastructure — is the largest cloud deal ever signed by an AI startup, deepening the recursive financing loop. Governments now require frontier AI model developers to submit models for regulatory compliance testing before public release, marking AI's transition to critical-infrastructure status. U.S. courts began treating AI chat logs as legally discoverable business records. OpenAI annualized revenue remains around $25B while committed infrastructure spend stands near $1.5T through 2031.",
+  "summary": "As of 11 May 2026, the AI bubble cauldron stays 'Boiling' with heat score 90. Shiller CAPE cooled to 39.6×, but the S&P 500 forward P/E still sits near 21.5× and Magnificent-7 ex-Tesla multiples remain around 30.9×. Global VC concentration is unchanged at 81% ($242B of $297B in Q1 2026). OpenAI annualized revenue remains about $25B against roughly $1.4T of committed infrastructure spend through 2031, while average U.S. grid connection delays for large data centers still run about six years. Major power-demand forecasts now cluster around ~1,000 TWh of data-center electricity use in 2026 with AI already about a quarter of load. Capgemini says fewer than 40% of organizations have operationalized GenAI at scale even as Sam Altman and Jensen Huang keep framing AI as an electricity- or iPhone-scale platform shift.",
   "kpis": {
     "capeRatio": {
-      "value": 41.9,
+      "value": 39.6,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — 41.9× as of 10 May 2026; now within ~3.7% of the dot-com all-time peak of 43.5× (Multpl / Finanzapedia)",
+      "description": "Cyclically adjusted P/E for US market — 39.6× in May 2026, still about 91% of the dot-com peak of 43.5× (MacroMicro / YCharts / LongtermTrends)",
       "weight": 20,
-      "score": 20
+      "score": 19
     },
     "sp500ForwardPE": {
-      "value": 21.3,
+      "value": 21.5,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for S&P 500 — 21.3× as of 10 May 2026, above 5-yr and 10-yr medians",
+      "description": "Forward price-to-earnings ratio for the S&P 500 — about 21.5× in early May 2026, above both 5-year and 10-year medians",
       "weight": 10,
       "score": 9
     },
     "top7StocksPE": {
-      "value": 31.2,
+      "value": 30.9,
       "historicalAvg": 20,
       "unit": "x",
       "label": "Top 7 Stocks P/E",
-      "description": "Average TTM P/E of large-cap AI-linked leaders remains elevated around low-30s to high-30s in 2026 snapshots; tracked at 31.2× for daily heat monitoring",
+      "description": "Representative Magnificent-7 valuation remains elevated: Tesla skews the simple average above 70×, while the ex-Tesla group average sits near 30.9× in May 2026",
       "weight": 10,
       "score": 9
     },
@@ -36,7 +36,7 @@
       "value": 81,
       "unit": "%",
       "label": "VC → AI Share",
-      "description": "Share of global Q1 2026 VC investment flowing into AI ($242B of $297B) — record high",
+      "description": "Share of global Q1 2026 VC investment flowing into AI ($242B of $297B) — still roughly 81% and near record concentration",
       "totalVcBn": 297,
       "aiVcBn": 242,
       "weight": 20,
@@ -47,7 +47,7 @@
       "yoyGrowth": 87,
       "unit": "billion USD",
       "label": "Hyperscaler Capex 2026",
-      "description": "Revised 2026 data center / AI capex across major hyperscalers (Amazon $200B, Google $185B, Microsoft ~$190B, Meta ~$135B, Oracle $55B) — up ~87% YoY vs 2025's $410B aggregate; Microsoft raised guidance after additional chip-cost disclosures",
+      "description": "Best-available 2026 hyperscaler / AI infrastructure buildout estimate remains near $765B aggregate (+87% YoY vs 2025's $410B), with no clearer cross-market revision yet than the late-Q1 guidance stack",
       "weight": 10,
       "score": 10
     },
@@ -55,44 +55,44 @@
       "value": 25,
       "unit": "billion USD (annual)",
       "label": "OpenAI Annual Revenue",
-      "description": "Current annualised revenue run rate ($25B as of Feb 2026, doubled from $13B in 2025) vs $1.5T committed infrastructure spend through 2031",
-      "committedSpendBn": 1500,
+      "description": "Current annualised revenue run rate (~$25B as of Feb 2026) versus roughly $1.4T of infrastructure commitments through 2031",
+      "committedSpendBn": 1400,
       "committedThrough": 2031,
       "weight": 5,
       "score": 4
     },
     "gridConnectionDelay": {
-      "value": 7,
+      "value": 6,
       "unit": "years",
       "baseline2023": 1.5,
       "label": "Grid Connection Delay",
-      "description": "Average delay to connect a large-scale data center to the electricity grid (range 5–10 yrs); ~50% of 2026 US capacity at risk",
+      "description": "Average wait for large U.S. data-center grid connections now runs about six years, with major hubs like Northern Virginia often closer to seven",
       "weight": 10,
-      "score": 10
+      "score": 9
     },
     "dataCenterPowerDemandTWh": {
       "value2023": 460,
-      "value2026": 945,
-      "value2030": 1200,
+      "value2026": 1000,
+      "value2030": 1050,
       "unit": "TWh",
       "label": "DC Power Demand",
-      "description": "Global data center electricity consumption — 2026 estimate revised sharply upward to ~945 TWh (from prior 600 TWh; source: industry analysts April 2026 citing AI racks at 30–100 kW each, exceeding IEA's earlier forecast); 2030 now projected ~1,200 TWh",
-      "weight": 5,
-      "score": 4
-    },
-    "aiUnicornsSince2024": {
-      "value": 308,
-      "unit": "companies",
-      "label": "AI Unicorns (Global)",
-      "description": "AI-focused companies with $1B+ valuation globally as of early 2026 — ~50% of all new unicorn formation",
+      "description": "Major forecasts now cluster near ~1,000 TWh of global data-center electricity use in 2026 and ~1,050 TWh by 2030; AI workloads account for roughly one-quarter of current demand and could approach ~44% by 2030",
       "weight": 5,
       "score": 5
+    },
+    "aiUnicornsSince2024": {
+      "value": 100,
+      "unit": "companies",
+      "label": "AI Unicorns (Global)",
+      "description": "CB Insights-style tracking points to about 100 AI unicorns founded since 2023/2024, within a broader universe of roughly 498 AI unicorns globally",
+      "weight": 5,
+      "score": 4
     },
     "narrativeSurgeNewbird": {
       "value": 582,
       "unit": "%",
       "label": "NewBird AI 1-Day Surge",
-      "description": "Allbirds (footwear) rebranded as NewBird AI and surged 582% intraday on zero AI revenue",
+      "description": "Allbirds (footwear) rebranded as NewBird AI and surged 582% intraday on essentially zero AI revenue",
       "weight": 5,
       "score": 5
     }
@@ -185,9 +185,41 @@
       "hyperscalerCapexBn": 765,
       "gridDelayYears": 7,
       "aiUnicorns": 308
+    },
+    {
+      "date": "2026-05-11",
+      "heatScore": 90,
+      "heatLabel": "Boiling",
+      "capeRatio": 39.6,
+      "sp500ForwardPE": 21.5,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 765,
+      "gridDelayYears": 6,
+      "aiUnicorns": 100
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-11",
+      "headline": "Capgemini says fewer than 40% of organizations have operationalized GenAI at scale, reinforcing the shift from AI hype to AI realism despite continued spending",
+      "source": "Capgemini Research Institute",
+      "type": "Productivity Counter-Evidence",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-05-11",
+      "headline": "Sam Altman says AI will become 'as ubiquitous as electricity' and calls 2026 the 'year of agentic applications' at Cisco AI Summit, extending peak-hype rhetoric",
+      "source": "CRN / Cisco AI Summit",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-11",
+      "headline": "CB Insights-based tracking now counts roughly 100 AI unicorns founded since 2023/2024 within a broader universe of 498 AI unicorns globally, underscoring private-market concentration",
+      "source": "TechSpot / CB Insights / CNBC",
+      "type": "Capital Concentration",
+      "sentiment": "extreme_bullish"
+    },
     {
       "date": "2026-05-10",
       "headline": "US and EU regulators mandate pre-release compliance testing for frontier AI models — OpenAI, Google, Anthropic, Microsoft and xAI must submit models before launch; AI now classified as critical infrastructure",
@@ -393,14 +425,49 @@
     }
   ],
   "valuationTable": [
-    { "metric": "CAPE Ratio",          "value1999Peak": 43.5, "value2026": 41.9,  "historicalAvg": 17.6 },
-    { "metric": "S&P 500 Forward P/E", "value1999Peak": 25,   "value2026": 21.3,  "historicalAvg": 16   },
-    { "metric": "Top 7 Stocks P/E",    "value1999Peak": 66,   "value2026": 31.2,  "historicalAvg": 20   }
+    {
+      "metric": "CAPE Ratio",
+      "value1999Peak": 43.5,
+      "value2026": 39.6,
+      "historicalAvg": 17.6
+    },
+    {
+      "metric": "S&P 500 Forward P/E",
+      "value1999Peak": 25,
+      "value2026": 21.5,
+      "historicalAvg": 16
+    },
+    {
+      "metric": "Top 7 Stocks P/E",
+      "value1999Peak": 66,
+      "value2026": 30.9,
+      "historicalAvg": 20
+    }
   ],
   "energyTable": [
-    { "metric": "DC Power Use (TWh)",    "y2023": 460,       "y2026": 945,       "y2030": 1200          },
-    { "metric": "AI Share of DC Power",  "y2023": "10%",     "y2026": "~30%",    "y2030": "~40%"        },
-    { "metric": "US IT Load (GW)",       "y2023": 60,        "y2026": 100,       "y2030": 150           },
-    { "metric": "Grid Connection Delay", "y2023": "1–2 yrs", "y2026": "5–10 yrs", "y2030": "Worsening" }
+    {
+      "metric": "DC Power Use (TWh)",
+      "y2023": 460,
+      "y2026": 1000,
+      "y2030": 1050
+    },
+    {
+      "metric": "AI Share of DC Power",
+      "y2023": "10%",
+      "y2026": "~25%",
+      "y2030": "~44%"
+    },
+    {
+      "metric": "US IT Load (GW)",
+      "y2023": 60,
+      "y2026": 100,
+      "y2030": 150
+    },
+    {
+      "metric": "Grid Connection Delay",
+      "y2023": "1–2 yrs",
+      "y2026": "5–7 yrs",
+      "y2030": "7+ yrs"
+    }
   ]
 }
