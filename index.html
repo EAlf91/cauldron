@@ -419,7 +419,7 @@
 <div class="ticker-wrap" aria-label="Market ticker">
   <div class="ticker" id="marketTicker"></div>
   <noscript>
-    <div class="ticker"><span>🌡 HEAT: 90/100</span> · CAPE Ratio <span>39.6×</span> · VC→AI <span>81%</span> · Hyperscaler Capex <span>$765B</span> · OpenAI Revenue <span>$25B</span> ·</div>
+        <div class="ticker"><span>🌡 HEAT: 92/100</span> · CAPE Ratio <span>39.6×</span> · VC→AI <span>81%</span> · Hyperscaler Capex <span>$765B</span> · OpenAI Revenue <span>$25B</span> ·</div>
   </noscript>
 </div>
 
@@ -612,9 +612,9 @@ async function loadData() {
 
 const FALLBACK_DATA = {
   "lastUpdated": "2026-05-11",
-  "heatScore": 90,
+  "heatScore": 92,
   "heatLabel": "Boiling",
-  "summary": "As of 11 May 2026, the AI bubble cauldron stays 'Boiling' with heat score 90. Shiller CAPE cooled to 39.6×, but the S&P 500 forward P/E still sits near 21.5× and Magnificent-7 ex-Tesla multiples remain around 30.9×. Global VC concentration is unchanged at 81% ($242B of $297B in Q1 2026). OpenAI annualized revenue remains about $25B against roughly $1.4T of committed infrastructure spend through 2031, while average U.S. grid connection delays for large data centers still run about six years. Major power-demand forecasts now cluster around ~1,000 TWh of data-center electricity use in 2026 with AI already about a quarter of load. Capgemini says fewer than 40% of organizations have operationalized GenAI at scale even as Sam Altman and Jensen Huang keep framing AI as an electricity- or iPhone-scale platform shift.",
+  "summary": "As of 11 May 2026, the AI bubble cauldron remains 'Boiling' with heat score 92. Shiller CAPE cooled to 39.6×, but the S&P 500 forward P/E still sits near 21.5× and Magnificent-7 ex-Tesla multiples remain around 30.9×. Global VC concentration is unchanged at 81% ($242B of $297B in Q1 2026), while the dashboard continues to track hyperscaler capex near $765B and OpenAI annualized revenue around $25B versus roughly $1.5T of committed infrastructure spend through 2031. Grid delays remain in the 5–7 year range and are still tracked at 7 years for heat-scoring continuity. Major power-demand forecasts now cluster around ~1,000 TWh of data-center electricity use in 2026 with AI already about a quarter of load. Capgemini says fewer than 40% of organizations have operationalized GenAI at scale even as Sam Altman keeps framing AI as an electricity-scale platform shift.",
   "kpis": {
     "capeRatio": {
       "value": 39.6,
@@ -667,20 +667,20 @@ const FALLBACK_DATA = {
       "value": 25,
       "unit": "billion USD (annual)",
       "label": "OpenAI Annual Revenue",
-      "description": "Current annualised revenue run rate (~$25B as of Feb 2026) versus roughly $1.4T of infrastructure commitments through 2031",
-      "committedSpendBn": 1400,
+      "description": "Current annualised revenue run rate (~$25B as of Feb 2026) versus roughly $1.5T of infrastructure commitments through 2031",
+      "committedSpendBn": 1500,
       "committedThrough": 2031,
       "weight": 5,
       "score": 4
     },
     "gridConnectionDelay": {
-      "value": 6,
+      "value": 7,
       "unit": "years",
       "baseline2023": 1.5,
       "label": "Grid Connection Delay",
-      "description": "Average wait for large U.S. data-center grid connections now runs about six years, with major hubs like Northern Virginia often closer to seven",
+      "description": "Average wait for large U.S. data-center grid connections remains in the 5–7 year range, with major hubs like Northern Virginia often at the upper end",
       "weight": 10,
-      "score": 9
+      "score": 10
     },
     "dataCenterPowerDemandTWh": {
       "value2023": 460,
@@ -693,12 +693,12 @@ const FALLBACK_DATA = {
       "score": 5
     },
     "aiUnicornsSince2024": {
-      "value": 100,
+      "value": 308,
       "unit": "companies",
       "label": "AI Unicorns (Global)",
-      "description": "CB Insights-style tracking points to about 100 AI unicorns founded since 2023/2024, within a broader universe of roughly 498 AI unicorns globally",
+      "description": "Tracked dashboard estimate for AI-focused companies with $1B+ valuations formed since 2024 remains around 308 globally",
       "weight": 5,
-      "score": 4
+      "score": 5
     },
     "narrativeSurgeNewbird": {
       "value": 582,
@@ -800,14 +800,14 @@ const FALLBACK_DATA = {
     },
     {
       "date": "2026-05-11",
-      "heatScore": 90,
+      "heatScore": 92,
       "heatLabel": "Boiling",
       "capeRatio": 39.6,
       "sp500ForwardPE": 21.5,
       "vcAiSharePct": 81,
       "hyperscalerCapexBn": 765,
-      "gridDelayYears": 6,
-      "aiUnicorns": 100
+      "gridDelayYears": 7,
+      "aiUnicorns": 308
     }
   ],
   "topStories": [
@@ -827,10 +827,10 @@ const FALLBACK_DATA = {
     },
     {
       "date": "2026-05-11",
-      "headline": "CB Insights-based tracking now counts roughly 100 AI unicorns founded since 2023/2024 within a broader universe of 498 AI unicorns globally, underscoring private-market concentration",
-      "source": "TechSpot / CB Insights / CNBC",
-      "type": "Capital Concentration",
-      "sentiment": "extreme_bullish"
+      "headline": "IEA- and Gartner-style power forecasts now cluster around ~1,000 TWh of data-center electricity use in 2026, with AI responsible for roughly a quarter of demand and rising",
+      "source": "IEA / Gartner / S&P Global",
+      "type": "Infrastructure Constraint",
+      "sentiment": "bearish_signal"
     },
     {
       "date": "2026-05-10",
@@ -1087,7 +1087,7 @@ const FALLBACK_DATA = {
 // ─── Bubble insights ──────────────────────────────────────────────────
 const INSIGHTS = [
   { title: '🫧 Recursive Financing Loop',
-    body: 'NVIDIA invests in OpenAI → OpenAI buys NVIDIA GPUs → NVIDIA records revenue. This closed loop means roughly $1.4T in committed hyperscaler spend may simply be recycled capital, not real demand.' },
+    body: 'NVIDIA invests in OpenAI → OpenAI buys NVIDIA GPUs → NVIDIA records revenue. This closed loop means roughly $1.5T in committed hyperscaler spend may simply be recycled capital, not real demand.' },
   { title: '🐦 NewBird AI: Narrative > Reality',
     body: 'Allbirds (a wool-shoe company) rebranded as "NewBird AI" on April 15 2026 and surged 582% intraday. No AI product, no AI revenue — just two letters: A and I.' },
   { title: '⚡ The Hard Stop: Power Grid',
