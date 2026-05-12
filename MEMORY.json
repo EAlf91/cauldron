@@ -1,34 +1,34 @@
 {
-  "lastUpdated": "2026-05-11",
+  "lastUpdated": "2026-05-12",
   "heatScore": 92,
   "heatLabel": "Boiling",
-  "summary": "As of 11 May 2026, the AI bubble cauldron remains 'Boiling' with heat score 92. Shiller CAPE cooled to 39.6×, but the S&P 500 forward P/E still sits near 21.5× and Magnificent-7 ex-Tesla multiples remain around 30.9×. Global VC concentration is unchanged at 81% ($242B of $297B in Q1 2026), while the dashboard continues to track hyperscaler capex near $765B and OpenAI annualized revenue around $25B versus roughly $1.5T of committed infrastructure spend through 2031. Grid delays remain in the 5–7 year range and are still tracked at 7 years for heat-scoring continuity. Major power-demand forecasts now cluster around ~1,000 TWh of data-center electricity use in 2026 with AI already about a quarter of load. Capgemini says fewer than 40% of organizations have operationalized GenAI at scale even as Sam Altman keeps framing AI as an electricity-scale platform shift.",
+  "summary": "As of 12 May 2026, the AI bubble cauldron remains 'Boiling' with heat score 92. Shiller CAPE rebounded to ~42.15× while the S&P 500 forward P/E sits near 21.0× and Magnificent-7 ex-Tesla multiples hover around 31.0×. Global VC concentration remains near 81% ($242B of $297B in Q1 2026), while hyperscaler capex consensus has shifted toward ~$602B (+36% YoY vs ~$443B in 2025). OpenAI annualized revenue is tracked near $20B against roughly $1.4T of committed infrastructure spending through 2034. Grid delays remain around 5–7 years and major forecasts still cluster around ~1,000 TWh data-center power use in 2026 with AI share rising toward the mid-40% range by 2030.",
   "kpis": {
     "capeRatio": {
-      "value": 39.6,
+      "value": 42.15,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — 39.6× in May 2026, still about 91% of the dot-com peak of 43.5× (MacroMicro / YCharts / LongtermTrends)",
+      "description": "Cyclically adjusted P/E for US market — about 42.15× in May 2026, roughly 97% of the dot-com peak of 43.5× (LongtermTrends / Finanzapedia)",
       "weight": 20,
-      "score": 19
+      "score": 20
     },
     "sp500ForwardPE": {
-      "value": 21.5,
+      "value": 21.0,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for the S&P 500 — about 21.5× in early May 2026, above both 5-year and 10-year medians",
+      "description": "Forward price-to-earnings ratio for the S&P 500 — around 21.0× in mid-May 2026, above both 5-year and 10-year medians (FactSet / MacroMicro)",
       "weight": 10,
       "score": 9
     },
     "top7StocksPE": {
-      "value": 30.9,
+      "value": 31.0,
       "historicalAvg": 20,
       "unit": "x",
       "label": "Top 7 Stocks P/E",
-      "description": "Representative Magnificent-7 valuation remains elevated: Tesla skews the simple average above 70×, while the ex-Tesla group average sits near 30.9× in May 2026",
+      "description": "Representative Magnificent-7 valuation remains elevated: Tesla still skews the simple average far higher, while the ex-Tesla group average is near 31.0× in May 2026",
       "weight": 10,
       "score": 9
     },
@@ -43,21 +43,21 @@
       "score": 16
     },
     "hyperscalerCapexBn": {
-      "value": 765,
-      "yoyGrowth": 87,
+      "value": 602,
+      "yoyGrowth": 36,
       "unit": "billion USD",
       "label": "Hyperscaler Capex 2026",
-      "description": "Best-available 2026 hyperscaler / AI infrastructure buildout estimate remains near $765B aggregate (+87% YoY vs 2025's $410B), with no clearer cross-market revision yet than the late-Q1 guidance stack",
+      "description": "Latest Big-5 hyperscaler consensus points to about $602B 2026 capex (+36% YoY vs ~$443B in 2025), still historically extreme but below prior $765B-style blended estimates",
       "weight": 10,
-      "score": 10
+      "score": 9
     },
     "openAiRevenueBn": {
-      "value": 25,
+      "value": 20,
       "unit": "billion USD (annual)",
       "label": "OpenAI Annual Revenue",
-      "description": "Current annualised revenue run rate (~$25B as of Feb 2026) versus roughly $1.5T of infrastructure commitments through 2031",
-      "committedSpendBn": 1500,
-      "committedThrough": 2031,
+      "description": "Current annualised revenue run rate (~$20B) versus roughly $1.4T of infrastructure commitments through 2034",
+      "committedSpendBn": 1400,
+      "committedThrough": 2034,
       "weight": 5,
       "score": 4
     },
@@ -73,10 +73,10 @@
     "dataCenterPowerDemandTWh": {
       "value2023": 460,
       "value2026": 1000,
-      "value2030": 1050,
+      "value2030": 1065,
       "unit": "TWh",
       "label": "DC Power Demand",
-      "description": "Major forecasts now cluster near ~1,000 TWh of global data-center electricity use in 2026 and ~1,050 TWh by 2030; AI workloads account for roughly one-quarter of current demand and could approach ~44% by 2030",
+      "description": "Major forecasts cluster around ~1,000 TWh of global data-center electricity use in 2026 and a ~945–1,065 TWh range by 2030; AI workloads are ~21–25% currently and could approach ~44% by 2030",
       "weight": 5,
       "score": 5
     },
@@ -89,10 +89,10 @@
       "score": 5
     },
     "narrativeSurgeNewbird": {
-      "value": 582,
+      "value": 876,
       "unit": "%",
       "label": "NewBird AI 1-Day Surge",
-      "description": "Allbirds (footwear) rebranded as NewBird AI and surged 582% intraday on essentially zero AI revenue",
+      "description": "Allbirds (footwear) rebranded as NewBird AI and reportedly hit an ~876% intraday spike (about +582% at close) on essentially zero AI revenue",
       "weight": 5,
       "score": 5
     }
@@ -196,9 +196,41 @@
       "hyperscalerCapexBn": 765,
       "gridDelayYears": 7,
       "aiUnicorns": 308
+    },
+    {
+      "date": "2026-05-12",
+      "heatScore": 92,
+      "heatLabel": "Boiling",
+      "capeRatio": 42.15,
+      "sp500ForwardPE": 21.0,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 602,
+      "gridDelayYears": 7,
+      "aiUnicorns": 308
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-12",
+      "headline": "Shiller CAPE rebounds to ~42.15× while S&P 500 forward P/E holds near 21.0× — valuation heat remains close to dot-com-era extremes",
+      "source": "LongtermTrends / FactSet / MacroMicro",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-12",
+      "headline": "Big-5 hyperscaler 2026 capex consensus converges near $602B (+36% YoY vs 2025), still historically elevated but below prior $765B blended estimates",
+      "source": "Industry capex trackers / analyst consensus",
+      "type": "Infrastructure Spend",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-05-12",
+      "headline": "OpenAI revenue run rate is tracked around $20B with about $1.4T in infrastructure commitments through 2034, extending the scale-vs-monetization tension",
+      "source": "TechCrunch / market trackers",
+      "type": "Circular Financing",
+      "sentiment": "extreme_bullish"
+    },
     {
       "date": "2026-05-11",
       "headline": "Capgemini says fewer than 40% of organizations have operationalized GenAI at scale, reinforcing the shift from AI hype to AI realism despite continued spending",
@@ -428,19 +460,19 @@
     {
       "metric": "CAPE Ratio",
       "value1999Peak": 43.5,
-      "value2026": 39.6,
+      "value2026": 42.15,
       "historicalAvg": 17.6
     },
     {
       "metric": "S&P 500 Forward P/E",
       "value1999Peak": 25,
-      "value2026": 21.5,
+      "value2026": 21.0,
       "historicalAvg": 16
     },
     {
       "metric": "Top 7 Stocks P/E",
       "value1999Peak": 66,
-      "value2026": 30.9,
+      "value2026": 31.0,
       "historicalAvg": 20
     }
   ],
@@ -449,7 +481,7 @@
       "metric": "DC Power Use (TWh)",
       "y2023": 460,
       "y2026": 1000,
-      "y2030": 1050
+      "y2030": 1065
     },
     {
       "metric": "AI Share of DC Power",
