@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-05-12",
+  "lastUpdated": "2026-05-13",
   "heatScore": 92,
   "heatLabel": "Boiling",
-  "summary": "As of 12 May 2026, the AI bubble cauldron remains 'Boiling' with heat score 92. Shiller CAPE rebounded to ~42.15× while the S&P 500 forward P/E sits near 21.0× and Magnificent-7 ex-Tesla multiples hover around 31.0×. Global VC concentration remains near 81% ($242B of $297B in Q1 2026), while hyperscaler capex consensus has shifted toward ~$602B (+36% YoY vs ~$443B in 2025). OpenAI annualized revenue is tracked near $20B against roughly $1.4T of committed infrastructure spending through 2034. Grid delays remain around 5–7 years and major forecasts still cluster around ~1,000 TWh data-center power use in 2026 with AI share rising toward the mid-40% range by 2030.",
+  "summary": "As of 13 May 2026, the AI bubble cauldron remains 'Boiling' with heat score 92. Shiller CAPE remains around ~42.15× while the S&P 500 forward P/E is near 21.0× and Magnificent-7 ex-Tesla multiples hover around 31.0×. Global VC concentration remains near 81% ($242B of $297B in Q1 2026), while hyperscaler 2026 capex consensus has re-accelerated into a ~$715–$750B range (~$725B midpoint, +67% YoY vs 2025). OpenAI annualized revenue is still tracked near $20B versus up to ~$1.4T of long-horizon infrastructure commitments, and grid connection delays still average roughly 3–6 years with global data-center power forecasts near ~1,000 TWh in 2026 and ~980 TWh by 2030.",
   "kpis": {
     "capeRatio": {
       "value": 42.15,
@@ -21,7 +21,7 @@
       "label": "S&P 500 Forward P/E",
       "description": "Forward price-to-earnings ratio for the S&P 500 — around 21.0× in mid-May 2026, above both 5-year and 10-year medians (FactSet / MacroMicro)",
       "weight": 10,
-      "score": 9
+      "score": 10
     },
     "top7StocksPE": {
       "value": 31.0,
@@ -43,11 +43,11 @@
       "score": 16
     },
     "hyperscalerCapexBn": {
-      "value": 602,
-      "yoyGrowth": 36,
+      "value": 725,
+      "yoyGrowth": 67,
       "unit": "billion USD",
       "label": "Hyperscaler Capex 2026",
-      "description": "Latest Big-5 hyperscaler consensus points to about $602B 2026 capex (+36% YoY vs ~$443B in 2025), still historically extreme but below prior $765B-style blended estimates",
+      "description": "Latest Big-5 hyperscaler consensus has moved back toward roughly $715–$750B for 2026 (midpoint ~$725B, ~+67% YoY vs 2025), reinforcing historically extreme AI infrastructure spend",
       "weight": 10,
       "score": 9
     },
@@ -55,28 +55,28 @@
       "value": 20,
       "unit": "billion USD (annual)",
       "label": "OpenAI Annual Revenue",
-      "description": "Current annualised revenue run rate (~$20B) versus roughly $1.4T of infrastructure commitments through 2034",
+      "description": "Current annualised revenue run rate is still around ~$20B, versus a long-horizon infrastructure commitment stack still cited up to ~$1.4T through the early 2030s",
       "committedSpendBn": 1400,
       "committedThrough": 2034,
       "weight": 5,
       "score": 4
     },
     "gridConnectionDelay": {
-      "value": 7,
+      "value": 6,
       "unit": "years",
       "baseline2023": 1.5,
       "label": "Grid Connection Delay",
-      "description": "Average wait for large U.S. data-center grid connections remains in the 5–7 year range, with major hubs like Northern Virginia often at the upper end",
+      "description": "Average wait for large U.S. data-center grid connections is still measured in multi-year queues, now commonly cited around 3–6 years depending on market congestion",
       "weight": 10,
-      "score": 10
+      "score": 9
     },
     "dataCenterPowerDemandTWh": {
       "value2023": 460,
       "value2026": 1000,
-      "value2030": 1065,
+      "value2030": 980,
       "unit": "TWh",
       "label": "DC Power Demand",
-      "description": "Major forecasts cluster around ~1,000 TWh of global data-center electricity use in 2026 and a ~945–1,065 TWh range by 2030; AI workloads are ~21–25% currently and could approach ~44% by 2030",
+      "description": "Major forecasts still cluster around ~1,000 TWh of global data-center electricity use in 2026 and around ~980 TWh by 2030; AI workloads remain a large and rising share",
       "weight": 5,
       "score": 5
     },
@@ -207,9 +207,41 @@
       "hyperscalerCapexBn": 602,
       "gridDelayYears": 7,
       "aiUnicorns": 308
+    },
+    {
+      "date": "2026-05-13",
+      "heatScore": 92,
+      "heatLabel": "Boiling",
+      "capeRatio": 42.15,
+      "sp500ForwardPE": 21.0,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 725,
+      "gridDelayYears": 6,
+      "aiUnicorns": 308
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-13",
+      "headline": "Hyperscaler 2026 AI capex consensus re-accelerates into a ~$715–$750B range (about $725B midpoint), implying roughly +67% YoY versus 2025",
+      "source": "CreditSights / Epoch AI / industry capex trackers",
+      "type": "Infrastructure Spend",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-13",
+      "headline": "New survey signals adoption friction: most firms using AI-led layoffs report no clear ROI uplift, reinforcing the productivity paradox despite heavy spend",
+      "source": "Gartner / Forbes productivity analysis",
+      "type": "Productivity Counter-Evidence",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-05-13",
+      "headline": "Power constraints persist as data-center grid interconnection queues remain multi-year (often ~3–6 years) while 2030 electricity demand forecasts stay near ~980 TWh",
+      "source": "Bloom Energy 2026 Power Report / Gartner",
+      "type": "Infrastructure Constraint",
+      "sentiment": "bearish_signal"
+    },
     {
       "date": "2026-05-12",
       "headline": "Shiller CAPE rebounds to ~42.15× while S&P 500 forward P/E holds near 21.0× — valuation heat remains close to dot-com-era extremes",
