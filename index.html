@@ -611,18 +611,18 @@ async function loadData() {
 }
 
 const FALLBACK_DATA = {
-  "lastUpdated": "2026-05-13",
-  "heatScore": 92,
+  "lastUpdated": "2026-05-14",
+  "heatScore": 93,
   "heatLabel": "Boiling",
-  "summary": "As of 13 May 2026, the AI bubble cauldron remains 'Boiling' with heat score 92. Shiller CAPE remains around ~42.15× while the S&P 500 forward P/E is near 21.0× and Magnificent-7 ex-Tesla multiples hover around 31.0×. Global VC concentration remains near 81% ($242B of $297B in Q1 2026), while hyperscaler 2026 capex consensus has re-accelerated into a ~$715–$750B range (~$725B midpoint, +67% YoY vs 2025). OpenAI annualized revenue is still tracked near $20B versus up to ~$1.4T of long-horizon infrastructure commitments, and grid connection delays still average roughly 3–6 years with global data-center power forecasts near ~1,000 TWh in 2026 and ~980 TWh by 2030.",
+  "summary": "As of 14 May 2026, the AI bubble cauldron is 'Boiling' with a new record heat score of 93. Shiller CAPE climbed to ~42.32×, now 97.3% of the dot-com peak of 43.5×. S&P 500 forward P/E holds near 21.0× and Magnificent-7 ex-Tesla multiples ease slightly to ~30.4×. Global VC concentration remains near 81% ($239B of $297B in Q1 2026). Hyperscaler 2026 capex consensus holds at ~$715–$725B (~+67% YoY vs 2025). OpenAI annualized revenue is now confirmed at ~$25B versus ~$1.4T of long-horizon infrastructure commitments. Grid connection delays still average 5–7 years (median ~6 years). Google announces the 'Googlebook' AI-first laptop category and races to embed Gemini as Android's core intelligence layer ahead of Apple's WWDC AI reboot.",
   "kpis": {
     "capeRatio": {
-      "value": 42.15,
+      "value": 42.32,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — about 42.15× in May 2026, roughly 97% of the dot-com peak of 43.5× (LongtermTrends / Finanzapedia)",
+      "description": "Cyclically adjusted P/E for US market — about 42.32× on 14 May 2026, now 97.3% of the dot-com peak of 43.5× (Multpl / marketcrash.net)",
       "weight": 20,
       "score": 20
     },
@@ -636,11 +636,11 @@ const FALLBACK_DATA = {
       "score": 10
     },
     "top7StocksPE": {
-      "value": 31.0,
+      "value": 30.4,
       "historicalAvg": 20,
       "unit": "x",
       "label": "Top 7 Stocks P/E",
-      "description": "Representative Magnificent-7 valuation remains elevated: Tesla still skews the simple average far higher, while the ex-Tesla group average is near 31.0× in May 2026",
+      "description": "Magnificent-7 ex-Tesla group average eases to ~30.4× in mid-May 2026 (NVDA 37.9×, AAPL 33.0×, AMZN 29.7×, GOOGL 28.6×, META 27.8×, MSFT 25.3×); Tesla remains an extreme outlier at ~378×",
       "weight": 10,
       "score": 9
     },
@@ -664,14 +664,14 @@ const FALLBACK_DATA = {
       "score": 9
     },
     "openAiRevenueBn": {
-      "value": 20,
+      "value": 25,
       "unit": "billion USD (annual)",
       "label": "OpenAI Annual Revenue",
-      "description": "Current annualised revenue run rate is still around ~$20B, versus a long-horizon infrastructure commitment stack still cited up to ~$1.4T through the early 2030s",
+      "description": "Annualised revenue confirmed at ~$25B as of May 2026 (up from $13B in 2025), on track for $29–$30B full-year 2026 as GPT-5.5 enterprise deployments accelerate — still dwarfed by ~$1.4T of long-horizon infrastructure commitments",
       "committedSpendBn": 1400,
       "committedThrough": 2034,
       "weight": 5,
-      "score": 4
+      "score": 5
     },
     "gridConnectionDelay": {
       "value": 6,
@@ -830,9 +830,41 @@ const FALLBACK_DATA = {
       "hyperscalerCapexBn": 725,
       "gridDelayYears": 6,
       "aiUnicorns": 308
+    },
+    {
+      "date": "2026-05-14",
+      "heatScore": 93,
+      "heatLabel": "Boiling",
+      "capeRatio": 42.32,
+      "sp500ForwardPE": 21.0,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 725,
+      "gridDelayYears": 6,
+      "aiUnicorns": 308
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-14",
+      "headline": "Shiller CAPE climbs to 42.32× — 97.3% of the dot-com all-time peak of 43.5×; heat score reaches new record of 93/100 as AI bubble indicators remain at extreme levels",
+      "source": "Multpl / marketcrash.net / LongtermTrends",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-14",
+      "headline": "Google announces 'Googlebook' — a new category of AI-first laptops designed for Gemini Intelligence; Gemini positioned as Android's core intelligence layer ahead of Apple's WWDC AI reboot",
+      "source": "CNBC / Google AI Blog / aitoolsrecap.com",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-14",
+      "headline": "OpenAI annualized revenue confirmed at $25B (up from $20B baseline), on track for $29–$30B full-year 2026 — still dwarfed by $1.4T infrastructure commitment stack, extending the circular financing tension",
+      "source": "analyticsinsight.net / creati.ai / gradually.ai",
+      "type": "Circular Financing",
+      "sentiment": "extreme_bullish"
+    },
     {
       "date": "2026-05-13",
       "headline": "Hyperscaler 2026 AI capex consensus re-accelerates into a ~$715–$750B range (about $725B midpoint), implying roughly +67% YoY versus 2025",
@@ -1104,7 +1136,7 @@ const FALLBACK_DATA = {
     {
       "metric": "CAPE Ratio",
       "value1999Peak": 43.5,
-      "value2026": 42.15,
+      "value2026": 42.32,
       "historicalAvg": 17.6
     },
     {
@@ -1116,7 +1148,7 @@ const FALLBACK_DATA = {
     {
       "metric": "Top 7 Stocks P/E",
       "value1999Peak": 66,
-      "value2026": 31.0,
+      "value2026": 30.4,
       "historicalAvg": 20
     }
   ],
