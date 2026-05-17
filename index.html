@@ -611,10 +611,10 @@ async function loadData() {
 }
 
 const FALLBACK_DATA = {
-  "lastUpdated": "2026-05-15",
+  "lastUpdated": "2026-05-17",
   "heatScore": 91,
   "heatLabel": "Boiling",
-  "summary": "As of 15 May 2026, the AI bubble cauldron remains 'Boiling' at 91/100. Shiller CAPE holds near 42.32× and the S&P 500 forward P/E stays around 21.0×, both still at elevated valuation levels. VC concentration remains extreme at ~81% ($242B of $297B in Q1 2026) and OpenAI annualized revenue is still near $25B against long-dated infrastructure commitments near $1.4T. Cooling pressure came from a lower 2026 hyperscaler capex consensus near ~$602B (+36% YoY vs 2025) and a slightly improved median grid delay around 4–5 years, though queue extremes still stretch far longer in constrained markets.",
+  "summary": "As of 17 May 2026, the AI bubble cauldron remains 'Boiling' at 91/100. Core valuation and concentration indicators are broadly unchanged over 16–17 May: CAPE stays near 42.32×, S&P 500 forward P/E around 21.0×, VC-to-AI concentration near 81%, and OpenAI annualized revenue near $25B against roughly $1.4T in committed infrastructure spend. Power-grid interconnection delays remain a key constraint for scaling new data-center capacity.",
   "kpis": {
     "capeRatio": {
       "value": 42.32,
@@ -852,9 +852,52 @@ const FALLBACK_DATA = {
       "hyperscalerCapexBn": 602,
       "gridDelayYears": 5,
       "aiUnicorns": 207
+    },
+    {
+      "date": "2026-05-16",
+      "heatScore": 91,
+      "heatLabel": "Boiling",
+      "capeRatio": 42.32,
+      "sp500ForwardPE": 21.0,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 602,
+      "gridDelayYears": 5,
+      "aiUnicorns": 207
+    },
+    {
+      "date": "2026-05-17",
+      "heatScore": 91,
+      "heatLabel": "Boiling",
+      "capeRatio": 42.32,
+      "sp500ForwardPE": 21.0,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 602,
+      "gridDelayYears": 5,
+      "aiUnicorns": 207
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-17",
+      "headline": "SEC/DOJ/FTC scrutiny of AI-washing intensified in May 2026, with new warnings that exaggerated AI capability claims can trigger both securities and consumer-protection enforcement.",
+      "source": "Debevoise / Harvard Law School Forum / Corporate Compliance Insights",
+      "type": "Regulatory",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-05-17",
+      "headline": "U.S. data-center buildouts continue to hit power bottlenecks, with many large projects still facing roughly 4–10 year interconnection waits despite ongoing AI capex expansion.",
+      "source": "Network World / Data Center Knowledge / Bain & Co.",
+      "type": "Infrastructure Constraint",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-05-16",
+      "headline": "Global VC concentration stayed near the Q1 2026 extreme (~81% of funding directed to AI), keeping capital flows highly narrative-driven even after valuation volatility.",
+      "source": "Q1 VC funding trackers / market commentary",
+      "type": "Capital Concentration",
+      "sentiment": "extreme_bullish"
+    },
     {
       "date": "2026-05-15",
       "headline": "Shiller CAPE holds near 42.32× while S&P 500 forward P/E stays around 21.0×, keeping U.S. equity valuation heat close to late-cycle extremes.",
