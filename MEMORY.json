@@ -1,36 +1,36 @@
 {
-  "lastUpdated": "2026-05-17",
-  "heatScore": 91,
+  "lastUpdated": "2026-05-18",
+  "heatScore": 92,
   "heatLabel": "Boiling",
-  "summary": "As of 17 May 2026, the AI bubble cauldron remains 'Boiling' at 91/100. Core valuation and concentration indicators are broadly unchanged over 16–17 May: CAPE stays near 42.32×, S&P 500 forward P/E around 21.0×, VC-to-AI concentration near 81%, and OpenAI annualized revenue near $25B against roughly $1.4T in committed infrastructure spend. Power-grid interconnection delays remain a key constraint for scaling new data-center capacity.",
+  "summary": "As of 18 May 2026, the AI bubble cauldron heats to 'Boiling' at 92/100. CAPE eased slightly to ~41.66× while the Magnificent-7 ex-Tesla P/E expanded to ~31.8× (NVDA 46×, AAPL 36×, AMZN 32×, GOOGL 30×) and S&P 500 forward P/E ticked up to ~21.4×. Big-4 hyperscaler 2026 capex estimate rises toward ~$620B. VC-to-AI concentration holds near 81% and OpenAI annualized revenue remains ~$25B against ~$1.4T in committed infrastructure spend.",
   "kpis": {
     "capeRatio": {
-      "value": 42.32,
+      "value": 41.66,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — about 42.32× on 14 May 2026, now 97.3% of the dot-com peak of 43.5× (Multpl / marketcrash.net)",
+      "description": "Cyclically adjusted P/E for US market — about 41.66× on 18 May 2026, now 95.8% of the dot-com peak of 43.5× (Multpl / marketcrash.net / longtermtrends.com)",
       "weight": 20,
       "score": 20
     },
     "sp500ForwardPE": {
-      "value": 21.0,
+      "value": 21.4,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for the S&P 500 — around 21.0× in mid-May 2026, above both 5-year and 10-year medians (FactSet / MacroMicro)",
+      "description": "Forward price-to-earnings ratio for the S&P 500 — 21.4× per FactSet in mid-May 2026, above the 5-year average of 19.9× and 10-year average of 18.9× (FactSet / MacroMicro)",
       "weight": 10,
       "score": 10
     },
     "top7StocksPE": {
-      "value": 30.4,
+      "value": 31.8,
       "historicalAvg": 20,
       "unit": "x",
       "label": "Top 7 Stocks P/E",
-      "description": "Magnificent-7 ex-Tesla group average eases to ~30.4× in mid-May 2026 (NVDA 37.9×, AAPL 33.0×, AMZN 29.7×, GOOGL 28.6×, META 27.8×, MSFT 25.3×); Tesla remains an extreme outlier at ~378×",
+      "description": "Magnificent-7 ex-Tesla TTM average expands to ~31.8× in mid-May 2026 (NVDA 46×, AAPL 36×, AMZN 32×, GOOGL 30×, MSFT 25×, META 22×); Tesla remains an extreme outlier at ~378×",
       "weight": 10,
-      "score": 9
+      "score": 10
     },
     "vcAiConcentration": {
       "value": 81,
@@ -43,11 +43,11 @@
       "score": 16
     },
     "hyperscalerCapexBn": {
-      "value": 602,
-      "yoyGrowth": 36,
+      "value": 620,
+      "yoyGrowth": 39,
       "unit": "billion USD",
       "label": "Hyperscaler Capex 2026",
-      "description": "Latest Big-5 hyperscaler consensus is around $602B for 2026 (about +36% YoY vs 2025), with most spend still tied to AI infrastructure buildouts.",
+      "description": "Big-4 hyperscaler consensus rises to ~$620B for 2026 (Amazon ~$200B, Google ~$185B, Meta ~$135B, Microsoft ~$100B; roughly +39% YoY vs 2025), with spending still dominated by AI infrastructure buildouts.",
       "weight": 10,
       "score": 8
     },
@@ -262,9 +262,41 @@
       "hyperscalerCapexBn": 602,
       "gridDelayYears": 5,
       "aiUnicorns": 207
+    },
+    {
+      "date": "2026-05-18",
+      "heatScore": 92,
+      "heatLabel": "Boiling",
+      "capeRatio": 41.66,
+      "sp500ForwardPE": 21.4,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 620,
+      "gridDelayYears": 5,
+      "aiUnicorns": 207
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-18",
+      "headline": "Shiller CAPE eases to ~41.66× (95.8% of dot-com peak) while Magnificent-7 ex-Tesla P/E expands to ~31.8× (NVDA 46×, AAPL 36×, AMZN 32×); heat score rises to 92/100 as Big-4 hyperscaler capex estimate climbs toward $620B.",
+      "source": "Multpl / longtermtrends.com / FactSet / Barchart",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-18",
+      "headline": "Opsera 2026 AI Coding Impact Benchmark: AI-generated PRs take 4.6× longer to review than human-authored code and introduce 15–18% more security vulnerabilities — raising governance risk despite 20–58% speed gains.",
+      "source": "Opsera AI Coding Impact 2026 Benchmark Report",
+      "type": "Productivity Counter-Evidence",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-05-18",
+      "headline": "FTC Air AI settlement (March 2026): $18M judgment for false AI capability claims, permanent marketing bans issued — Operation AI Comply has now filed 12+ enforcement actions; fines rising to $53K per violation by 2027.",
+      "source": "FTC Press Release / JDSupra / openclawai.io",
+      "type": "Regulatory",
+      "sentiment": "bearish_signal"
+    },
     {
       "date": "2026-05-17",
       "headline": "SEC/DOJ/FTC scrutiny of AI-washing intensified in May 2026, with new warnings that exaggerated AI capability claims can trigger both securities and consumer-protection enforcement.",
@@ -599,19 +631,19 @@
     {
       "metric": "CAPE Ratio",
       "value1999Peak": 43.5,
-      "value2026": 42.32,
+      "value2026": 41.66,
       "historicalAvg": 17.6
     },
     {
       "metric": "S&P 500 Forward P/E",
       "value1999Peak": 25,
-      "value2026": 21.0,
+      "value2026": 21.4,
       "historicalAvg": 16
     },
     {
       "metric": "Top 7 Stocks P/E",
       "value1999Peak": 66,
-      "value2026": 30.4,
+      "value2026": 31.8,
       "historicalAvg": 20
     }
   ],
