@@ -611,18 +611,18 @@ async function loadData() {
 }
 
 const FALLBACK_DATA = {
-  "lastUpdated": "2026-05-18",
+  "lastUpdated": "2026-05-19",
   "heatScore": 92,
   "heatLabel": "Boiling",
-  "summary": "As of 18 May 2026, the AI bubble cauldron heats to 'Boiling' at 92/100. CAPE eased slightly to ~41.66× while the Magnificent-7 ex-Tesla P/E expanded to ~31.8× (NVDA 46×, AAPL 36×, AMZN 32×, GOOGL 30×) and S&P 500 forward P/E ticked up to ~21.4×. Big-4 hyperscaler 2026 capex estimate rises toward ~$620B. VC-to-AI concentration holds near 81% and OpenAI annualized revenue remains ~$25B against ~$1.4T in committed infrastructure spend.",
+  "summary": "As of 19 May 2026, the AI bubble cauldron stays 'Boiling' at 92/100. Shiller CAPE sits near ~41.63× while the S&P 500 forward P/E holds at ~21.4× and the Magnificent-7 ex-Tesla P/E remains around ~31.8×. Big-4 hyperscaler 2026 capex consensus has re-heated toward ~$700B (~+61% YoY), while average U.S. grid-connection waits for large data-centre projects are still about 4 years in major markets. VC-to-AI concentration remains near 81%, AI unicorn count stays at 207 since 2024, and OpenAI's annualised revenue remains about $25B against roughly $1.4T in committed infrastructure spend.",
   "kpis": {
     "capeRatio": {
-      "value": 41.66,
+      "value": 41.63,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — about 41.66× on 18 May 2026, now 95.8% of the dot-com peak of 43.5× (Multpl / marketcrash.net / longtermtrends.com)",
+      "description": "Cyclically adjusted P/E for US market — about 41.63× in May 2026, now 95.7% of the dot-com peak of 43.5× (Multpl / marketcrash.net / longtermtrends.com)",
       "weight": 20,
       "score": 20
     },
@@ -640,7 +640,7 @@ const FALLBACK_DATA = {
       "historicalAvg": 20,
       "unit": "x",
       "label": "Top 7 Stocks P/E",
-      "description": "Magnificent-7 ex-Tesla TTM average expands to ~31.8× in mid-May 2026 (NVDA 46×, AAPL 36×, AMZN 32×, GOOGL 30×, MSFT 25×, META 22×); Tesla remains an extreme outlier at ~378×",
+      "description": "Magnificent-7 ex-Tesla TTM average remains around ~31.8× in mid-May 2026 (NVDA ~45–58×, AAPL ~34–36×, AMZN ~31–49×, GOOGL ~27–30×, MSFT ~24–36×, META ~22–29×); Tesla remains an extreme outlier.",
       "weight": 10,
       "score": 10
     },
@@ -648,39 +648,39 @@ const FALLBACK_DATA = {
       "value": 81,
       "unit": "%",
       "label": "VC → AI Share",
-      "description": "Share of global Q1 2026 VC investment flowing into AI ($242B of $297B) — still roughly 81% and near record concentration",
+      "description": "Share of global Q1 2026 VC investment flowing into AI ($242B of $297B) — still roughly 81% and near record concentration.",
       "totalVcBn": 297,
       "aiVcBn": 242,
       "weight": 20,
       "score": 16
     },
     "hyperscalerCapexBn": {
-      "value": 620,
-      "yoyGrowth": 39,
+      "value": 700,
+      "yoyGrowth": 61,
       "unit": "billion USD",
       "label": "Hyperscaler Capex 2026",
-      "description": "Big-4 hyperscaler consensus rises to ~$620B for 2026 (Amazon ~$200B, Google ~$185B, Meta ~$135B, Microsoft ~$100B; roughly +39% YoY vs 2025), with spending still dominated by AI infrastructure buildouts.",
+      "description": "Big-4 hyperscaler consensus has re-heated toward a ~$700B midpoint for 2026 (roughly a $650B–$715B range for Amazon, Google, Meta, and Microsoft), or about +61% YoY versus 2025, with spending still dominated by AI infrastructure buildouts.",
       "weight": 10,
-      "score": 8
+      "score": 9
     },
     "openAiRevenueBn": {
       "value": 25,
       "unit": "billion USD (annual)",
       "label": "OpenAI Annual Revenue",
-      "description": "Annualised revenue confirmed at ~$25B as of May 2026 (up from $13B in 2025), on track for $29–$30B full-year 2026 as GPT-5.5 enterprise deployments accelerate — still dwarfed by ~$1.4T of long-horizon infrastructure commitments",
+      "description": "Annualised revenue remains around ~$25B as of early 2026 (up from $13B in 2025), with reporting still pointing to roughly $29–$30B full-year 2026 potential — far below the long-horizon infrastructure commitment stack.",
       "committedSpendBn": 1400,
       "committedThrough": 2034,
       "weight": 5,
       "score": 5
     },
     "gridConnectionDelay": {
-      "value": 5,
+      "value": 4,
       "unit": "years",
       "baseline2023": 1.5,
       "label": "Grid Connection Delay",
-      "description": "Median wait for large U.S. data-center grid connections is now commonly cited around 4–5 years, though severe regional bottlenecks can still extend much longer.",
+      "description": "Average wait for large U.S. data-centre grid connections is now about 4 years in major markets, though severe regional bottlenecks can still stretch to 7–12 years.",
       "weight": 10,
-      "score": 8
+      "score": 7
     },
     "dataCenterPowerDemandTWh": {
       "value2023": 460,
@@ -688,7 +688,7 @@ const FALLBACK_DATA = {
       "value2030": 980,
       "unit": "TWh",
       "label": "DC Power Demand",
-      "description": "Major forecasts still cluster around ~1,000 TWh of global data-center electricity use in 2026 and around ~980 TWh by 2030; AI workloads remain a large and rising share",
+      "description": "Major forecasts still cluster around ~1,000 TWh of global data-centre electricity use in 2026 and roughly ~945–980 TWh by 2030; AI workloads remain a large and rising share.",
       "weight": 5,
       "score": 5
     },
@@ -696,7 +696,7 @@ const FALLBACK_DATA = {
       "value": 207,
       "unit": "companies",
       "label": "AI Unicorns (Global)",
-      "description": "Recent tracker consensus still points to about 207 AI-focused companies reaching $1B+ valuation since 2024, with AI representing a large share of newly minted unicorns.",
+      "description": "Current tracker consensus still points to about 207 AI-focused companies reaching $1B+ valuation since 2024, with AI representing a large share of newly minted unicorns.",
       "weight": 5,
       "score": 5
     },
@@ -885,12 +885,44 @@ const FALLBACK_DATA = {
       "hyperscalerCapexBn": 620,
       "gridDelayYears": 5,
       "aiUnicorns": 207
+    },
+    {
+      "date": "2026-05-19",
+      "heatScore": 92,
+      "heatLabel": "Boiling",
+      "capeRatio": 41.63,
+      "sp500ForwardPE": 21.4,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 700,
+      "gridDelayYears": 4,
+      "aiUnicorns": 207
     }
   ],
   "topStories": [
     {
+      "date": "2026-05-19",
+      "headline": "Shiller CAPE sits near ~41.63× while the S&P 500 forward P/E holds at ~21.4×; Big-4 hyperscaler 2026 capex consensus re-heats toward a ~$700B midpoint (~+61% YoY), keeping the cauldron at 92/100.",
+      "source": "Multpl / FactSet / OfficeChai / KAS Advisors",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-19",
+      "headline": "JLL and data-centre infrastructure trackers now describe roughly 4-year average U.S. grid-connection waits for large projects, with constrained markets still stretching to 7–12 years.",
+      "source": "JLL / Data Center Knowledge / Network World",
+      "type": "Infrastructure Constraint",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-05-19",
+      "headline": "Stanford's AI Index 2026 shows near-universal enterprise AI adoption, but real-world agentic automation reliability still trails the pace of benchmark and funding hype.",
+      "source": "Stanford HAI AI Index 2026 / IEEE Spectrum",
+      "type": "Productivity Counter-Evidence",
+      "sentiment": "bearish_signal"
+    },
+    {
       "date": "2026-05-18",
-      "headline": "Shiller CAPE eases to ~41.66× (95.8% of dot-com peak) while Magnificent-7 ex-Tesla P/E expands to ~31.8× (NVDA 46×, AAPL 36×, AMZN 32×, GOOGL 30×); heat score rises to 92/100 as Big-4 hyperscaler capex estimate climbs toward $620B.",
+      "headline": "Shiller CAPE eases to ~41.66× (95.8% of dot-com peak) while Magnificent-7 ex-Tesla P/E expands to ~31.8× (NVDA 46×, AAPL 36×, AMZN 32×); heat score rises to 92/100 as Big-4 hyperscaler capex estimate climbs toward $620B.",
       "source": "Multpl / longtermtrends.com / FactSet / Barchart",
       "type": "Hype Cycle",
       "sentiment": "extreme_bullish"
@@ -1243,7 +1275,7 @@ const FALLBACK_DATA = {
     {
       "metric": "CAPE Ratio",
       "value1999Peak": 43.5,
-      "value2026": 41.66,
+      "value2026": 41.63,
       "historicalAvg": 17.6
     },
     {
@@ -1264,7 +1296,7 @@ const FALLBACK_DATA = {
       "metric": "DC Power Use (TWh)",
       "y2023": 460,
       "y2026": 1000,
-      "y2030": 1065
+      "y2030": 980
     },
     {
       "metric": "AI Share of DC Power",
@@ -1281,7 +1313,7 @@ const FALLBACK_DATA = {
     {
       "metric": "Grid Connection Delay",
       "y2023": "1–2 yrs",
-      "y2026": "4–5 yrs",
+      "y2026": "4 yrs",
       "y2030": "7+ yrs"
     }
   ]
@@ -1294,9 +1326,9 @@ const INSIGHTS = [
   { title: '🐦 NewBird AI: Narrative > Reality',
     body: 'Allbirds (a wool-shoe company) rebranded as "NewBird AI" on April 15 2026 and surged ~876% intraday. No AI product, no AI revenue — just two letters: A and I.' },
   { title: '⚡ The Hard Stop: Power Grid',
-    body: 'A single large-scale AI data center can require 300 MW+. Grid connection now takes 5–10 years. Billions in GPUs are sitting idle waiting for power they may never get.' },
-  { title: '📉 CAPE at 41.66 — Still Bubble Territory',
-    body: 'The CAPE ratio stands at ~41.66× in May 2026 — about 96% of the dot-com all-time peak of 43.5×. That 1999–2000 era correction resulted in a 78% drawdown in the Nasdaq.' },
+    body: 'A single large-scale AI data center can require 300 MW+. Grid connection now averages about 4 years in major U.S. markets, while bottlenecked regions can still stretch to 7–12 years. Billions in GPUs are sitting idle waiting for power they may never get.' },
+  { title: '📉 CAPE at 41.63 — Still Bubble Territory',
+    body: 'The CAPE ratio stands at ~41.63× in May 2026 — about 95.7% of the dot-com all-time peak of 43.5×. That 1999–2000 era correction resulted in a 78% drawdown in the Nasdaq.' },
   { title: '🤖 AI Slop & Productivity Paradox',
     body: 'Studies show AI coding assistants made programming 19% slower due to time spent fixing AI-generated bugs. Up to 95% of enterprise Gen AI implementations have reportedly failed.' },
   { title: '💰 "Chief AI Officer" is Already Dead',
