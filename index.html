@@ -611,18 +611,18 @@ async function loadData() {
 }
 
 const FALLBACK_DATA = {
-  "lastUpdated": "2026-05-19",
+  "lastUpdated": "2026-05-21",
   "heatScore": 92,
   "heatLabel": "Boiling",
-  "summary": "As of 19 May 2026, the AI bubble cauldron stays 'Boiling' at 92/100. Shiller CAPE sits near ~41.63× while the S&P 500 forward P/E holds at ~21.4× and the Magnificent-7 ex-Tesla P/E remains around ~31.8×. Big-4 hyperscaler 2026 capex consensus has re-heated toward ~$700B (~+61% YoY), while average U.S. grid-connection waits for large data-centre projects are still about 4 years in major markets. VC-to-AI concentration remains near 81%, AI unicorn count stays at 207 since 2024, and OpenAI's annualised revenue remains about $25B against roughly $1.4T in committed infrastructure spend.",
+  "summary": "As of 21 May 2026, the AI bubble cauldron remains 'Boiling' at 92/100. Shiller CAPE is near ~41.06× while S&P 500 forward P/E stays around ~21.4× and the Magnificent-7 ex-Tesla P/E remains near ~31.8×. Big-4 hyperscaler 2026 capex consensus is still around ~$700B (~+61% YoY), while average U.S. grid-connection waits for large data-centre projects remain about 4 years in major markets. VC-to-AI concentration is still near 81%, AI unicorn count remains 207 since 2024, and OpenAI annualised revenue stays around $25B versus an updated infrastructure commitment path of roughly $600B through 2030.",
   "kpis": {
     "capeRatio": {
-      "value": 41.63,
+      "value": 41.06,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — about 41.63× in May 2026, now 95.7% of the dot-com peak of 43.5× (Multpl / marketcrash.net / longtermtrends.com)",
+      "description": "Cyclically adjusted P/E for US market — about 41.06× in May 2026, now 94.4% of the dot-com peak of 43.5× (Multpl / YCharts / valuation trackers)",
       "weight": 20,
       "score": 20
     },
@@ -667,9 +667,9 @@ const FALLBACK_DATA = {
       "value": 25,
       "unit": "billion USD (annual)",
       "label": "OpenAI Annual Revenue",
-      "description": "Annualised revenue remains around ~$25B as of early 2026 (up from $13B in 2025), with reporting still pointing to roughly $29–$30B full-year 2026 potential — far below the long-horizon infrastructure commitment stack.",
-      "committedSpendBn": 1400,
-      "committedThrough": 2034,
+      "description": "Annualised revenue remains around ~$25B as of early 2026 (with ~$25–$30B full-year run-rate expectations), while recent investor guidance has shifted committed infrastructure spend toward roughly $600B through 2030.",
+      "committedSpendBn": 600,
+      "committedThrough": 2030,
       "weight": 5,
       "score": 5
     },
@@ -685,10 +685,10 @@ const FALLBACK_DATA = {
     "dataCenterPowerDemandTWh": {
       "value2023": 460,
       "value2026": 1000,
-      "value2030": 980,
+      "value2030": 945,
       "unit": "TWh",
       "label": "DC Power Demand",
-      "description": "Major forecasts still cluster around ~1,000 TWh of global data-centre electricity use in 2026 and roughly ~945–980 TWh by 2030; AI workloads remain a large and rising share.",
+      "description": "Major forecasts still cluster around ~1,000 TWh of global data-centre electricity use in 2026, with IEA-style central estimates around ~945 TWh by 2030; AI workloads remain a large and rising share.",
       "weight": 5,
       "score": 5
     },
@@ -896,9 +896,52 @@ const FALLBACK_DATA = {
       "hyperscalerCapexBn": 700,
       "gridDelayYears": 4,
       "aiUnicorns": 207
+    },
+    {
+      "date": "2026-05-20",
+      "heatScore": 92,
+      "heatLabel": "Boiling",
+      "capeRatio": 41.06,
+      "sp500ForwardPE": 21.4,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 700,
+      "gridDelayYears": 4,
+      "aiUnicorns": 207
+    },
+    {
+      "date": "2026-05-21",
+      "heatScore": 92,
+      "heatLabel": "Boiling",
+      "capeRatio": 41.06,
+      "sp500ForwardPE": 21.4,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 700,
+      "gridDelayYears": 4,
+      "aiUnicorns": 207
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-21",
+      "headline": "Shiller CAPE hovers near ~41.06× while S&P 500 forward P/E remains ~21.4×; valuation heat stays elevated and keeps the cauldron at 92/100.",
+      "source": "Multpl / YCharts / FactSet-style valuation trackers",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-21",
+      "headline": "OpenAI annualized revenue remains around $25B, while 2026 guidance discussions increasingly center on roughly $600B in infrastructure commitments through 2030 rather than prior $1.4T narratives.",
+      "source": "CNBC / market reporting / investor guidance summaries",
+      "type": "Circular Financing",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-05-21",
+      "headline": "IEA-style power outlooks continue to anchor around ~1,000 TWh data-centre electricity demand in 2026 and ~945 TWh by 2030, underscoring persistent infrastructure strain.",
+      "source": "IEA / S&P Global power coverage",
+      "type": "Infrastructure Constraint",
+      "sentiment": "bearish_signal"
+    },
     {
       "date": "2026-05-19",
       "headline": "Shiller CAPE sits near ~41.63× while the S&P 500 forward P/E holds at ~21.4×; Big-4 hyperscaler 2026 capex consensus re-heats toward a ~$700B midpoint (~+61% YoY), keeping the cauldron at 92/100.",
@@ -1275,7 +1318,7 @@ const FALLBACK_DATA = {
     {
       "metric": "CAPE Ratio",
       "value1999Peak": 43.5,
-      "value2026": 41.63,
+      "value2026": 41.06,
       "historicalAvg": 17.6
     },
     {
@@ -1296,7 +1339,7 @@ const FALLBACK_DATA = {
       "metric": "DC Power Use (TWh)",
       "y2023": 460,
       "y2026": 1000,
-      "y2030": 980
+      "y2030": 945
     },
     {
       "metric": "AI Share of DC Power",
@@ -1322,13 +1365,13 @@ const FALLBACK_DATA = {
 // ─── Bubble insights ──────────────────────────────────────────────────
 const INSIGHTS = [
   { title: '🫧 Recursive Financing Loop',
-    body: 'NVIDIA invests in OpenAI → OpenAI buys NVIDIA GPUs → NVIDIA records revenue. This closed loop means roughly $1.4T in committed hyperscaler spend may simply be recycled capital, not real demand.' },
+    body: 'NVIDIA invests in OpenAI → OpenAI buys NVIDIA GPUs → NVIDIA records revenue. This closed loop means roughly $600B in committed infrastructure spend through 2030 may still reflect recycled capital dynamics, not purely end-demand.' },
   { title: '🐦 NewBird AI: Narrative > Reality',
     body: 'Allbirds (a wool-shoe company) rebranded as "NewBird AI" on April 15 2026 and surged ~876% intraday. No AI product, no AI revenue — just two letters: A and I.' },
   { title: '⚡ The Hard Stop: Power Grid',
     body: 'A single large-scale AI data center can require 300 MW+. Grid connection now averages about 4 years in major U.S. markets, while bottlenecked regions can still stretch to 7–12 years. Billions in GPUs are sitting idle waiting for power they may never get.' },
-  { title: '📉 CAPE at 41.63 — Still Bubble Territory',
-    body: 'The CAPE ratio stands at ~41.63× in May 2026 — about 95.7% of the dot-com all-time peak of 43.5×. That 1999–2000 era correction resulted in a 78% drawdown in the Nasdaq.' },
+  { title: '📉 CAPE at 41.06 — Still Bubble Territory',
+    body: 'The CAPE ratio stands at ~41.06× in May 2026 — about 94.4% of the dot-com all-time peak of 43.5×. That 1999–2000 era correction resulted in a 78% drawdown in the Nasdaq.' },
   { title: '🤖 AI Slop & Productivity Paradox',
     body: 'Studies show AI coding assistants made programming 19% slower due to time spent fixing AI-generated bugs. Up to 95% of enterprise Gen AI implementations have reportedly failed.' },
   { title: '💰 "Chief AI Officer" is Already Dead',
