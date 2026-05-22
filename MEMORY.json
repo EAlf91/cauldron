@@ -1,25 +1,25 @@
 {
-  "lastUpdated": "2026-05-21",
+  "lastUpdated": "2026-05-22",
   "heatScore": 92,
   "heatLabel": "Boiling",
-  "summary": "As of 21 May 2026, the AI bubble cauldron remains 'Boiling' at 92/100. Shiller CAPE is near ~41.06× while S&P 500 forward P/E stays around ~21.4× and the Magnificent-7 ex-Tesla P/E remains near ~31.8×. Big-4 hyperscaler 2026 capex consensus is still around ~$700B (~+61% YoY), while average U.S. grid-connection waits for large data-centre projects remain about 4 years in major markets. VC-to-AI concentration is still near 81%, AI unicorn count remains 207 since 2024, and OpenAI annualised revenue stays around $25B versus an updated infrastructure commitment path of roughly $600B through 2030.",
+  "summary": "As of 22 May 2026, the AI bubble cauldron remains 'Boiling' at 92/100. Shiller CAPE ticks up to ~41.35× (95.1% of the dot-com peak of 43.5×) while S&P 500 forward P/E eases slightly to ~21.1× and the Magnificent-7 ex-Tesla P/E holds near ~31.8×. Big-4 hyperscaler 2026 capex consensus stays around ~$700B (~+61% YoY), while average U.S. grid-connection waits for large data-centre projects remain about 4 years in major markets. VC-to-AI concentration is still near 81%, AI unicorn count remains 207 since 2024, and OpenAI annualised revenue stays around $25B versus a committed infrastructure path of roughly $600B through 2030. Yale Insights and Bezos publicly warn AI market exuberance is overdone as thought leaders shift from evangelism to evaluation.",
   "kpis": {
     "capeRatio": {
-      "value": 41.06,
+      "value": 41.35,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — about 41.06× in May 2026, now 94.4% of the dot-com peak of 43.5× (Multpl / YCharts / valuation trackers)",
+      "description": "Cyclically adjusted P/E for US market — about 41.35× in late May 2026, now 95.1% of the dot-com peak of 43.5× (Multpl / YCharts / valuation trackers)",
       "weight": 20,
       "score": 20
     },
     "sp500ForwardPE": {
-      "value": 21.4,
+      "value": 21.1,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for the S&P 500 — 21.4× per FactSet in mid-May 2026, above the 5-year average of 19.9× and 10-year average of 18.9× (FactSet / MacroMicro)",
+      "description": "Forward price-to-earnings ratio for the S&P 500 — 21.1× per FactSet in late May 2026, above the 5-year average of 19.9× and 10-year average of 18.9× (FactSet / MacroMicro)",
       "weight": 10,
       "score": 10
     },
@@ -306,9 +306,41 @@
       "hyperscalerCapexBn": 700,
       "gridDelayYears": 4,
       "aiUnicorns": 207
+    },
+    {
+      "date": "2026-05-22",
+      "heatScore": 92,
+      "heatLabel": "Boiling",
+      "capeRatio": 41.35,
+      "sp500ForwardPE": 21.1,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 700,
+      "gridDelayYears": 4,
+      "aiUnicorns": 207
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-22",
+      "headline": "Shiller CAPE ticks up to ~41.35× (95.1% of dot-com peak) while S&P 500 Forward P/E eases to ~21.1×; AI bubble cauldron holds steady at 92/100 'Boiling'.",
+      "source": "Multpl / LongtermTrends / FactSet / MacroMicro",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-22",
+      "headline": "Yale Insights and Jeff Bezos publicly warn that AI market exuberance is overdone — prominent investors and academics now openly debating the mechanism by which the AI bubble eventually bursts.",
+      "source": "Yale School of Management Insights / bvwd.ca.gov / Goldman Sachs / Economic Times",
+      "type": "Hype Cycle",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-05-22",
+      "headline": "Stanford HAI, Gartner, and Yale mark 2026 as the 'year of AI reckoning' — narrative shifts from evangelism to evaluation as enterprise AI failure rates remain high and ROI scrutiny intensifies.",
+      "source": "Stanford HAI / Gartner / Yale Insights / OpenTools AI",
+      "type": "Productivity Counter-Evidence",
+      "sentiment": "bearish_signal"
+    },
     {
       "date": "2026-05-21",
       "headline": "Shiller CAPE hovers near ~41.06× while S&P 500 forward P/E remains ~21.4×; valuation heat stays elevated and keeps the cauldron at 92/100.",
