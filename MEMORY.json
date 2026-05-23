@@ -1,25 +1,25 @@
 {
-  "lastUpdated": "2026-05-22",
+  "lastUpdated": "2026-05-23",
   "heatScore": 92,
   "heatLabel": "Boiling",
-  "summary": "As of 22 May 2026, the AI bubble cauldron remains 'Boiling' at 92/100. Shiller CAPE ticks up to ~41.35× (95.1% of the dot-com peak of 43.5×) while S&P 500 forward P/E eases slightly to ~21.1× and the Magnificent-7 ex-Tesla P/E holds near ~31.8×. Big-4 hyperscaler 2026 capex consensus stays around ~$700B (~+61% YoY), while average U.S. grid-connection waits for large data-centre projects remain about 4 years in major markets. VC-to-AI concentration is still near 81%, AI unicorn count remains 207 since 2024, and OpenAI annualised revenue stays around $25B versus a committed infrastructure path of roughly $600B through 2030. Yale Insights and Bezos publicly warn AI market exuberance is overdone as thought leaders shift from evangelism to evaluation.",
+  "summary": "As of 23 May 2026, the AI bubble cauldron remains 'Boiling' at 92/100. Shiller CAPE ticks up to ~41.4× (95.2% of the dot-com peak of 43.5×) while S&P 500 forward P/E edges slightly higher to ~21.2×; Magnificent-7 ex-Tesla P/E holds near ~31.8×. Big-4 hyperscaler 2026 capex is now revised toward a ~$720B consensus (+65% YoY), while nearly half of planned U.S. data-centre projects are delayed or cancelled due to grid and supply-chain bottlenecks. Average grid-connection waits remain around 4 years in major markets. VC-to-AI concentration holds at 81%, AI unicorn count stays at 207 since 2024, and OpenAI annualised revenue remains ~$25B. New Gartner and RAND research confirms 80–95% of enterprise AI projects fail to deliver tangible ROI, reinforcing the 'AI reckoning' theme that is defining 2026.",
   "kpis": {
     "capeRatio": {
-      "value": 41.35,
+      "value": 41.4,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — about 41.35× in late May 2026, now 95.1% of the dot-com peak of 43.5× (Multpl / YCharts / valuation trackers)",
+      "description": "Cyclically adjusted P/E for US market — about 41.4× in late May 2026, now 95.2% of the dot-com peak of 43.5× (Multpl / Finanzapedia / LongtermTrends)",
       "weight": 20,
       "score": 20
     },
     "sp500ForwardPE": {
-      "value": 21.1,
+      "value": 21.2,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for the S&P 500 — 21.1× per FactSet in late May 2026, above the 5-year average of 19.9× and 10-year average of 18.9× (FactSet / MacroMicro)",
+      "description": "Forward price-to-earnings ratio for the S&P 500 — ~21.2× per MacroMicro in late May 2026, above the 5-year average of 19.9× and 10-year average of 18.9× (MacroMicro / FactSet / IndexBox)",
       "weight": 10,
       "score": 10
     },
@@ -43,11 +43,11 @@
       "score": 16
     },
     "hyperscalerCapexBn": {
-      "value": 700,
-      "yoyGrowth": 61,
+      "value": 720,
+      "yoyGrowth": 65,
       "unit": "billion USD",
       "label": "Hyperscaler Capex 2026",
-      "description": "Big-4 hyperscaler consensus has re-heated toward a ~$700B midpoint for 2026 (roughly a $650B–$715B range for Amazon, Google, Meta, and Microsoft), or about +61% YoY versus 2025, with spending still dominated by AI infrastructure buildouts.",
+      "description": "Big-4 hyperscaler (Amazon ~$200B, Microsoft ~$190B, Google ~$185B, Meta ~$145B) consensus re-rates toward a ~$720B midpoint for 2026 (+65% YoY vs 2025's ~$435B), as TrendForce and multiple analysts now track $715–$730B for the full year — still dominated by AI infrastructure buildouts.",
       "weight": 10,
       "score": 9
     },
@@ -317,9 +317,41 @@
       "hyperscalerCapexBn": 700,
       "gridDelayYears": 4,
       "aiUnicorns": 207
+    },
+    {
+      "date": "2026-05-23",
+      "heatScore": 92,
+      "heatLabel": "Boiling",
+      "capeRatio": 41.4,
+      "sp500ForwardPE": 21.2,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 720,
+      "gridDelayYears": 4,
+      "aiUnicorns": 207
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-23",
+      "headline": "Shiller CAPE ticks up to ~41.4× (95.2% of dot-com peak) while S&P 500 forward P/E edges to ~21.2×; Big-4 hyperscaler 2026 capex consensus revised up to ~$720B (+65% YoY); AI bubble cauldron holds steady at 92/100 'Boiling'.",
+      "source": "Multpl / Finanzapedia / LongtermTrends / MacroMicro / TrendForce / OfficeChai",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-23",
+      "headline": "Nearly half of planned U.S. data centres for 2026 face delays or cancellation — grid connection waits now average 4–10 years, transformer lead times stretch to 3–5 years, and 50% of 16 GW pipeline is stalled; only ~5 GW under active construction.",
+      "source": "TechSpot / ByteIota / Network World / Data Center Knowledge",
+      "type": "Infrastructure Constraint",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-05-23",
+      "headline": "Gartner and RAND confirm 80–95% enterprise AI project failure rate in 2026 — boards pivot from 'soft ROI' to hard P&L accountability; productivity paradox deepens as micro-gains fail to appear in macro statistics.",
+      "source": "Gartner / RAND Corporation / Forbes / CIO.com",
+      "type": "Productivity Counter-Evidence",
+      "sentiment": "bearish_signal"
+    },
     {
       "date": "2026-05-22",
       "headline": "Shiller CAPE ticks up to ~41.35× (95.1% of dot-com peak) while S&P 500 Forward P/E eases to ~21.1×; AI bubble cauldron holds steady at 92/100 'Boiling'.",
@@ -738,13 +770,13 @@
     {
       "metric": "CAPE Ratio",
       "value1999Peak": 43.5,
-      "value2026": 41.06,
+      "value2026": 41.4,
       "historicalAvg": 17.6
     },
     {
       "metric": "S&P 500 Forward P/E",
       "value1999Peak": 25,
-      "value2026": 21.4,
+      "value2026": 21.2,
       "historicalAvg": 16
     },
     {
