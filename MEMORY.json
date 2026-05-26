@@ -1,8 +1,8 @@
 {
   "lastUpdated": "2026-05-26",
-  "heatScore": 92,
+  "heatScore": 93,
   "heatLabel": "Boiling",
-  "summary": "As of 26 May 2026, the AI bubble cauldron stays 'Boiling' at 92/100. Shiller CAPE eases slightly to ~39.8× (91.5% of the dot-com peak) while S&P 500 forward P/E dips to ~20.9×; Magnificent-7 ex-Tesla trailing P/E expands to ~38.7× as AI-sector valuations diverge from the broader index. Big-4 hyperscaler 2026 capex consensus holds at ~$720B (+65% YoY). OpenAI Q1 2026 revenue came in at $5.7B ($25B annualised run-rate) with an adjusted operating margin of –122%, reinforcing the circular-financing paradox. Grid-connection waits remain ~4 years on average; VC-to-AI concentration holds at 81%; AI unicorn count stays at 207 since 2024. The EU adopted its first AI-Transparency Label for news content and the U.S. advanced mandatory pre-release testing for frontier models — regulatory pressure is escalating as AI is reclassified as critical infrastructure.",
+  "summary": "As of 26 May 2026, the AI bubble cauldron rises to 'Boiling' at 93/100. Shiller CAPE holds near ~39.8× (91.5% of the dot-com peak) while S&P 500 forward P/E stays at ~20.9×; Magnificent-7 ex-Tesla trailing P/E averages ~38.7× (NVDA ~58.5×, AMZN ~48.5×, MSFT ~36.5×, AAPL ~33.5×, META ~28.5×, GOOGL ~26.5×). Big-4 hyperscaler 2026 capex consensus holds at ~$720B (+65% YoY). OpenAI Q1 2026 revenue came in at $5.7B ($25B annualised run-rate) with an adjusted operating margin of –122%, reinforcing the circular-financing paradox. Grid-connection wait times have climbed to a national median of ~5 years for large U.S. data centres (some constrained markets 7–12 years); VC-to-AI concentration holds at 81%; AI unicorn count stays at 207 since 2024. The METR 2026 study confirms experienced developers take ~19% longer on complex tasks with AI; enterprise GenAI pilot-to-production failure rate confirmed at ~95% by MIT NANDA and McKinsey.",
   "kpis": {
     "capeRatio": {
       "value": 39.8,
@@ -62,13 +62,13 @@
       "score": 5
     },
     "gridConnectionDelay": {
-      "value": 4,
+      "value": 5,
       "unit": "years",
       "baseline2023": 1.5,
       "label": "Grid Connection Delay",
-      "description": "Average wait for large U.S. data-centre grid connections is now about 4 years in major markets, though severe regional bottlenecks can still stretch to 7–12 years.",
+      "description": "National median wait for large U.S. data-centre grid connections has risen to ~5 years in 2026, with severely constrained markets (Northern Virginia, etc.) stretching to 7–12 years; nearly half of 2026 planned capacity is delayed or cancelled (Grid Interconnection Delays 2026 / AhaSignals / DataCenter Dynamics).",
       "weight": 10,
-      "score": 7
+      "score": 8
     },
     "dataCenterPowerDemandTWh": {
       "value2023": 460,
@@ -331,17 +331,38 @@
     },
     {
       "date": "2026-05-26",
-      "heatScore": 92,
+      "heatScore": 93,
       "heatLabel": "Boiling",
       "capeRatio": 39.8,
       "sp500ForwardPE": 20.9,
       "vcAiSharePct": 81,
       "hyperscalerCapexBn": 720,
-      "gridDelayYears": 4,
+      "gridDelayYears": 5,
       "aiUnicorns": 207
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-26",
+      "headline": "METR 2026 study confirms experienced developers take ~19% longer on complex tasks when using AI coding assistants — perceived speed gains do not translate to real delivery gains; only 29% of developers trust AI-generated code accuracy (down from 40% in 2024).",
+      "source": "METR / secondtalent.com / callsphere.ai / uvik.net AI Coding Statistics 2026",
+      "type": "Productivity Counter-Evidence",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-05-26",
+      "headline": "U.S. data-centre grid connection wait time climbs to a national median of ~5 years in 2026 (some markets 7–12 years); interconnection queue has grown from 1,400 GW to 2,600 GW since 2021; nearly half of planned 2026 data-centre capacity is delayed or cancelled.",
+      "source": "enkiai.com Grid Interconnection Delays 2026 / AhaSignals Interconnection Queue Tracker / DataCenter Dynamics",
+      "type": "Infrastructure Constraint",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-05-26",
+      "headline": "MIT NANDA, McKinsey and Stanford HAI confirm 95% pilot-to-production failure rate for enterprise GenAI in 2026 — only ~5% of firms are 'AI high performers'; the primary causes are organisational unreadiness and poor data governance, not technical limitations.",
+      "source": "MIT NANDA / McKinsey / Stanford HAI / timewell.jp GenAI Divide 2026 / folio3.ai",
+      "type": "Productivity Counter-Evidence",
+      "sentiment": "bearish_signal"
+    },
     {
       "date": "2026-05-26",
       "headline": "Shiller CAPE eases to ~39.8× (91.5% of dot-com peak) while Magnificent-7 ex-Tesla trailing P/E expands to ~38.7× average — AI-sector valuations diverge from broader market as NVDA ~58.5×, AMZN ~48.5×, MSFT ~36.5×; heat score holds at 92/100 'Boiling'.",
@@ -802,19 +823,19 @@
     {
       "metric": "CAPE Ratio",
       "value1999Peak": 43.5,
-      "value2026": 41.4,
+      "value2026": 39.8,
       "historicalAvg": 17.6
     },
     {
       "metric": "S&P 500 Forward P/E",
       "value1999Peak": 25,
-      "value2026": 21.2,
+      "value2026": 20.9,
       "historicalAvg": 16
     },
     {
       "metric": "Top 7 Stocks P/E",
       "value1999Peak": 66,
-      "value2026": 31.8,
+      "value2026": 38.7,
       "historicalAvg": 20
     }
   ],
@@ -840,7 +861,7 @@
     {
       "metric": "Grid Connection Delay",
       "y2023": "1–2 yrs",
-      "y2026": "4 yrs",
+      "y2026": "5 yrs",
       "y2030": "7+ yrs"
     }
   ]
