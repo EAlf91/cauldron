@@ -1,34 +1,34 @@
 {
-  "lastUpdated": "2026-05-23",
+  "lastUpdated": "2026-05-26",
   "heatScore": 92,
   "heatLabel": "Boiling",
-  "summary": "As of 23 May 2026, the AI bubble cauldron remains 'Boiling' at 92/100. Shiller CAPE ticks up to ~41.4× (95.2% of the dot-com peak of 43.5×) while S&P 500 forward P/E edges slightly higher to ~21.2×; Magnificent-7 ex-Tesla P/E holds near ~31.8×. Big-4 hyperscaler 2026 capex is now revised toward a ~$720B consensus (+65% YoY), while nearly half of planned U.S. data-centre projects are delayed or cancelled due to grid and supply-chain bottlenecks. Average grid-connection waits remain around 4 years in major markets. VC-to-AI concentration holds at 81%, AI unicorn count stays at 207 since 2024, and OpenAI annualised revenue remains ~$25B. New Gartner and RAND research confirms 80–95% of enterprise AI projects fail to deliver tangible ROI, reinforcing the 'AI reckoning' theme that is defining 2026.",
+  "summary": "As of 26 May 2026, the AI bubble cauldron stays 'Boiling' at 92/100. Shiller CAPE eases slightly to ~39.8× (91.5% of the dot-com peak) while S&P 500 forward P/E dips to ~20.9×; Magnificent-7 ex-Tesla trailing P/E expands to ~38.7× as AI-sector valuations diverge from the broader index. Big-4 hyperscaler 2026 capex consensus holds at ~$720B (+65% YoY). OpenAI Q1 2026 revenue came in at $5.7B ($25B annualised run-rate) with an adjusted operating margin of –122%, reinforcing the circular-financing paradox. Grid-connection waits remain ~4 years on average; VC-to-AI concentration holds at 81%; AI unicorn count stays at 207 since 2024. The EU adopted its first AI-Transparency Label for news content and the U.S. advanced mandatory pre-release testing for frontier models — regulatory pressure is escalating as AI is reclassified as critical infrastructure.",
   "kpis": {
     "capeRatio": {
-      "value": 41.4,
+      "value": 39.8,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — about 41.4× in late May 2026, now 95.2% of the dot-com peak of 43.5× (Multpl / Finanzapedia / LongtermTrends)",
+      "description": "Cyclically adjusted P/E for US market — about 39.8× in late May 2026, now 91.5% of the dot-com peak of 43.5× (YCharts / Multpl / LongtermTrends)",
       "weight": 20,
       "score": 20
     },
     "sp500ForwardPE": {
-      "value": 21.2,
+      "value": 20.9,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for the S&P 500 — ~21.2× per MacroMicro in late May 2026, above the 5-year average of 19.9× and 10-year average of 18.9× (MacroMicro / FactSet / IndexBox)",
+      "description": "Forward price-to-earnings ratio for the S&P 500 — ~20.9× per MacroMicro on 26 May 2026, above the 5-year average of 19.9× and 10-year average of 18.9× (MacroMicro / FactSet)",
       "weight": 10,
       "score": 10
     },
     "top7StocksPE": {
-      "value": 31.8,
+      "value": 38.7,
       "historicalAvg": 20,
       "unit": "x",
       "label": "Top 7 Stocks P/E",
-      "description": "Magnificent-7 ex-Tesla TTM average remains around ~31.8× in mid-May 2026 (NVDA ~45–58×, AAPL ~34–36×, AMZN ~31–49×, GOOGL ~27–30×, MSFT ~24–36×, META ~22–29×); Tesla remains an extreme outlier.",
+      "description": "Magnificent-7 ex-Tesla TTM average expands to ~38.7× in late May 2026 (NVDA ~58.5×, AMZN ~48.5×, MSFT ~36.5×, AAPL ~33.5×, META ~28.5×, GOOGL ~26.5×); AI-sector premium widening vs. broader index.",
       "weight": 10,
       "score": 10
     },
@@ -55,7 +55,7 @@
       "value": 25,
       "unit": "billion USD (annual)",
       "label": "OpenAI Annual Revenue",
-      "description": "Annualised revenue remains around ~$25B as of early 2026 (with ~$25–$30B full-year run-rate expectations), while recent investor guidance has shifted committed infrastructure spend toward roughly $600B through 2030.",
+      "description": "OpenAI Q1 2026 revenue: $5.7B (~$25B annualised run-rate), adjusted operating margin –122% (burning $122 per $1 earned). Enterprise now >40% of revenue. Committed infrastructure spend ~$600B through 2030.",
       "committedSpendBn": 600,
       "committedThrough": 2030,
       "weight": 5,
@@ -328,9 +328,41 @@
       "hyperscalerCapexBn": 720,
       "gridDelayYears": 4,
       "aiUnicorns": 207
+    },
+    {
+      "date": "2026-05-26",
+      "heatScore": 92,
+      "heatLabel": "Boiling",
+      "capeRatio": 39.8,
+      "sp500ForwardPE": 20.9,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 720,
+      "gridDelayYears": 4,
+      "aiUnicorns": 207
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-26",
+      "headline": "Shiller CAPE eases to ~39.8× (91.5% of dot-com peak) while Magnificent-7 ex-Tesla trailing P/E expands to ~38.7× average — AI-sector valuations diverge from broader market as NVDA ~58.5×, AMZN ~48.5×, MSFT ~36.5×; heat score holds at 92/100 'Boiling'.",
+      "source": "YCharts / Multpl / LongtermTrends / MacroMicro / MarketXLS",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-26",
+      "headline": "OpenAI Q1 2026 revenue $5.7B (~$25B annualised) with adjusted operating margin of –122% — the company burns $122 for every $1 earned; enterprise now >40% of revenue, IPO preparations advancing while net loss projected at ~$14B for full-year 2026.",
+      "source": "The Tech Portal / FAQ.com.tw / AI Daily Post / WinBuzzer",
+      "type": "Circular Financing",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-05-26",
+      "headline": "EU adopts first AI-Transparency Label for news content (May 2026); U.S. mandates pre-release testing for frontier models — AI formally reclassified as critical infrastructure, ending 'move fast and break things' era and opening new compliance and litigation exposure.",
+      "source": "imfounder.com / kersai.com / llodo.com / AI Policy Desk",
+      "type": "Regulatory",
+      "sentiment": "bearish_signal"
+    },
     {
       "date": "2026-05-23",
       "headline": "Shiller CAPE ticks up to ~41.4× (95.2% of dot-com peak) while S&P 500 forward P/E edges to ~21.2×; Big-4 hyperscaler 2026 capex consensus revised up to ~$720B (+65% YoY); AI bubble cauldron holds steady at 92/100 'Boiling'.",
