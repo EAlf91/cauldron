@@ -2,15 +2,15 @@
   "lastUpdated": "2026-05-26",
   "heatScore": 93,
   "heatLabel": "Boiling",
-  "summary": "As of 26 May 2026, the AI bubble cauldron rises to 'Boiling' at 93/100. Shiller CAPE holds near ~39.8× (91.5% of the dot-com peak) while S&P 500 forward P/E stays at ~20.9×; Magnificent-7 ex-Tesla trailing P/E averages ~38.7× (NVDA ~58.5×, AMZN ~48.5×, MSFT ~36.5×, AAPL ~33.5×, META ~28.5×, GOOGL ~26.5×). Big-4 hyperscaler 2026 capex consensus holds at ~$720B (+65% YoY). OpenAI Q1 2026 revenue came in at $5.7B ($25B annualised run-rate) with an adjusted operating margin of –122%, reinforcing the circular-financing paradox. Grid-connection wait times have climbed to a national median of ~5 years for large U.S. data centres (some constrained markets 7–12 years); VC-to-AI concentration holds at 81%; AI unicorn count stays at 207 since 2024. The METR 2026 study confirms experienced developers take ~19% longer on complex tasks with AI; enterprise GenAI pilot-to-production failure rate confirmed at ~95% by MIT NANDA and McKinsey.",
+  "summary": "As of 26 May 2026, the AI bubble cauldron remains 'Boiling' at 93/100. Shiller CAPE sits near ~39.6× (91.0% of the dot-com peak) while S&P 500 forward P/E stays at ~20.9×; Magnificent-7 trailing P/E now averages ~43.6× (range ~26.5× to ~68.5×). Big-5 hyperscaler 2026 capex consensus is ~$725B (+64% YoY), while broader trackers that include major China platforms point toward ~$830B. OpenAI's annualised revenue run-rate remains around ~$25B. Grid-connection wait times remain around ~5 years for large U.S. data centres; VC-to-AI concentration holds at 81% ($239B of $297B in Q1 2026); AI unicorn count holds at 207 since 2024. The METR 2026 study still indicates experienced developers take ~19% longer on complex tasks with AI assistance, while SEC/DOJ AI-washing enforcement has expanded via the Nate case.",
   "kpis": {
     "capeRatio": {
-      "value": 39.8,
+      "value": 39.6,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — about 39.8× in late May 2026, now 91.5% of the dot-com peak of 43.5× (YCharts / Multpl / LongtermTrends)",
+      "description": "Cyclically adjusted P/E for US market — about 39.6× in late May 2026, still near historic extremes and about 91.0% of the dot-com peak of 43.5× (YCharts / Multpl / LongtermTrends).",
       "weight": 20,
       "score": 20
     },
@@ -24,11 +24,11 @@
       "score": 10
     },
     "top7StocksPE": {
-      "value": 38.7,
+      "value": 43.6,
       "historicalAvg": 20,
       "unit": "x",
       "label": "Top 7 Stocks P/E",
-      "description": "Magnificent-7 ex-Tesla TTM average expands to ~38.7× in late May 2026 (NVDA ~58.5×, AMZN ~48.5×, MSFT ~36.5×, AAPL ~33.5×, META ~28.5×, GOOGL ~26.5×); AI-sector premium widening vs. broader index.",
+      "description": "Magnificent-7 trailing P/E averages ~43.6× in late May 2026, with dispersion from ~26.5× (GOOGL) to ~68.5× (TSLA); valuation premium remains elevated versus the broader index.",
       "weight": 10,
       "score": 10
     },
@@ -36,18 +36,18 @@
       "value": 81,
       "unit": "%",
       "label": "VC → AI Share",
-      "description": "Share of global Q1 2026 VC investment flowing into AI ($242B of $297B) — still roughly 81% and near record concentration.",
+      "description": "Share of global Q1 2026 VC investment flowing into AI ($239B of $297B) — roughly 81% and near record concentration.",
       "totalVcBn": 297,
-      "aiVcBn": 242,
+      "aiVcBn": 239,
       "weight": 20,
       "score": 16
     },
     "hyperscalerCapexBn": {
-      "value": 720,
-      "yoyGrowth": 65,
+      "value": 725,
+      "yoyGrowth": 64,
       "unit": "billion USD",
       "label": "Hyperscaler Capex 2026",
-      "description": "Big-4 hyperscaler (Amazon ~$200B, Microsoft ~$190B, Google ~$185B, Meta ~$145B) consensus re-rates toward a ~$720B midpoint for 2026 (+65% YoY vs 2025's ~$435B), as TrendForce and multiple analysts now track $715–$730B for the full year — still dominated by AI infrastructure buildouts.",
+      "description": "Big-5 hyperscaler 2026 capex consensus clusters around ~$725B (+64% YoY), while broader tracker sets including major China cloud platforms run as high as ~$830B; AI infrastructure remains the dominant spend driver.",
       "weight": 10,
       "score": 9
     },
@@ -339,9 +339,41 @@
       "hyperscalerCapexBn": 720,
       "gridDelayYears": 5,
       "aiUnicorns": 207
+    },
+    {
+      "date": "2026-05-26",
+      "heatScore": 93,
+      "heatLabel": "Boiling",
+      "capeRatio": 39.6,
+      "sp500ForwardPE": 20.9,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 725,
+      "gridDelayYears": 5,
+      "aiUnicorns": 207
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-26",
+      "headline": "SEC and DOJ expanded AI-washing enforcement in 2026 via parallel civil/criminal fraud actions tied to Nate, reinforcing that unsubstantiated AI claims now carry direct founder-level liability risk.",
+      "source": "Debevoise / White & Case / Holland & Knight",
+      "type": "Regulatory",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-05-26",
+      "headline": "Global VC reached about $297B in Q1 2026, with AI startups absorbing roughly $239B (~81%), keeping AI concentration near record highs and further tightening narrative-driven capital allocation.",
+      "source": "Crunchbase / KPMG / Grey Journal market summary",
+      "type": "Circular Financing",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-26",
+      "headline": "Hyperscaler infrastructure spend for 2026 remains on a steep trajectory: Big-5 consensus sits near ~$725B (+64% YoY), while broader tracker sets including China platforms point toward ~$830B.",
+      "source": "CreditSights / TrendForce / industry tracker synthesis",
+      "type": "Infrastructure Constraint",
+      "sentiment": "extreme_bullish"
+    },
     {
       "date": "2026-05-26",
       "headline": "METR 2026 study confirms experienced developers take ~19% longer on complex tasks when using AI coding assistants — perceived speed gains do not translate to real delivery gains; only 29% of developers trust AI-generated code accuracy (down from 40% in 2024).",
@@ -365,7 +397,7 @@
     },
     {
       "date": "2026-05-26",
-      "headline": "Shiller CAPE eases to ~39.8× (91.5% of dot-com peak) while Magnificent-7 ex-Tesla trailing P/E expands to ~38.7× average — AI-sector valuations diverge from broader market as NVDA ~58.5×, AMZN ~48.5×, MSFT ~36.5×; heat score holds at 92/100 'Boiling'.",
+      "headline": "Shiller CAPE eases to ~39.8× (91.5% of dot-com peak) while Magnificent-7 ex-Tesla trailing P/E expands to ~38.7× average — AI-sector valuations diverge from broader market as NVDA ~58.5×, AMZN ~48.5×, MSFT ~36.5×; heat score holds at 93/100 'Boiling'.",
       "source": "YCharts / Multpl / LongtermTrends / MacroMicro / MarketXLS",
       "type": "Hype Cycle",
       "sentiment": "extreme_bullish"
