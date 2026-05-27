@@ -22,4 +22,10 @@ Use this prompt for daily cauldron updates:
 - keep units and rounding consistent (x, %, B/T USD, years)
 - update lastUpdated and heat score label/value together
 - for web-search findings, do not use older studies (e.g., 2025); stick to 2026 sources and the specific update date from the issue title
+
+# Citation Requirements
+- every new `topStories` entry MUST include a `sourceUrl` field containing the direct URL to the primary source article or report (e.g., `"sourceUrl": "https://www.gartner.com/en/newsroom/..."`)
+- if multiple sources are listed in `source`, set `sourceUrl` to the URL of the most authoritative or directly relevant one
+- do NOT use search-engine URLs or aggregator pages; link to the actual article or report
+- the `source` field should still contain the human-readable publication name(s) as before
 ```

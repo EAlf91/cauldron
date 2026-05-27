@@ -66,6 +66,6 @@ After answering the questions above, update **`MEMORY.json`** in-place with:
 1. New KPI values in the `kpis` object (update `value`, `score`, and any sub-fields that changed).
 2. A new entry appended to the `historical` array for today's date.
 3. Updated `heatScore`, `heatLabel`, `summary`, and `lastUpdated` at the root level.
-4. Up to 3 new entries prepended to `topStories` for the most significant developments found.
+4. Up to 3 new entries prepended to `topStories` for the most significant developments found. Each entry must include a `sourceUrl` field with the direct URL to the primary source article or report.
 
 Do **not** remove existing historical entries. Do **not** change the JSON schema.
