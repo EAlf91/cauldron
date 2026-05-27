@@ -575,6 +575,7 @@
             <th>Headline</th>
             <th>Type</th>
             <th>Signal</th>
+            <th>Source</th>
           </tr>
         </thead>
         <tbody id="newsBody"><!-- filled by JS --></tbody>
@@ -1792,12 +1793,17 @@ function renderEnergy(data) {
 function renderNews(data) {
   const tbody = document.getElementById('newsBody');
   data.topStories.forEach(story => {
+    const safeUrl = story.sourceUrl && /^https?:\/\//i.test(story.sourceUrl) ? story.sourceUrl : null;
+    const sourceCell = safeUrl
+      ? `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer" style="color:var(--orange);word-break:break-word">${story.source || safeUrl}</a>`
+      : `<span style="color:var(--muted)">${story.source || ''}</span>`;
     tbody.insertAdjacentHTML('beforeend', `
       <tr>
         <td style="white-space:nowrap;color:var(--muted)">${story.date}</td>
         <td>${story.headline}</td>
         <td>${typeBadge(story.type)}</td>
         <td>${sentimentBadge(story.sentiment)}</td>
+        <td style="font-size:0.8em;min-width:10rem">${sourceCell}</td>
       </tr>
     `);
   });
