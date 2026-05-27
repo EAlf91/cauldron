@@ -1,25 +1,25 @@
 {
-  "lastUpdated": "2026-05-26",
+  "lastUpdated": "2026-05-27",
   "heatScore": 93,
   "heatLabel": "Boiling",
-  "summary": "As of 26 May 2026, the AI bubble cauldron remains 'Boiling' at 93/100. Shiller CAPE sits near ~39.6× (91.0% of the dot-com peak) while S&P 500 forward P/E stays at ~20.9×; Magnificent-7 trailing P/E now averages ~43.6× (range ~26.5× to ~68.5×). Big-5 hyperscaler 2026 capex consensus is ~$725B (+64% YoY), while broader trackers that include major China platforms point toward ~$830B. OpenAI's annualised revenue run-rate remains around ~$25B. Grid-connection wait times remain around ~5 years for large U.S. data centres; VC-to-AI concentration holds at 81% ($239B of $297B in Q1 2026); AI unicorn count holds at 207 since 2024. The METR 2026 study still indicates experienced developers take ~19% longer on complex tasks with AI assistance, while SEC/DOJ AI-washing enforcement has expanded via the Nate case.",
+  "summary": "As of 27 May 2026, the AI bubble cauldron holds 'Boiling' at 93/100. Shiller CAPE eases slightly to ~39.3× (~90.3% of the dot-com peak of 43.5×) while S&P 500 forward P/E ticks up to ~21.3×; Magnificent-7 trailing P/E holds near ~43.6× (range ~26.5×–68.5×). Big-5 hyperscaler 2026 capex consensus remains ~$725B (+64% YoY), broader tracker sets including China platforms approach ~$830B. OpenAI annualised run-rate stays ~$25B. Grid-connection median holds at ~5 years for U.S. data centres; VC-to-AI concentration unchanged at 81% ($239B of $297B in Q1 2026); AI unicorns since 2024 remain at 207. FTC settled with Cox Media Group for ~$1M over deceptive AI capability claims (May 21); S&P 500 and Nasdaq hit fresh record highs driven by AI/memory chip rally. Hackett Group (2026) confirms 91% of AI pilots stall and never scale; RAND/Gartner: 80% enterprise AI project failure rate.",
   "kpis": {
     "capeRatio": {
-      "value": 39.6,
+      "value": 39.3,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — about 39.6× in late May 2026, still near historic extremes and about 91.0% of the dot-com peak of 43.5× (YCharts / Multpl / LongtermTrends).",
+      "description": "Cyclically adjusted P/E for US market — about 39.3× on 27 May 2026, ~90.3% of the dot-com peak of 43.5×; still at extreme historical levels (YCharts / Multpl / LongtermTrends / MarketXLS May 2026).",
       "weight": 20,
       "score": 20
     },
     "sp500ForwardPE": {
-      "value": 20.9,
+      "value": 21.3,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for the S&P 500 — ~20.9× per MacroMicro on 26 May 2026, above the 5-year average of 19.9× and 10-year average of 18.9× (MacroMicro / FactSet)",
+      "description": "Forward price-to-earnings ratio for the S&P 500 — ~21.3× on 27 May 2026 (StreetStats / Trendonify), close to 5-year median of 21.1× and above 10-year median of 19.8×; market hit fresh record highs on AI/chip rally.",
       "weight": 10,
       "score": 10
     },
@@ -350,9 +350,41 @@
       "hyperscalerCapexBn": 725,
       "gridDelayYears": 5,
       "aiUnicorns": 207
+    },
+    {
+      "date": "2026-05-27",
+      "heatScore": 93,
+      "heatLabel": "Boiling",
+      "capeRatio": 39.3,
+      "sp500ForwardPE": 21.3,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 725,
+      "gridDelayYears": 5,
+      "aiUnicorns": 207
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-27",
+      "headline": "S&P 500 and Nasdaq Composite hit fresh all-time highs on 27 May 2026 as AI and memory chip stocks surged — Micron Technology breached a $1 trillion market cap after a 19% rally, with knock-on gains in Seagate and Western Digital; AI infrastructure ETFs posted new records.",
+      "source": "CNBC / AI Chronicle / Morgan Stanley AI Market Trends 2026",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-27",
+      "headline": "FTC settled with Cox Media Group and two smaller firms for ~$1M over false 'AI-powered' marketing claims (May 21 2026); FTC warned Amazon, Meta, Apple and 12 other platforms via letters — signalling shift from warnings to active AI-washing enforcement with immediate effect.",
+      "source": "FTC Press Release / launch-legal.com / AI Policy Desk",
+      "type": "Regulatory",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-05-27",
+      "headline": "Hackett Group (2026): 91% of enterprise AI pilots stall and never scale to business value; RAND/Gartner confirm 80–85% overall AI project failure rate — only 19.7% of AI projects achieve or exceed their objectives, deepening the AI productivity paradox.",
+      "source": "Hackett Group / RAND Corporation / Gartner April 2026 / Folio3 / Freshworks 2026 Key Issues Study",
+      "type": "Productivity Counter-Evidence",
+      "sentiment": "bearish_signal"
+    },
     {
       "date": "2026-05-26",
       "headline": "SEC and DOJ expanded AI-washing enforcement in 2026 via parallel civil/criminal fraud actions tied to Nate, reinforcing that unsubstantiated AI claims now carry direct founder-level liability risk.",
