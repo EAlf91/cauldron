@@ -419,7 +419,7 @@
 <div class="ticker-wrap" aria-label="Market ticker">
   <div class="ticker" id="marketTicker"></div>
   <noscript>
-        <div class="ticker"><span>🌡 HEAT: 93/100</span> · CAPE Ratio <span>39.3×</span> · VC→AI <span>81%</span> · Hyperscaler Capex <span>$725B</span> · OpenAI Revenue <span>$25B</span> ·</div>
+        <div class="ticker"><span>🌡 HEAT: 93/100</span> · CAPE Ratio <span>39.5×</span> · VC→AI <span>81%</span> · Hyperscaler Capex <span>$725B</span> · OpenAI Revenue <span>$25B</span> ·</div>
   </noscript>
 </div>
 
@@ -612,36 +612,36 @@ async function loadData() {
 }
 
 const FALLBACK_DATA = {
-  "lastUpdated": "2026-05-27",
+  "lastUpdated": "2026-05-28",
   "heatScore": 93,
   "heatLabel": "Boiling",
-  "summary": "As of 27 May 2026, the AI bubble cauldron holds 'Boiling' at 93/100. Shiller CAPE eases slightly to ~39.3× (~90.3% of the dot-com peak of 43.5×) while S&P 500 forward P/E ticks up to ~21.3×; Magnificent-7 trailing P/E holds near ~43.6× (range ~26.5×–68.5×). Big-5 hyperscaler 2026 capex consensus remains ~$725B (+64% YoY), broader tracker sets including China platforms approach ~$830B. OpenAI annualised run-rate stays ~$25B. Grid-connection median holds at ~5 years for U.S. data centres; VC-to-AI concentration unchanged at 81% ($239B of $297B in Q1 2026); AI unicorns since 2024 remain at 207. FTC settled with Cox Media Group for ~$1M over deceptive AI capability claims (May 21); S&P 500 and Nasdaq hit fresh record highs driven by AI/memory chip rally. Hackett Group (2026) confirms 91% of AI pilots stall and never scale; RAND/Gartner: 80% enterprise AI project failure rate.",
+  "summary": "As of 28 May 2026, the AI bubble cauldron holds 'Boiling' at 93/100. Anthropic raised $65B in a Series H round at a $965B valuation, surpassing OpenAI as the world's most valuable AI startup; Anthropic's revenue run-rate hit ~$47B ahead of an anticipated IPO. OpenAI (May 22) confidentially filed its S-1 targeting a Sept 2026 listing at $852B–$1T valuation while burning $1.22 per $1 earned. ByteDance plans $70B AI capex for 2026, pushing broader global hyperscaler spend (including China) above ~$900B. Shiller CAPE edges to ~39.5× (~90.8% of dot-com peak); S&P 500 forward P/E ticks to ~21.4×; Magnificent-7 trailing P/E averages ~42.9× (TSLA ~68.5×, NVDA ~58.5×, AMZN ~48.5×; AAPL ~33.5×, META ~28.5×). Big-5 hyperscaler capex consensus ~$725B (+64% YoY). VC→AI concentration steady at 81% ($239B of $297B in Q1 2026); AI unicorns since 2024 remain at 207. Grid-connection median holds at ~5 years.",
   "kpis": {
     "capeRatio": {
-      "value": 39.3,
+      "value": 39.5,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — about 39.3× on 27 May 2026, ~90.3% of the dot-com peak of 43.5×; still at extreme historical levels (YCharts / Multpl / LongtermTrends / MarketXLS May 2026).",
+      "description": "Cyclically adjusted P/E for US market — about 39.5× on 28 May 2026, ~90.8% of the dot-com peak of 43.5×; MacroMicro shows ~39.89 for end-May, YCharts ~39.58 for May 31; still at extreme historical levels (YCharts / MacroMicro / Multpl / LongtermTrends / MarketXLS May 2026).",
       "weight": 20,
       "score": 20
     },
     "sp500ForwardPE": {
-      "value": 21.3,
+      "value": 21.4,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for the S&P 500 — ~21.3× on 27 May 2026 (StreetStats / Trendonify), close to 5-year median of 21.1× and above 10-year median of 19.8×; market hit fresh record highs on AI/chip rally.",
+      "description": "Forward price-to-earnings ratio for the S&P 500 — ~21.4× on 28 May 2026 (StreetStats / VCPScanner), close to 5-year median of 21.1× and above 10-year median of 19.8×; elevated amid continued AI-driven market highs.",
       "weight": 10,
       "score": 10
     },
     "top7StocksPE": {
-      "value": 43.6,
+      "value": 42.9,
       "historicalAvg": 20,
       "unit": "x",
       "label": "Top 7 Stocks P/E",
-      "description": "Magnificent-7 trailing P/E averages ~43.6× in late May 2026, with dispersion from ~26.5× (GOOGL) to ~68.5× (TSLA); valuation premium remains elevated versus the broader index.",
+      "description": "Magnificent-7 trailing P/E averages ~42.9× in late May 2026 (TSLA ~68.5×, NVDA ~58.5×, AMZN ~48.5×, MSFT ~36.5×, AAPL ~33.5×, META ~28.5×, GOOGL ~26.5×); valuation premium remains elevated versus the broader index (MarketXLS Magnificent 7 Valuation Dashboard May 2026).",
       "weight": 10,
       "score": 10
     },
@@ -660,7 +660,7 @@ const FALLBACK_DATA = {
       "yoyGrowth": 64,
       "unit": "billion USD",
       "label": "Hyperscaler Capex 2026",
-      "description": "Big-5 hyperscaler 2026 capex consensus clusters around ~$725B (+64% YoY), while broader tracker sets including major China cloud platforms run as high as ~$830B; AI infrastructure remains the dominant spend driver.",
+      "description": "Big-5 hyperscaler 2026 capex consensus clusters around ~$725B (+64% YoY); ByteDance's planned $70B AI capex (May 27–28 2026) pushes the broader global tracker including major China cloud platforms above ~$900B; AI infrastructure remains the dominant spend driver.",
       "weight": 10,
       "score": 9
     },
@@ -974,9 +974,44 @@ const FALLBACK_DATA = {
       "hyperscalerCapexBn": 725,
       "gridDelayYears": 5,
       "aiUnicorns": 207
+    },
+    {
+      "date": "2026-05-28",
+      "heatScore": 93,
+      "heatLabel": "Boiling",
+      "capeRatio": 39.5,
+      "sp500ForwardPE": 21.4,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 725,
+      "gridDelayYears": 5,
+      "aiUnicorns": 207
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-28",
+      "headline": "Anthropic raises $65B Series H at a $965B post-money valuation (May 28 2026), surpassing OpenAI as the world's most valuable AI startup; led by Altimeter, Dragoneer, Greenoaks, Sequoia + Amazon/Blackstone participation — Anthropic revenue run-rate hit ~$47B, making this likely its final private funding round before IPO.",
+      "source": "Bloomberg / CNBC / TechCrunch",
+      "sourceUrl": "https://www.bloomberg.com/news/articles/2026-05-28/anthropic-raises-at-965-billion-valuation-eclipsing-openai",
+      "type": "Circular Financing",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-28",
+      "headline": "OpenAI confidentially filed its S-1 IPO registration with the SEC (May 22 2026), targeting a September 2026 public listing at a $852B–$1T valuation led by Goldman Sachs and Morgan Stanley — the company generates ~$25B in annualised revenue but loses $1.22 for every $1 earned, making it one of the most expensive unprofitable IPOs in history.",
+      "source": "CNBC / Roborhythms / TechJournal",
+      "sourceUrl": "https://www.roborhythms.com/openai-ipo-filing-2026/",
+      "type": "Circular Financing",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-28",
+      "headline": "ByteDance plans $70B AI capex in 2026 — more than double the prior year, funded from ~$50B 2025 profit — pushing the broader global AI infrastructure spend (including China platforms) above ~$900B; amplifies the circular financing loop as TikTok's parent accelerates competition with U.S. hyperscalers.",
+      "source": "Bloomberg / AI Tools Recap / rallies.ai",
+      "sourceUrl": "https://www.bloomberg.com/news/articles/2026-05-27/bytedance-weighs-capex-of-as-much-as-70-billion-in-ai-push",
+      "type": "Infrastructure Constraint",
+      "sentiment": "extreme_bullish"
+    },
     {
       "date": "2026-05-27",
       "headline": "S&P 500 and Nasdaq Composite hit fresh all-time highs on 27 May 2026 as AI and memory chip stocks surged — Micron Technology breached a $1 trillion market cap after a 19% rally, with knock-on gains in Seagate and Western Digital; AI infrastructure ETFs posted new records.",
