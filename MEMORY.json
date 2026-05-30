@@ -1,34 +1,34 @@
 {
-  "lastUpdated": "2026-05-29",
+  "lastUpdated": "2026-05-30",
   "heatScore": 93,
   "heatLabel": "Boiling",
-  "summary": "As of 29 May 2026, the AI bubble cauldron holds 'Boiling' at 93/100. The Shiller CAPE ratio crossed 40× for only the second time in 100 years (first: dot-com peak 2000), closing at ~40.0× on May 29 — 91.9% of the all-time dot-com peak of 43.5×. S&P 500 forward P/E ticks up to ~21.5×. Magnificent-7 trailing P/E averages ~42.9× (TSLA ~68.5×, NVDA ~58.5×, AMZN ~48.5×, MSFT ~36.5×, AAPL ~33.5×, META ~28.5×, GOOGL ~26.5×). A CloudBees/The Register study finds 81% of enterprise tech leaders report production failures tied to AI-generated code, with only 31% of AI spending credibly linked to business value. NVIDIA market cap reaches $5.1T; AI stocks lead May 2026 rally. Big-5 hyperscaler capex consensus remains ~$725B (+64% YoY). VC→AI concentration steady at 81% ($239B of $297B in Q1 2026); AI unicorns since 2024 at 207. Grid-connection median holds at ~5 years.",
+  "summary": "As of 30 May 2026, the AI bubble cauldron holds 'Boiling' at 93/100. Shiller CAPE ticks up to ~40.1× (92.2% of the all-time dot-com peak of 43.5×). S&P 500 forward P/E eases to ~21.2×. Magnificent-7 trailing P/E reshuffles dramatically: TSLA surges to ~326× on thin earnings while NVDA compresses to ~38.6× on massive earnings growth; full-7 average now ~73.3×, ex-TSLA average ~31.1×. OpenAI's reasoning model disproves Paul Erdős's 80-year-old unit distance conjecture in discrete geometry — the first time an AI has independently solved a central open problem in mathematics. Illinois passes the US's first law mandating annual independent third-party safety audits of frontier AI labs (SB 315, effective Jan 2027). Big-5 hyperscaler capex consensus holds at ~$725B (+64% YoY). VC→AI concentration steady at 81% ($239B of $297B in Q1 2026); AI unicorns since 2024 at 207. Grid-connection median holds at ~5 years.",
   "kpis": {
     "capeRatio": {
-      "value": 40.0,
+      "value": 40.1,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — crossed 40× on 29 May 2026 for only the second time in 100 years (first instance: dot-com bubble peak 2000); ~91.9% of the all-time peak of 43.5×. Motley Fool noted this rare milestone on May 28 2026; YCharts/MacroMicro corroborate ~39.9–40.1 for late May (YCharts / MacroMicro / Multpl / LongtermTrends / Motley Fool May 2026).",
+      "description": "Cyclically adjusted P/E for US market — ticks up to ~40.1× on 30 May 2026 (92.2% of the all-time peak of 43.5×), still only the second time in 100 years this level has been breached (first: dot-com bubble peak 2000). Finanzapedia/MacroMicro corroborate ~39.89–41.06 for late May (Finanzapedia / MacroMicro / Multpl / LongtermTrends / Motley Fool May 2026).",
       "weight": 20,
       "score": 20
     },
     "sp500ForwardPE": {
-      "value": 21.5,
+      "value": 21.2,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for the S&P 500 — ~21.5× on 29 May 2026 (Trendonify / VCPScanner), above the 5-year median of 21.1× and well above the 10-year median of 19.8×; elevated amid continued AI-driven market highs.",
+      "description": "Forward price-to-earnings ratio for the S&P 500 — eases to ~21.2× on 30 May 2026 (MacroMicro / StreetStats / FactSet), above the 5-year average of 19.9× and the 10-year average of 18.9×; still elevated amid continued AI-driven market highs.",
       "weight": 10,
       "score": 10
     },
     "top7StocksPE": {
-      "value": 42.9,
+      "value": 73.3,
       "historicalAvg": 20,
       "unit": "x",
       "label": "Top 7 Stocks P/E",
-      "description": "Magnificent-7 trailing P/E averages ~42.9× in late May 2026 (TSLA ~68.5×, NVDA ~58.5×, AMZN ~48.5×, MSFT ~36.5×, AAPL ~33.5×, META ~28.5×, GOOGL ~26.5×); valuation premium remains elevated versus the broader index (MarketXLS Magnificent 7 Valuation Dashboard May 2026).",
+      "description": "Magnificent-7 trailing P/E average surges to ~73.3× on 30 May 2026 as TSLA spikes to ~326× on thin earnings; ex-TSLA average compresses to ~31.1× as NVDA (~38.6×), AAPL (~37.7×), AMZN (~33.4×), GOOGL (~29.8×), MSFT (~24.0×) and META (~23.0×) see P/E multiples contract on strong earnings growth (BearSavings.com / financecharts.com Mag-7 Valuation Dashboard May 2026).",
       "weight": 10,
       "score": 10
     },
@@ -383,9 +383,44 @@
       "hyperscalerCapexBn": 725,
       "gridDelayYears": 5,
       "aiUnicorns": 207
+    },
+    {
+      "date": "2026-05-30",
+      "heatScore": 93,
+      "heatLabel": "Boiling",
+      "capeRatio": 40.1,
+      "sp500ForwardPE": 21.2,
+      "vcAiSharePct": 81,
+      "hyperscalerCapexBn": 725,
+      "gridDelayYears": 5,
+      "aiUnicorns": 207
     }
   ],
   "topStories": [
+    {
+      "date": "2026-05-30",
+      "headline": "OpenAI's reasoning model autonomously disproves Paul Erdős's 80-year-old unit distance conjecture in discrete geometry — the first time an AI has independently solved a central open problem in mathematics; the proof was verified by Fields Medalist Tim Gowers and Princeton's Will Sawin; underscores AI's accelerating shift from research assistant to autonomous originator.",
+      "source": "OpenAI Blog / AI Weekly / explainx.ai",
+      "sourceUrl": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-30",
+      "headline": "Illinois passes the US's first law (SB 315) requiring annual independent third-party safety audits of frontier AI labs — OpenAI, Google DeepMind, and Anthropic must undergo external safety verification, publish pre-release risk reports, and report critical incidents within 72 hours; up to $3M fines for violations; effective January 2027.",
+      "source": "NBC News / Illinois Legislature / NBC Chicago",
+      "sourceUrl": "https://www.nbcnews.com/tech/tech-news/illinois-legislature-passes-historic-ai-bill-rcna347191",
+      "type": "Regulatory",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-05-30",
+      "headline": "Shiller CAPE ticks up to ~40.1× (92.2% of dot-com peak) while S&P 500 forward P/E eases to ~21.2×; Magnificent-7 P/E reshuffles — TSLA surges to ~326× on thin earnings, NVDA compresses to ~38.6× on massive earnings growth; full-7 average now ~73.3×, ex-TSLA ~31.1×; heat score holds at 93/100 'Boiling'.",
+      "source": "Finanzapedia / MacroMicro / BearSavings.com / FactSet",
+      "sourceUrl": "https://finanzapedia.com/en/sp500/sp500-cape-ratio",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
     {
       "date": "2026-05-29",
       "headline": "Shiller CAPE crosses 40× for only the second time in 100 years (first: dot-com bubble 2000) — closing at ~40.0× on May 29 2026, or 91.9% of the all-time peak; Motley Fool warns this rare signal historically precedes decade-long periods of low returns or sharp corrections as mean-reversion pressures mount.",
@@ -957,19 +992,19 @@
     {
       "metric": "CAPE Ratio",
       "value1999Peak": 43.5,
-      "value2026": 39.8,
+      "value2026": 40.1,
       "historicalAvg": 17.6
     },
     {
       "metric": "S&P 500 Forward P/E",
       "value1999Peak": 25,
-      "value2026": 20.9,
+      "value2026": 21.2,
       "historicalAvg": 16
     },
     {
       "metric": "Top 7 Stocks P/E",
       "value1999Peak": 66,
-      "value2026": 38.7,
+      "value2026": 31.1,
       "historicalAvg": 20
     }
   ],
