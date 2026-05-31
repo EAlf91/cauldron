@@ -612,27 +612,27 @@ async function loadData() {
 }
 
 const FALLBACK_DATA = {
-  "lastUpdated": "2026-05-30",
-  "heatScore": 93,
+  "lastUpdated": "2026-05-31",
+  "heatScore": 94,
   "heatLabel": "Boiling",
-  "summary": "As of 30 May 2026, the AI bubble cauldron holds 'Boiling' at 93/100. Shiller CAPE ticks up to ~40.1× (92.2% of the all-time dot-com peak of 43.5×). S&P 500 forward P/E eases to ~21.2×. Magnificent-7 trailing P/E reshuffles dramatically: TSLA surges to ~326× on thin earnings while NVDA compresses to ~38.6× on massive earnings growth; full-7 average now ~73.3×. OpenAI’s reasoning model disproves Paul Erdős’s 80-year-old unit distance conjecture. Illinois passes the first US law mandating annual AI safety audits. Big-5 hyperscaler capex consensus holds at ~$725B (+64% YoY). VC→AI concentration steady at 81% ($239B of $297B in Q1 2026); AI unicorns since 2024 at 207. Grid-connection median holds at ~5 years.",
+  "summary": "As of 31 May 2026, the AI bubble cauldron moves to 'Boiling' at 94/100. Shiller CAPE sits near ~41.06× (~94.4% of the dot-com peak of 43.5×), while S&P 500 forward P/E rises to ~22.8× into month-end. Big-5 hyperscaler capex consensus remains around ~$725B (+64% YoY). VC→AI concentration remains extreme at roughly 80–81% of Q1 2026 funding. OpenAI annualized revenue remains around ~$25B with large forward infrastructure commitments, and U.S. grid connection delays for large data centers stay near ~5 years. Stanford HAI's 2026 AI Index continues to show fast capability progress alongside ongoing enterprise execution and governance gaps.",
   "kpis": {
     "capeRatio": {
-      "value": 40.1,
+      "value": 41.06,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for US market — ticks up to ~40.1× on 30 May 2026 (92.2% of the all-time peak of 43.5×), still only the second time in 100 years this level has been breached (first: dot-com bubble peak 2000). Finanzapedia/MacroMicro corroborate ~39.89–41.06 for late May (Finanzapedia / MacroMicro / Multpl / LongtermTrends / Motley Fool May 2026).",
+      "description": "Cyclically adjusted P/E for the U.S. market — latest end-May 2026 readings remain near ~41.06× (~94.4% of the all-time dot-com peak of 43.5×), keeping valuation heat near historical extremes (Finanzapedia / LongtermTrends / YCharts, May 2026).",
       "weight": 20,
       "score": 20
     },
     "sp500ForwardPE": {
-      "value": 21.2,
+      "value": 22.8,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for the S&P 500 — eases to ~21.2× on 30 May 2026 (MacroMicro / StreetStats / FactSet), above the 5-year average of 19.9× and the 10-year average of 18.9×; still elevated amid continued AI-driven market highs.",
+      "description": "Forward price-to-earnings ratio for the S&P 500 — month-end May 2026 trackers show around ~22.8× (MacroMicro), materially above long-run norms and still consistent with late-cycle AI-led valuation expansion.",
       "weight": 10,
       "score": 10
     },
@@ -646,12 +646,12 @@ const FALLBACK_DATA = {
       "score": 10
     },
     "vcAiConcentration": {
-      "value": 81,
+      "value": 80,
       "unit": "%",
       "label": "VC → AI Share",
-      "description": "Share of global Q1 2026 VC investment flowing into AI ($239B of $297B) — roughly 81% and near record concentration.",
-      "totalVcBn": 297,
-      "aiVcBn": 239,
+      "description": "Share of global Q1 2026 VC investment flowing into AI is still around ~80% (roughly $242B of ~$300B, depending on tracker), indicating continued extreme capital concentration in AI.",
+      "totalVcBn": 300,
+      "aiVcBn": 242,
       "weight": 20,
       "score": 16
     },
@@ -1007,12 +1007,47 @@ const FALLBACK_DATA = {
       "hyperscalerCapexBn": 725,
       "gridDelayYears": 5,
       "aiUnicorns": 207
+    },
+    {
+      "date": "2026-05-31",
+      "heatScore": 94,
+      "heatLabel": "Boiling",
+      "capeRatio": 41.06,
+      "sp500ForwardPE": 22.8,
+      "vcAiSharePct": 80,
+      "hyperscalerCapexBn": 725,
+      "gridDelayYears": 5,
+      "aiUnicorns": 207
     }
   ],
   "topStories": [
     {
+      "date": "2026-05-31",
+      "headline": "Month-end valuation check: Shiller CAPE remains around ~41.06× while S&P 500 forward P/E prints ~22.8×, keeping U.S. equity multiples in a historically stretched regime as AI leadership continues to dominate index pricing.",
+      "source": "Finanzapedia / MacroMicro",
+      "sourceUrl": "https://en.macromicro.me/series/20052/sp500-forward-pe-ratio",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-31",
+      "headline": "Crunchbase reports Q1 2026 as a record VC quarter (~$300B globally), with AI capturing roughly 80% (~$242B), reinforcing narrative-driven capital concentration and mega-round dependency.",
+      "source": "Crunchbase",
+      "sourceUrl": "https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/",
+      "type": "Circular Financing",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-05-31",
+      "headline": "Stanford HAI AI Index 2026 documents continued frontier-model progress and deployment acceleration, while governance, reliability, and enterprise execution constraints remain central risk factors.",
+      "source": "Stanford HAI AI Index",
+      "sourceUrl": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+      "type": "Productivity Counter-Evidence",
+      "sentiment": "bearish_signal"
+    },
+    {
       "date": "2026-05-30",
-      "headline": "OpenAI’s reasoning model autonomously disproves Paul Erdős’s 80-year-old unit distance conjecture in discrete geometry — the first time an AI has independently solved a central open problem in mathematics; the proof was verified by Fields Medalist Tim Gowers and Princeton’s Will Sawin; underscores AI’s accelerating shift from research assistant to autonomous originator.",
+      "headline": "OpenAI's reasoning model autonomously disproves Paul Erdős's 80-year-old unit distance conjecture in discrete geometry — the first time an AI has independently solved a central open problem in mathematics; the proof was verified by Fields Medalist Tim Gowers and Princeton's Will Sawin; underscores AI's accelerating shift from research assistant to autonomous originator.",
       "source": "OpenAI Blog / AI Weekly / explainx.ai",
       "sourceUrl": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
       "type": "Hype Cycle",
@@ -1020,7 +1055,7 @@ const FALLBACK_DATA = {
     },
     {
       "date": "2026-05-30",
-      "headline": "Illinois passes the US’s first law (SB 315) requiring annual independent third-party safety audits of frontier AI labs — OpenAI, Google DeepMind, and Anthropic must undergo external safety verification, publish pre-release risk reports, and report critical incidents within 72 hours; up to $3M fines for violations; effective January 2027.",
+      "headline": "Illinois passes the US's first law (SB 315) requiring annual independent third-party safety audits of frontier AI labs — OpenAI, Google DeepMind, and Anthropic must undergo external safety verification, publish pre-release risk reports, and report critical incidents within 72 hours; up to $3M fines for violations; effective January 2027.",
       "source": "NBC News / Illinois Legislature / NBC Chicago",
       "sourceUrl": "https://www.nbcnews.com/tech/tech-news/illinois-legislature-passes-historic-ai-bill-rcna347191",
       "type": "Regulatory",
@@ -1028,7 +1063,7 @@ const FALLBACK_DATA = {
     },
     {
       "date": "2026-05-30",
-      "headline": "Shiller CAPE ticks up to ~40.1× (92.2% of dot-com peak) while S&P 500 forward P/E eases to ~21.2×; Magnificent-7 P/E reshuffles — TSLA surges to ~326× on thin earnings, NVDA compresses to ~38.6× on massive earnings growth; full-7 average now ~73.3×, ex-TSLA ~31.1×; heat score holds at 93/100 ‘Boiling’.",
+      "headline": "Shiller CAPE ticks up to ~40.1× (92.2% of dot-com peak) while S&P 500 forward P/E eases to ~21.2×; Magnificent-7 P/E reshuffles — TSLA surges to ~326× on thin earnings, NVDA compresses to ~38.6× on massive earnings growth; full-7 average now ~73.3×, ex-TSLA ~31.1×; heat score holds at 93/100 'Boiling'.",
       "source": "Finanzapedia / MacroMicro / BearSavings.com / FactSet",
       "sourceUrl": "https://finanzapedia.com/en/sp500/sp500-cape-ratio",
       "type": "Hype Cycle",
@@ -1036,7 +1071,7 @@ const FALLBACK_DATA = {
     },
     {
       "date": "2026-05-29",
-      "headline": "Shiller CAPE crosses 40\u00d7 for only the second time in 100 years (first: dot-com bubble 2000) \u2014 closing at ~40.0\u00d7 on May 29 2026, or 91.9% of the all-time peak; Motley Fool warns this rare signal historically precedes decade-long periods of low returns or sharp corrections as mean-reversion pressures mount.",
+      "headline": "Shiller CAPE crosses 40× for only the second time in 100 years (first: dot-com bubble 2000) — closing at ~40.0× on May 29 2026, or 91.9% of the all-time peak; Motley Fool warns this rare signal historically precedes decade-long periods of low returns or sharp corrections as mean-reversion pressures mount.",
       "source": "The Motley Fool",
       "sourceUrl": "https://www.fool.com/investing/2026/05/28/the-sp-500-just-did-something-for-the-3rd-time-in/",
       "type": "Hype Cycle",
@@ -1044,7 +1079,7 @@ const FALLBACK_DATA = {
     },
     {
       "date": "2026-05-29",
-      "headline": "CloudBees study (May 2026): 81% of enterprise technology leaders report a rise in production failures directly linked to AI-generated code \u2014 only 31% of AI spend is tied to measurable business outcomes; AI-written PRs take 4.6\u00d7 longer to review and introduce 15\u201318% more security vulnerabilities, deepening the AI productivity paradox.",
+      "headline": "CloudBees study (May 2026): 81% of enterprise technology leaders report a rise in production failures directly linked to AI-generated code — only 31% of AI spend is tied to measurable business outcomes; AI-written PRs take 4.6× longer to review and introduce 15–18% more security vulnerabilities, deepening the AI productivity paradox.",
       "source": "The Register / CloudBees / Business Insider",
       "sourceUrl": "https://www.theregister.com/ai-ml/2026/05/20/ai-code-boom-drives-production-failures-higher-spending/5243787",
       "type": "Productivity Counter-Evidence",
@@ -1052,7 +1087,7 @@ const FALLBACK_DATA = {
     },
     {
       "date": "2026-05-29",
-      "headline": "NVIDIA market cap reaches $5.1 trillion as AI hardware demand intensifies \u2014 Micron and SK Hynix join the '$1 trillion club'; AI stocks lead the May 2026 broad market rally with tech sector hitting new all-time highs, driven by hyperscaler capex surging toward ~$725B and AI IPO pipeline (OpenAI, Anthropic) heating up.",
+      "headline": "NVIDIA market cap reaches $5.1 trillion as AI hardware demand intensifies — Micron and SK Hynix join the '$1 trillion club'; AI stocks lead the May 2026 broad market rally with tech sector hitting new all-time highs, driven by hyperscaler capex surging toward ~$725B and AI IPO pipeline (OpenAI, Anthropic) heating up.",
       "source": "Yahoo Finance / AI Tools Recap",
       "sourceUrl": "https://aitoolsrecap.com/Blog/ai-news-may-2026",
       "type": "Hype Cycle",
@@ -1605,13 +1640,13 @@ const FALLBACK_DATA = {
     {
       "metric": "CAPE Ratio",
       "value1999Peak": 43.5,
-      "value2026": 40.1,
+      "value2026": 41.06,
       "historicalAvg": 17.6
     },
     {
       "metric": "S&P 500 Forward P/E",
       "value1999Peak": 25,
-      "value2026": 21.2,
+      "value2026": 22.8,
       "historicalAvg": 16
     },
     {
@@ -1647,6 +1682,7 @@ const FALLBACK_DATA = {
       "y2030": "7+ yrs"
     }
   ]
+}
 };
 
 // ─── Bubble insights ──────────────────────────────────────────────────
@@ -1657,8 +1693,8 @@ const INSIGHTS = [
     body: 'Allbirds (a wool-shoe company) rebranded as "NewBird AI" on April 15 2026 and surged ~876% intraday. No AI product, no AI revenue — just two letters: A and I.' },
   { title: '⚡ The Hard Stop: Power Grid',
     body: 'A single large-scale AI data center can require 300 MW+. Grid connection now averages about 4 years in major U.S. markets, while bottlenecked regions can still stretch to 7–12 years. Billions in GPUs are sitting idle waiting for power they may never get.' },
-  { title: '📉 CAPE at 40.1 — Crossed 40× for the 2nd Time in 100 Years',
-    body: 'The CAPE ratio ticked up to 40.1× on 30 May 2026 — still only the second time in 100 years (first: dot-com peak 2000). At 92.2% of the all-time peak of 43.5×, this rare milestone historically precedes prolonged low returns or sharp corrections. The 1999–2000 CAPE peak led to a 78% Nasdaq drawdown.' },
+  { title: '📉 CAPE at 41.06 — Still Near Dot-Com Extremes',
+    body: 'The CAPE ratio sits near 41.06× as of 31 May 2026 — about 94.4% of the all-time peak of 43.5× reached during dot-com. This remains one of the most extended valuation regimes of the last century and keeps correction risk elevated if earnings expectations slip.' },
   { title: '🤖 AI Slop & Productivity Paradox',
     body: 'Studies show AI coding assistants made programming 19% slower due to time spent fixing AI-generated bugs. Up to 95% of enterprise Gen AI implementations have reportedly failed.' },
   { title: '💰 "Chief AI Officer" is Already Dead',
