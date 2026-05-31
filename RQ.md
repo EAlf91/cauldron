@@ -64,8 +64,10 @@ For each run, look up the most current publicly available data and update every 
 
 After answering the questions above, update **`MEMORY.json`** in-place with:
 1. New KPI values in the `kpis` object (update `value`, `score`, and any sub-fields that changed).
-2. A new entry appended to the `historical` array for today's date.
+2. A new entry appended to the `historical` array for today's date, while keeping at least the latest 10 days of `historical` entries in `MEMORY.json`.
 3. Updated `heatScore`, `heatLabel`, `summary`, and `lastUpdated` at the root level.
 4. Up to 3 new entries prepended to `topStories` for the most significant developments found. Each entry must include a `sourceUrl` field with the direct URL to the primary source article or report.
 
-Do **not** remove existing historical entries. Do **not** change the JSON schema.
+Keep at least the latest 10 days of `historical` and `topStories` entries in `MEMORY.json` at all times.  
+If you need to reduce size, only trim entries older than that 10-day window (archive/fallback only).  
+Do **not** change the JSON schema.
