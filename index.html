@@ -1682,7 +1682,6 @@ const FALLBACK_DATA = {
       "y2030": "7+ yrs"
     }
   ]
-}
 };
 
 // ─── Bubble insights ──────────────────────────────────────────────────
@@ -1910,7 +1909,11 @@ function renderKpiCards(data) {
 // ─── Render history chart ─────────────────────────────────────────────
 function renderHistory(data) {
   const container = document.getElementById('historyChart');
-  data.historical.forEach(row => {
+  const historyRows = (Array.isArray(data.historical) && data.historical.length
+    ? data.historical
+    : FALLBACK_DATA.historical
+  ).slice(-10);
+  historyRows.forEach(row => {
     const pct = row.heatScore;
     const div = document.createElement('div');
     div.className = 'history-row';
