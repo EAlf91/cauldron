@@ -22,6 +22,8 @@ Use this prompt for daily cauldron updates:
 - keep units and rounding consistent (x, %, B/T USD, years)
 - update lastUpdated and heat score label/value together
 - for web-search findings, do not use older studies (e.g., 2025); stick to 2026 sources and the specific update date from the issue title
+- keep **at least the latest 10 days** of `historical` and `topStories` entries directly in `MEMORY.json` so the live page always has current data
+- if you need to trim data size, trim **only entries older than the latest 10 days** and treat those as archive/fallback data
 
 # Citation Requirements
 - every new `topStories` entry MUST include a `sourceUrl` field containing the direct URL to the primary source article or report (e.g., `"sourceUrl": "https://www.gartner.com/en/newsroom/..."`)

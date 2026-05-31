@@ -40,7 +40,8 @@ jobs:
              - Update `lastUpdated` to `$TODAY`.
              - Update `summary` to reflect the most important changes found.
              - Prepend up to 3 new entries to `topStories` for the most significant recent developments.
-          4. **Do not** remove existing historical entries or change the JSON schema.
+          4. Keep at least the latest 10 days of `historical` and `topStories` entries in `MEMORY.json` so the live page keeps current data.
+             If size trimming is needed, only trim entries older than that 10-day window (archive/fallback only). Do not change the JSON schema.
           5. Open a pull request with the updated `MEMORY.json` once the research is complete.
 
           ### Relevant files
