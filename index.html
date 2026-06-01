@@ -612,10 +612,10 @@ async function loadData() {
 }
 
 const FALLBACK_DATA = {
-  "lastUpdated": "2026-05-31",
+  "lastUpdated": "2026-06-01",
   "heatScore": 94,
   "heatLabel": "Boiling",
-  "summary": "As of 31 May 2026, the AI bubble cauldron moves to 'Boiling' at 94/100. Shiller CAPE sits near ~41.06× (~94.4% of the dot-com peak of 43.5×), while S&P 500 forward P/E rises to ~22.8× into month-end. Big-5 hyperscaler capex consensus remains around ~$725B (+64% YoY). VC→AI concentration remains extreme at roughly 80–81% of Q1 2026 funding. OpenAI annualized revenue remains around ~$25B with large forward infrastructure commitments, and U.S. grid connection delays for large data centers stay near ~5 years. Stanford HAI's 2026 AI Index continues to show fast capability progress alongside ongoing enterprise execution and governance gaps.",
+  "summary": "As of 1 June 2026, the AI bubble cauldron holds at 'Boiling' 94/100. The latest available 2026 valuation trackers still show Shiller CAPE near 41.06× (~94.4% of the dot-com peak of 43.5×) and S&P 500 forward P/E around 22.8×. Big-5 hyperscaler capex consensus remains around ~$725B (+64% YoY), VC→AI concentration remains near 80% of Q1 2026 funding, OpenAI annualized revenue remains around ~$25B with large forward infrastructure commitments, and large U.S. data-center grid connection delays remain near ~5 years. Fresh late-May 2026 signals still point to accelerating AI capability gains, tighter regulation, and more explicit monetization of AI tooling into early June.",
   "kpis": {
     "capeRatio": {
       "value": 41.06,
@@ -1018,9 +1018,44 @@ const FALLBACK_DATA = {
       "hyperscalerCapexBn": 725,
       "gridDelayYears": 5,
       "aiUnicorns": 207
+    },
+    {
+      "date": "2026-06-01",
+      "heatScore": 94,
+      "heatLabel": "Boiling",
+      "capeRatio": 41.06,
+      "sp500ForwardPE": 22.8,
+      "vcAiSharePct": 80,
+      "hyperscalerCapexBn": 725,
+      "gridDelayYears": 5,
+      "aiUnicorns": 207
     }
   ],
   "topStories": [
+    {
+      "date": "2026-06-01",
+      "headline": "GitHub Copilot shifts to usage-based billing on 1 June 2026, replacing premium-request quotas with token-based GitHub AI Credits across plans — a direct signal that AI coding demand is now being monetized with explicit compute economics.",
+      "source": "GitHub Blog",
+      "sourceUrl": "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
+      "type": "Circular Financing",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-06-01",
+      "headline": "Stanford HAI's 2026 AI Index reports frontier-model performance on SWE-bench Verified rising from 60% to near 100% in a year, organizational AI adoption reaching 88%, and 4 in 5 university students using generative AI — reinforcing how fast capability and adoption expectations are compounding.",
+      "source": "Stanford HAI AI Index",
+      "sourceUrl": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-06-01",
+      "headline": "Illinois lawmakers advanced the first U.S. bill requiring annual third-party safety audits for frontier AI labs, pre-release risk reporting, and 72-hour incident disclosure — a sign that AI governance is hardening as capability claims keep escalating.",
+      "source": "NBC News / Illinois Legislature",
+      "sourceUrl": "https://www.nbcnews.com/tech/tech-news/illinois-legislature-passes-historic-ai-bill-rcna347191",
+      "type": "Regulatory",
+      "sentiment": "bearish_signal"
+    },
     {
       "date": "2026-05-31",
       "headline": "Month-end valuation check: Shiller CAPE remains around ~41.06× while S&P 500 forward P/E prints ~22.8×, keeping U.S. equity multiples in a historically stretched regime as AI leadership continues to dominate index pricing.",
