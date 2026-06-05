@@ -20,47 +20,53 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
-          TODAY=$(date -u +"%Y-%m-%d")
+          TODAY_ISSUE=$(date -u +"%d.%m.%Y")
 
           BODY=$(cat <<'EOF'
-          ## Task: Update MEMORY.json with today's KPI data
+          # Daily update prompt
 
-          **Date:** $TODAY
+          Use this prompt for daily cauldron updates:
 
-          Using the research questions defined in [RQ.md](./RQ.md), research the current values for every KPI and update [MEMORY.json](./MEMORY.json) accordingly.
+          ```md
+          # How to update
 
-          ### Instructions
+          1. check current state of MEMORY.json
+          2. research using web-search agent and the research questions from RQ.md; only use recent findings from 2026 and prioritize findings from the update date in the issue title (e.g., 26.05.2026)
+          3. update the MEMORY.json file with newest findings
+          4. update index.html and add new score to heat score over time
 
-          1. **Read `RQ.md`** — it contains ten research-question groups (RQ-01 through RQ-10) that map directly to fields in `MEMORY.json`.
-          2. **Look up the latest publicly available data** for each question (valuation ratios, capex figures, grid delays, VC share, regulatory updates, sentiment indicators, etc.).
-          3. **Update `MEMORY.json`** following the *Output Contract* at the bottom of `RQ.md`:
-             - Update `value`, `score`, and sub-fields for each KPI in the `kpis` object.
-             - Append a new entry to the `historical` array for today's date (`$TODAY`).
-             - Recalculate and update `heatScore` and `heatLabel` at the root level.
-             - Update `lastUpdated` to `$TODAY`.
-             - Update `summary` to reflect the most important changes found.
-             - Prepend up to 3 new entries to `topStories` for the most significant recent developments.
-          4. Keep at least the latest 10 days of `historical` and `topStories` entries in `MEMORY.json` so the live page keeps current data.
-             If size trimming is needed, only trim entries older than that 10-day window (archive/fallback only). Do not change the JSON schema.
-          5. Open a pull request with the updated `MEMORY.json` once the research is complete.
+          # General Guidelines
+          - follow RPI (research, plan, implement) process always
+          - ensure that values are consistent across all places:
+            - ticker values
+            - hero right-side KPI list
+            - KPI cards
+            - valuation/energy sections when relevant
+            - MEMORY.json current KPI values and latest historical entry
+          - when a KPI changes (e.g., CAPE, capex, VC share, grid delay, unicorns, OpenAI revenue), verify all displays match before finishing
+          - keep units and rounding consistent (x, %, B/T USD, years)
+          - update lastUpdated and heat score label/value together
+          - for web-search findings, do not use older studies (e.g., 2025); stick to 2026 sources and the specific update date from the issue title
+          - keep **at least the latest 10 days** of `historical` and `topStories` entries directly in `MEMORY.json` so the live page always has current data
+          - if MEMORY.json has more than 10 days backup them in a separate file called ARCHIVE.json
+          - if you need to trim data size, trim **only entries older than the latest 10 days** and treat those as archive/fallback data
 
-          ### Relevant files
-          - `RQ.md` — research questions and output contract
-          - `MEMORY.json` — structured data store to update
-          - `RESEARCH.md` — original research for context
+          # Citation Requirements
+          - every new `topStories` entry MUST include a `sourceUrl` field containing the direct URL to the primary source article or report (e.g., `"sourceUrl": "https://www.gartner.com/en/newsroom/..."`)
+          - if multiple sources are listed in `source`, set `sourceUrl` to the URL of the most authoritative or directly relevant one
+          - do NOT use search-engine URLs or aggregator pages; link to the actual article or report
+          - the `source` field should still contain the human-readable publication name(s) as before
+          ```
           EOF
           )
 
-          # Substitute the date variable in the body
-          BODY="${BODY//\$TODAY/$TODAY}"
-
           gh issue create \
             --repo "$REPO" \
-            --title "[$TODAY] Update MEMORY.json with latest AI bubble KPI data" \
+            --title "Update $TODAY_ISSUE" \
             --body "$BODY" \
             --assignee "copilot" || \
           gh issue create \
             --repo "$REPO" \
-            --title "[$TODAY] Update MEMORY.json with latest AI bubble KPI data" \
+            --title "Update $TODAY_ISSUE" \
             --body "$BODY" \
             --assignee "copilot"
