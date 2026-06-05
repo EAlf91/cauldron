@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-06-01",
+  "lastUpdated": "2026-06-05",
   "heatScore": 94,
   "heatLabel": "Boiling",
-  "summary": "As of 1 June 2026, the AI bubble cauldron holds at 'Boiling' 94/100. The latest available 2026 valuation trackers still show Shiller CAPE near 41.06× (~94.4% of the dot-com peak of 43.5×) and S&P 500 forward P/E around 22.8×. Big-5 hyperscaler capex consensus remains around ~$725B (+64% YoY), VC→AI concentration remains near 80% of Q1 2026 funding, OpenAI annualized revenue remains around ~$25B with large forward infrastructure commitments, and large U.S. data-center grid connection delays remain near ~5 years. Fresh late-May 2026 signals still point to accelerating AI capability gains, tighter regulation, and more explicit monetization of AI tooling into early June.",
+  "summary": "As of 5 June 2026, the AI bubble cauldron holds at 'Boiling' 94/100. The Shiller CAPE ratio has risen to ~42.78× — now 98.3% of the all-time dot-com peak of 43.5×, the highest reading in this update series and a historic extremes signal. Google I/O 2026 (20–21 May) and its June 5 follow-up cadence show Gemini 3.5 Flash powering AI Mode in Search with 1 billion users, Gemini app at 900M MAU, and Gemini Omni and Spark launching new agent-era services. Microsoft launched MAI-Thinking-1 at Build 2026 — its first fully in-house reasoning model designed to reduce OpenAI dependence. A bipartisan 'Great American AI Act' draft circulated June 4 seeks to preempt all state AI-development laws for 3 years. Big-4 hyperscaler capex remains near ~$725B (+64% YoY), VC→AI concentration holds near 80%, OpenAI annualized revenue remains ~$25B with IPO preparations advancing, and U.S. data-center grid delays remain ~5 years.",
   "kpis": {
     "capeRatio": {
-      "value": 41.06,
+      "value": 42.78,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for the U.S. market — latest end-May 2026 readings remain near ~41.06× (~94.4% of the all-time dot-com peak of 43.5×), keeping valuation heat near historical extremes (Finanzapedia / LongtermTrends / YCharts, May 2026).",
+      "description": "Cyclically adjusted P/E for the U.S. market — early-June 2026 readings have climbed to ~42.78× (~98.3% of the all-time dot-com peak of 43.5×), the highest reading in this 2026 series and keeping U.S. equity valuation heat at near-record historical extremes (Finanzapedia, June 2026).",
       "weight": 20,
       "score": 20
     },
@@ -99,237 +99,6 @@
   },
   "historical": [
     {
-      "date": "2026-05-03",
-      "heatScore": 86,
-      "heatLabel": "Boiling",
-      "capeRatio": 39.3,
-      "sp500ForwardPE": 21,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 700,
-      "gridDelayYears": 7,
-      "aiUnicorns": 308
-    },
-    {
-      "date": "2026-05-04",
-      "heatScore": 89,
-      "heatLabel": "Boiling",
-      "capeRatio": 41.1,
-      "sp500ForwardPE": 21.5,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 740,
-      "gridDelayYears": 7,
-      "aiUnicorns": 308
-    },
-    {
-      "date": "2026-05-05",
-      "heatScore": 88,
-      "heatLabel": "Boiling",
-      "capeRatio": 39.19,
-      "sp500ForwardPE": 20.9,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 740,
-      "gridDelayYears": 7,
-      "aiUnicorns": 308
-    },
-    {
-      "date": "2026-05-06",
-      "heatScore": 88,
-      "heatLabel": "Boiling",
-      "capeRatio": 39.27,
-      "sp500ForwardPE": 20.8,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 765,
-      "gridDelayYears": 7,
-      "aiUnicorns": 308
-    },
-    {
-      "date": "2026-05-07",
-      "heatScore": 89,
-      "heatLabel": "Boiling",
-      "capeRatio": 41.2,
-      "sp500ForwardPE": 21.0,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 765,
-      "gridDelayYears": 7,
-      "aiUnicorns": 308
-    },
-    {
-      "date": "2026-05-08",
-      "heatScore": 90,
-      "heatLabel": "Boiling",
-      "capeRatio": 41.8,
-      "sp500ForwardPE": 20.9,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 765,
-      "gridDelayYears": 7,
-      "aiUnicorns": 308
-    },
-    {
-      "date": "2026-05-09",
-      "heatScore": 92,
-      "heatLabel": "Boiling",
-      "capeRatio": 42.05,
-      "sp500ForwardPE": 21.5,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 765,
-      "gridDelayYears": 7,
-      "aiUnicorns": 308
-    },
-    {
-      "date": "2026-05-10",
-      "heatScore": 92,
-      "heatLabel": "Boiling",
-      "capeRatio": 41.9,
-      "sp500ForwardPE": 21.3,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 765,
-      "gridDelayYears": 7,
-      "aiUnicorns": 308
-    },
-    {
-      "date": "2026-05-11",
-      "heatScore": 92,
-      "heatLabel": "Boiling",
-      "capeRatio": 39.6,
-      "sp500ForwardPE": 21.5,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 765,
-      "gridDelayYears": 7,
-      "aiUnicorns": 308
-    },
-    {
-      "date": "2026-05-12",
-      "heatScore": 92,
-      "heatLabel": "Boiling",
-      "capeRatio": 42.15,
-      "sp500ForwardPE": 21.0,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 602,
-      "gridDelayYears": 7,
-      "aiUnicorns": 308
-    },
-    {
-      "date": "2026-05-13",
-      "heatScore": 92,
-      "heatLabel": "Boiling",
-      "capeRatio": 42.15,
-      "sp500ForwardPE": 21.0,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 725,
-      "gridDelayYears": 6,
-      "aiUnicorns": 308
-    },
-    {
-      "date": "2026-05-14",
-      "heatScore": 93,
-      "heatLabel": "Boiling",
-      "capeRatio": 42.32,
-      "sp500ForwardPE": 21.0,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 725,
-      "gridDelayYears": 6,
-      "aiUnicorns": 308
-    },
-    {
-      "date": "2026-05-15",
-      "heatScore": 91,
-      "heatLabel": "Boiling",
-      "capeRatio": 42.32,
-      "sp500ForwardPE": 21.0,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 602,
-      "gridDelayYears": 5,
-      "aiUnicorns": 207
-    },
-    {
-      "date": "2026-05-16",
-      "heatScore": 91,
-      "heatLabel": "Boiling",
-      "capeRatio": 42.32,
-      "sp500ForwardPE": 21.0,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 602,
-      "gridDelayYears": 5,
-      "aiUnicorns": 207
-    },
-    {
-      "date": "2026-05-17",
-      "heatScore": 91,
-      "heatLabel": "Boiling",
-      "capeRatio": 42.32,
-      "sp500ForwardPE": 21.0,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 602,
-      "gridDelayYears": 5,
-      "aiUnicorns": 207
-    },
-    {
-      "date": "2026-05-18",
-      "heatScore": 92,
-      "heatLabel": "Boiling",
-      "capeRatio": 41.66,
-      "sp500ForwardPE": 21.4,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 620,
-      "gridDelayYears": 5,
-      "aiUnicorns": 207
-    },
-    {
-      "date": "2026-05-19",
-      "heatScore": 92,
-      "heatLabel": "Boiling",
-      "capeRatio": 41.63,
-      "sp500ForwardPE": 21.4,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 700,
-      "gridDelayYears": 4,
-      "aiUnicorns": 207
-    },
-    {
-      "date": "2026-05-20",
-      "heatScore": 92,
-      "heatLabel": "Boiling",
-      "capeRatio": 41.06,
-      "sp500ForwardPE": 21.4,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 700,
-      "gridDelayYears": 4,
-      "aiUnicorns": 207
-    },
-    {
-      "date": "2026-05-21",
-      "heatScore": 92,
-      "heatLabel": "Boiling",
-      "capeRatio": 41.06,
-      "sp500ForwardPE": 21.4,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 700,
-      "gridDelayYears": 4,
-      "aiUnicorns": 207
-    },
-    {
-      "date": "2026-05-22",
-      "heatScore": 92,
-      "heatLabel": "Boiling",
-      "capeRatio": 41.35,
-      "sp500ForwardPE": 21.1,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 700,
-      "gridDelayYears": 4,
-      "aiUnicorns": 207
-    },
-    {
-      "date": "2026-05-23",
-      "heatScore": 92,
-      "heatLabel": "Boiling",
-      "capeRatio": 41.4,
-      "sp500ForwardPE": 21.2,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 720,
-      "gridDelayYears": 4,
-      "aiUnicorns": 207
-    },
-    {
       "date": "2026-05-26",
       "heatScore": 93,
       "heatLabel": "Boiling",
@@ -416,9 +185,44 @@
       "hyperscalerCapexBn": 725,
       "gridDelayYears": 5,
       "aiUnicorns": 207
+    },
+    {
+      "date": "2026-06-05",
+      "heatScore": 94,
+      "heatLabel": "Boiling",
+      "capeRatio": 42.78,
+      "sp500ForwardPE": 22.8,
+      "vcAiSharePct": 80,
+      "hyperscalerCapexBn": 725,
+      "gridDelayYears": 5,
+      "aiUnicorns": 207
     }
   ],
   "topStories": [
+    {
+      "date": "2026-06-05",
+      "headline": "Google I/O 2026 launches Gemini 3.5 Flash as the new default in AI Mode in Search (1B+ users) and Gemini app (900M MAU), while Gemini Omni and Spark debut as agentic 'world model' and personal-agent services — Sundar Pichai declares the 'agentic Gemini era', doubling down on the AI capability and adoption narrative at scale.",
+      "source": "Google Keyword Blog / Mashable / Explainx.ai",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-06-05",
+      "headline": "Bipartisan 'Great American AI Act' draft (June 4 2026) proposes a 3-year federal preemption of all state laws regulating the development of AI models — the most sweeping U.S. AI governance move since the Biden executive order, designed to block a patchwork of Illinois, Colorado, and California AI safety rules that the industry argues hinder innovation.",
+      "source": "Roll Call / Broadband Breakfast",
+      "sourceUrl": "https://rollcall.com/2026/06/04/bipartisan-ai-draft-proposes-three-year-preemption-of-state-laws/",
+      "type": "Regulatory",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-06-05",
+      "headline": "Microsoft launches MAI-Thinking-1 at Build 2026 — its first fully in-house reasoning model (35B active / ~1T total MoE parameters, 256K context) trained entirely without OpenAI data, matching Claude Opus 4.6 on coding benchmarks; signals Microsoft's deliberate move to reduce OpenAI dependency and own the full AI stack from chip to model to enterprise product.",
+      "source": "TechTimes / The Letter Two / mer.vin",
+      "sourceUrl": "https://www.techtimes.com/articles/317631/20260602/microsoft-build-2026-mai-thinking-1-first-house-reasoning-model-trained-without-openai-data.htm",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
     {
       "date": "2026-06-01",
       "headline": "GitHub Copilot shifts to usage-based billing on 1 June 2026, replacing premium-request quotas with token-based GitHub AI Credits across plans — a direct signal that AI coding demand is now being monetized with explicit compute economics.",
@@ -624,398 +428,6 @@
       "sentiment": "bearish_signal"
     },
     {
-      "date": "2026-05-23",
-      "headline": "Shiller CAPE ticks up to ~41.4× (95.2% of dot-com peak) while S&P 500 forward P/E edges to ~21.2×; Big-4 hyperscaler 2026 capex consensus revised up to ~$720B (+65% YoY); AI bubble cauldron holds steady at 92/100 'Boiling'.",
-      "source": "Multpl / Finanzapedia / LongtermTrends / MacroMicro / TrendForce / OfficeChai",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-23",
-      "headline": "Nearly half of planned U.S. data centres for 2026 face delays or cancellation — grid connection waits now average 4–10 years, transformer lead times stretch to 3–5 years, and 50% of 16 GW pipeline is stalled; only ~5 GW under active construction.",
-      "source": "TechSpot / ByteIota / Network World / Data Center Knowledge",
-      "type": "Infrastructure Constraint",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-23",
-      "headline": "Gartner and RAND confirm 80–95% enterprise AI project failure rate in 2026 — boards pivot from 'soft ROI' to hard P&L accountability; productivity paradox deepens as micro-gains fail to appear in macro statistics.",
-      "source": "Gartner / RAND Corporation / Forbes / CIO.com",
-      "type": "Productivity Counter-Evidence",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-22",
-      "headline": "Shiller CAPE ticks up to ~41.35× (95.1% of dot-com peak) while S&P 500 Forward P/E eases to ~21.1×; AI bubble cauldron holds steady at 92/100 'Boiling'.",
-      "source": "Multpl / LongtermTrends / FactSet / MacroMicro",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-22",
-      "headline": "Yale Insights and Jeff Bezos publicly warn that AI market exuberance is overdone — prominent investors and academics now openly debating the mechanism by which the AI bubble eventually bursts.",
-      "source": "Yale School of Management Insights / bvwd.ca.gov / Goldman Sachs / Economic Times",
-      "type": "Hype Cycle",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-22",
-      "headline": "Stanford HAI, Gartner, and Yale mark 2026 as the 'year of AI reckoning' — narrative shifts from evangelism to evaluation as enterprise AI failure rates remain high and ROI scrutiny intensifies.",
-      "source": "Stanford HAI / Gartner / Yale Insights / OpenTools AI",
-      "type": "Productivity Counter-Evidence",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-21",
-      "headline": "Shiller CAPE hovers near ~41.06× while S&P 500 forward P/E remains ~21.4×; valuation heat stays elevated and keeps the cauldron at 92/100.",
-      "source": "Multpl / YCharts / FactSet-style valuation trackers",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-21",
-      "headline": "OpenAI annualized revenue remains around $25B, while 2026 guidance discussions increasingly center on roughly $600B in infrastructure commitments through 2030 rather than prior $1.4T narratives.",
-      "source": "CNBC / market reporting / investor guidance summaries",
-      "type": "Circular Financing",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-21",
-      "headline": "IEA-style power outlooks continue to anchor around ~1,000 TWh data-centre electricity demand in 2026 and ~945 TWh by 2030, underscoring persistent infrastructure strain.",
-      "source": "IEA / S&P Global power coverage",
-      "type": "Infrastructure Constraint",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-19",
-      "headline": "Shiller CAPE sits near ~41.63× while the S&P 500 forward P/E holds at ~21.4×; Big-4 hyperscaler 2026 capex consensus re-heats toward a ~$700B midpoint (~+61% YoY), keeping the cauldron at 92/100.",
-      "source": "Multpl / FactSet / OfficeChai / KAS Advisors",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-19",
-      "headline": "JLL and data-centre infrastructure trackers now describe roughly 4-year average U.S. grid-connection waits for large projects, with constrained markets still stretching to 7–12 years.",
-      "source": "JLL / Data Center Knowledge / Network World",
-      "type": "Infrastructure Constraint",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-19",
-      "headline": "Stanford's AI Index 2026 shows near-universal enterprise AI adoption, but real-world agentic automation reliability still trails the pace of benchmark and funding hype.",
-      "source": "Stanford HAI AI Index 2026 / IEEE Spectrum",
-      "type": "Productivity Counter-Evidence",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-18",
-      "headline": "Shiller CAPE eases to ~41.66× (95.8% of dot-com peak) while Magnificent-7 ex-Tesla P/E expands to ~31.8× (NVDA 46×, AAPL 36×, AMZN 32×); heat score rises to 92/100 as Big-4 hyperscaler capex estimate climbs toward $620B.",
-      "source": "Multpl / longtermtrends.com / FactSet / Barchart",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-18",
-      "headline": "Opsera 2026 AI Coding Impact Benchmark: AI-generated PRs take 4.6× longer to review than human-authored code and introduce 15–18% more security vulnerabilities — raising governance risk despite 20–58% speed gains.",
-      "source": "Opsera AI Coding Impact 2026 Benchmark Report",
-      "type": "Productivity Counter-Evidence",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-18",
-      "headline": "FTC Air AI settlement (March 2026): $18M judgment for false AI capability claims, permanent marketing bans issued — Operation AI Comply has now filed 12+ enforcement actions; fines rising to $53K per violation by 2027.",
-      "source": "FTC Press Release / JDSupra / openclawai.io",
-      "type": "Regulatory",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-17",
-      "headline": "SEC/DOJ/FTC scrutiny of AI-washing intensified in May 2026, with new warnings that exaggerated AI capability claims can trigger both securities and consumer-protection enforcement.",
-      "source": "Debevoise / Harvard Law School Forum / Corporate Compliance Insights",
-      "type": "Regulatory",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-17",
-      "headline": "U.S. data-center buildouts continue to hit power bottlenecks, with many large projects still facing roughly 4–10 year interconnection waits despite ongoing AI capex expansion.",
-      "source": "Network World / Data Center Knowledge / Bain & Co.",
-      "type": "Infrastructure Constraint",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-16",
-      "headline": "Global VC concentration stayed near the Q1 2026 extreme (~81% of funding directed to AI), keeping capital flows highly narrative-driven even after valuation volatility.",
-      "source": "Q1 VC funding trackers / market commentary",
-      "type": "Capital Concentration",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-15",
-      "headline": "Shiller CAPE holds near 42.32× while S&P 500 forward P/E stays around 21.0×, keeping U.S. equity valuation heat close to late-cycle extremes.",
-      "source": "LongtermTrends / FactSet / MacroMicro",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-15",
-      "headline": "Big-5 hyperscaler 2026 capex consensus centers near $602B (+36% YoY vs 2025), still massive but below prior $700B+ blow-off scenarios.",
-      "source": "MUFG / Introl / ai2.work",
-      "type": "Infrastructure Spend",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-15",
-      "headline": "New 2026 engineering benchmarks show AI coding assistants increase delivery speed but also raise review latency and incident risk without strong governance.",
-      "source": "Opsera 2026 Benchmark / Cortex",
-      "type": "Productivity Counter-Evidence",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-14",
-      "headline": "Shiller CAPE climbs to 42.32× — 97.3% of the dot-com all-time peak of 43.5×; heat score reaches new record of 93/100 as AI bubble indicators remain at extreme levels",
-      "source": "Multpl / marketcrash.net / LongtermTrends",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-14",
-      "headline": "Google announces 'Googlebook' — a new category of AI-first laptops designed for Gemini Intelligence; Gemini positioned as Android's core intelligence layer ahead of Apple's WWDC AI reboot",
-      "source": "CNBC / Google AI Blog / aitoolsrecap.com",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-14",
-      "headline": "OpenAI annualized revenue confirmed at $25B (up from $20B baseline), on track for $29–$30B full-year 2026 — still dwarfed by $1.4T infrastructure commitment stack, extending the circular financing tension",
-      "source": "analyticsinsight.net / creati.ai / gradually.ai",
-      "type": "Circular Financing",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-13",
-      "headline": "Hyperscaler 2026 AI capex consensus re-accelerates into a ~$715–$750B range (about $725B midpoint), implying roughly +67% YoY versus 2025",
-      "source": "CreditSights / Epoch AI / industry capex trackers",
-      "type": "Infrastructure Spend",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-13",
-      "headline": "New survey signals adoption friction: most firms using AI-led layoffs report no clear ROI uplift, reinforcing the productivity paradox despite heavy spend",
-      "source": "Gartner / Forbes productivity analysis",
-      "type": "Productivity Counter-Evidence",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-13",
-      "headline": "Power constraints persist as data-center grid interconnection queues remain multi-year (often ~3–6 years) while 2030 electricity demand forecasts stay near ~980 TWh",
-      "source": "Bloom Energy 2026 Power Report / Gartner",
-      "type": "Infrastructure Constraint",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-12",
-      "headline": "Shiller CAPE rebounds to ~42.15× while S&P 500 forward P/E holds near 21.0× — valuation heat remains close to dot-com-era extremes",
-      "source": "LongtermTrends / FactSet / MacroMicro",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-12",
-      "headline": "Big-5 hyperscaler 2026 capex consensus converges near $602B (+36% YoY vs 2025), still historically elevated but below prior $765B blended estimates",
-      "source": "Industry capex trackers / analyst consensus",
-      "type": "Infrastructure Spend",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-12",
-      "headline": "OpenAI revenue run rate is tracked around $20B with about $1.4T in infrastructure commitments through 2034, extending the scale-vs-monetization tension",
-      "source": "TechCrunch / market trackers",
-      "type": "Circular Financing",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-11",
-      "headline": "Capgemini says fewer than 40% of organizations have operationalized GenAI at scale, reinforcing the shift from AI hype to AI realism despite continued spending",
-      "source": "Capgemini Research Institute",
-      "type": "Productivity Counter-Evidence",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-11",
-      "headline": "Sam Altman says AI will become 'as ubiquitous as electricity' and calls 2026 the 'year of agentic applications' at Cisco AI Summit, extending peak-hype rhetoric",
-      "source": "CRN / Cisco AI Summit",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-11",
-      "headline": "IEA- and Gartner-style power forecasts now cluster around ~1,000 TWh of data-center electricity use in 2026, with AI responsible for roughly a quarter of demand and rising",
-      "source": "IEA / Gartner / S&P Global",
-      "type": "Infrastructure Constraint",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-10",
-      "headline": "US and EU regulators mandate pre-release compliance testing for frontier AI models — OpenAI, Google, Anthropic, Microsoft and xAI must submit models before launch; AI now classified as critical infrastructure",
-      "source": "imfounder.com / kersai.com / AI Policy Desk",
-      "type": "Regulatory",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-10",
-      "headline": "US courts rule AI chat logs legally discoverable — confidential ChatGPT, Claude and Gemini conversations can now be subpoenaed as business records, opening new legal and compliance risks for enterprises using AI",
-      "source": "AI News May 2026 Digest / toolscompare.ai",
-      "type": "Regulatory",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-06",
-      "headline": "Anthropic commits $200B to Google Cloud over 5 years for TPU chips and compute — largest AI startup cloud deal ever; Alphabet's $40B equity stake further deepens the circular financing loop",
-      "source": "The Information / Yahoo Finance / Engadget / edgen.tech",
-      "type": "Circular Financing",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-09",
-      "headline": "Shiller CAPE reaches 42.05× while S&P 500 forward P/E rebounds to 21.5× — valuation heat remains near dot-com extremes",
-      "source": "Multpl / InvestSnips / market valuation trackers",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-08",
-      "headline": "Anthropic raises $50B at $900B+ valuation — largest private AI funding event in history, surpassing OpenAI's $852B post-money valuation; ARR accelerating toward ~$40B; investors given 48-hour window; IPO planned for October 2026",
-      "source": "Forbes / aibusinessreview.org / unite.ai / WinBuzzer",
-      "type": "Circular Financing",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-08",
-      "headline": "Amazon deepens Anthropic commitment: new $5B equity stake + up to $20B milestone-linked funding; Anthropic pledges $100B+ to AWS over a decade — mirroring and intensifying Google's $40B infrastructure pledge",
-      "source": "CNBC / unite.ai / kersai.com",
-      "type": "Circular Financing",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-08",
-      "headline": "CAPE ratio climbs to 41.8× — now within 3.9% of the dot-com all-time peak (43.5×); Top-7 P/E expands to 30.4× (NVDA 40.5×, AAPL 33.5×); heat score rises to new record high of 90/100",
-      "source": "marketcrash.net / multpl.com / financecharts.com",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-07",
-      "headline": "OpenAI ends Azure cloud exclusivity, expands to AWS; launches 'The Deployment Company' — $10B enterprise AI joint venture backed by TPG and Bain Capital embedding forward-deployed engineers at client firms",
-      "source": "TechCrunch / SiliconAngle / The Information",
-      "type": "Circular Financing",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-07",
-      "headline": "Anthropic previews Claude Mythos (10-trillion-parameter model for cybersecurity and research); Google pledges up to $40B investment; Anthropic ARR surpasses $30B with potential $900B+ valuation",
-      "source": "ChatFin AI / TheAITrack / SiliconAngle",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-07",
-      "headline": "CAPE ratio surges to 41.2× — now within 5.3% of the dot-com all-time peak (43.5×); S&P 500 forward P/E rises to 21.0×; heat score climbs to 89",
-      "source": "Finanzapedia / LongTermTrends / StreetStats",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-06",
-      "headline": "Anthropic overtakes OpenAI in revenue: $30B ARR (up from $9B in late 2025) — plans October 2026 IPO at $380–500B valuation on Nasdaq; fastest revenue ramp in enterprise software history",
-      "source": "Vucense / Analytics India Magazine / TechMarketBriefs",
-      "type": "Circular Financing",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-06",
-      "headline": "Alphabet issues $32B 'century bond' to finance AI capex as hyperscalers go into historic debt — aggregate 2026 AI infrastructure spend now ~$765B (+87% YoY)",
-      "source": "Yahoo Finance / European Business Magazine",
-      "type": "Infrastructure Spend",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-06",
-      "headline": "Microsoft raises 2026 capex guidance to ~$190B (from ~$165B) citing higher chip costs and supply constraints — S&P 500 forward P/E eases to 20.8×; CAPE holds at 39.27×",
-      "source": "Yahoo Finance / StreetStats / MacroMicro",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-04",
-      "headline": "OpenAI and Anthropic simultaneously launch competing enterprise AI joint ventures backed by Wall Street (Blackstone/Goldman Sachs), raising billions to wire AI directly into institutional infrastructure",
-      "source": "TechCrunch / Anthropic / OpenAI",
-      "type": "Circular Financing",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-05",
-      "headline": "OpenAI releases GPT-5.5 with advanced agentic and coding capabilities; xAI launches Grok 4.3 API — AI lab model arms race continues to accelerate",
-      "source": "OpenAI / xAI / The AI Track",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-05",
-      "headline": "Shiller CAPE ratio eases to 39.19× — still 90% of the way to the dot-com all-time peak of 43.5×; S&P 500 forward P/E settles at 20.9×",
-      "source": "Multpl / FactSet",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-04",
-      "headline": "CAPE ratio climbs to 41.1× in May 2026 — within 2.4 points of the dot-com all-time peak of 43.5×",
-      "source": "Multpl / Finanzapedia",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-04-30",
-      "headline": "Microsoft and Meta raise 2026 capex guidance; hyperscaler aggregate revised to ~$740B — up 80% YoY from 2025's $410B",
-      "source": "Q1 2026 Earnings Calls (Microsoft, Meta)",
-      "type": "Infrastructure Spend",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-04-30",
-      "headline": "Nvidia deploys OpenAI Codex to all 10,000 employees; Jensen Huang declares 'age of AI' while Altman calls it 'awesome'",
-      "source": "Benzinga / Nvidia Press Release",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-04-30",
-      "headline": "Big Tech Q1 2026 earnings confirm $700B hyperscaler capex for 2026 — largest annual tech capex in history",
-      "source": "Q1 2026 Earnings Reports (Amazon, Google, Microsoft, Meta)",
-      "type": "Infrastructure Spend",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-02-26",
-      "headline": "OpenAI hits $25B annualised revenue — doubled from $13B in 2025; eyes $1T IPO valuation by late 2026",
-      "source": "The Information / Reuters",
-      "type": "Circular Financing",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-04-30",
-      "headline": "FTC Operation AI Comply escalates to active investigations and consent orders in April 2026; EU AI Act transparency rules take effect Aug 2026",
-      "source": "FTC Press Releases / AI Policy Desk",
-      "type": "Regulatory",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-04-15",
-      "headline": "Allbirds → NewBird AI: +582% in a single trading day",
-      "source": "SEC Filing / Market Data",
-      "type": "AI-Washing",
-      "sentiment": "extreme_bullish"
-    },
-    {
       "date": "2026-Q1",
       "headline": "81% of all global VC ($242B of $297B) flowed into AI sector in Q1 2026 — record concentration",
       "source": "Venture Capital Research",
@@ -1028,41 +440,13 @@
       "source": "FactSet / Earnings Call Analysis",
       "type": "Hype Cycle",
       "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026",
-      "headline": "Grid connection delays reach 5–10 years; 50% of 2026 US data centre capacity at risk of delay or cancellation",
-      "source": "Energy Sector Research / Google / ERCOT Data",
-      "type": "Infrastructure Constraint",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026",
-      "headline": "OpenAI revenue $25B/yr vs $1.5T committed infrastructure spend through 2031",
-      "source": "Financial Analysis",
-      "type": "Circular Financing",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2025-2026",
-      "headline": "AI coding assistants made programming 19% slower due to refactoring AI-generated code",
-      "source": "Academic Study",
-      "type": "Productivity Counter-Evidence",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2025",
-      "headline": "Chief AI Officer postings surged 478% then collapsed as boards absorb role into CIO/CTO",
-      "source": "Job Market Analysis / Forrester",
-      "type": "Hype Cycle",
-      "sentiment": "bearish_signal"
     }
   ],
   "valuationTable": [
     {
       "metric": "CAPE Ratio",
       "value1999Peak": 43.5,
-      "value2026": 41.06,
+      "value2026": 42.78,
       "historicalAvg": 17.6
     },
     {
