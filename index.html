@@ -612,10 +612,10 @@ async function loadData() {
 }
 
 const FALLBACK_DATA = {
-  "lastUpdated": "2026-06-05",
+  "lastUpdated": "2026-06-06",
   "heatScore": 94,
   "heatLabel": "Boiling",
-  "summary": "As of 5 June 2026, the AI bubble cauldron holds at 'Boiling' 94/100. The Shiller CAPE ratio has risen to ~42.78× — now 98.3% of the all-time dot-com peak of 43.5×, the highest reading in this update series and a historic extremes signal. Google I/O 2026 follow-up cadence shows Gemini 3.5 Flash powering AI Mode in Search with 1B+ users, Gemini app at 900M MAU, and Gemini Omni and Spark launching new agent-era services. Microsoft launched MAI-Thinking-1 at Build 2026 — its first fully in-house reasoning model designed to reduce OpenAI dependence. A bipartisan 'Great American AI Act' draft circulated June 4 seeks to preempt all state AI-development laws for 3 years. Big-4 hyperscaler capex remains near ~$725B (+64% YoY), VC→AI concentration holds near 80%, OpenAI annualized revenue remains ~$25B with IPO preparations advancing, and U.S. data-center grid delays remain ~5 years.",
+  "summary": "As of 6 June 2026, the AI bubble cauldron holds at 'Boiling' 94/100. The day's dominant story is Google's $30B compute deal with SpaceX ($920M/month for 110,000 NVIDIA GPUs), disclosed in SpaceX's SEC S-1 amendment on 5 June — the largest compute-outsourcing contract in history, confirming that even Google can no longer build data-centre capacity fast enough to meet its own Gemini Enterprise demand. NVIDIA launched Cosmos 3 at Computex 2026 on 1 June, the world's first open omnimodel combining vision reasoning, world simulation, and action generation. Florida's AG filed the first state-level lawsuit against OpenAI and Sam Altman (1 June), claiming concealed ChatGPT safety risks linked to violent incidents. The Shiller CAPE ratio holds near ~42.78× (~98.3% of the dot-com all-time peak), S&P 500 forward P/E is ~22.7×, hyperscaler capex consensus sits at ~$725B (+64% YoY), VC→AI concentration is ~80%, and OpenAI annualised revenue stays at ~$25B with its IPO advancing.",
   "kpis": {
     "capeRatio": {
       "value": 42.78,
@@ -712,28 +712,6 @@ const FALLBACK_DATA = {
   },
   "historical": [
     {
-      "date": "2026-05-26",
-      "heatScore": 93,
-      "heatLabel": "Boiling",
-      "capeRatio": 39.8,
-      "sp500ForwardPE": 20.9,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 720,
-      "gridDelayYears": 5,
-      "aiUnicorns": 207
-    },
-    {
-      "date": "2026-05-26",
-      "heatScore": 93,
-      "heatLabel": "Boiling",
-      "capeRatio": 39.6,
-      "sp500ForwardPE": 20.9,
-      "vcAiSharePct": 81,
-      "hyperscalerCapexBn": 725,
-      "gridDelayYears": 5,
-      "aiUnicorns": 207
-    },
-    {
       "date": "2026-05-27",
       "heatScore": 93,
       "heatLabel": "Boiling",
@@ -809,9 +787,44 @@ const FALLBACK_DATA = {
       "hyperscalerCapexBn": 725,
       "gridDelayYears": 5,
       "aiUnicorns": 207
+    },
+    {
+      "date": "2026-06-06",
+      "heatScore": 94,
+      "heatLabel": "Boiling",
+      "capeRatio": 42.78,
+      "sp500ForwardPE": 22.7,
+      "vcAiSharePct": 80,
+      "hyperscalerCapexBn": 725,
+      "gridDelayYears": 5,
+      "aiUnicorns": 207
     }
   ],
   "topStories": [
+    {
+      "date": "2026-06-06",
+      "headline": "Google signs $30B compute deal with SpaceX ($920M/month for 110,000 NVIDIA GPUs, Oct 2026–Jun 2029) as 'bridge capacity' for surging Gemini Enterprise demand — disclosed in SpaceX's S-1 amendment on June 5; the largest compute-outsourcing contract in history confirms even Big-5 hyperscalers can no longer build infrastructure fast enough to meet their own AI demand, amplifying the circular financing loop.",
+      "source": "TechCrunch / CNBC / Bloomberg",
+      "sourceUrl": "https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/",
+      "type": "Circular Financing",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-06-06",
+      "headline": "Florida AG files first U.S. state-level lawsuit against OpenAI and CEO Sam Altman (June 1 2026), claiming ChatGPT concealed serious safety risks — including alleged links to a 2025 mass shooting at Florida State University and two student deaths at USF — and violated Florida's Deceptive and Unfair Trade Practices Act; seeks billions in damages and operational restrictions, directly threatening OpenAI's $852B–$1T IPO plans.",
+      "source": "CNBC / TechCrunch / CBS News",
+      "sourceUrl": "https://www.cnbc.com/2026/06/01/florida-ag-open-ai-altman-lawsuit.html",
+      "type": "Regulatory",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-06-06",
+      "headline": "NVIDIA launches Cosmos 3 at Computex 2026 (June 1 2026) — the world's first fully open 'omnimodel' for physical AI, unifying vision reasoning, world simulation, and action generation in a single mixture-of-transformers model; Jensen Huang calls it a 'generational leap' for robotics and autonomous vehicles; immediately available in Nano and Super sizes on Hugging Face with the NVIDIA Cosmos Coalition of leading AI and robotics labs.",
+      "source": "NVIDIA / HuggingFace / datanorth.ai",
+      "sourceUrl": "https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
     {
       "date": "2026-06-05",
       "headline": "Google I/O 2026 launches Gemini 3.5 Flash as the new default in AI Mode in Search (1B+ users) and Gemini app (900M MAU), while Gemini Omni and Spark debut as agentic 'world model' and personal-agent services — Sundar Pichai declares the 'agentic Gemini era', doubling down on the AI capability and adoption narrative at scale.",
@@ -822,7 +835,7 @@ const FALLBACK_DATA = {
     },
     {
       "date": "2026-06-05",
-      "headline": "Bipartisan 'Great American AI Act' draft (June 4 2026) proposes a 3-year federal preemption of all state laws regulating the development of AI models — the most sweeping U.S. AI governance move designed to block Illinois, Colorado, and California AI safety rules that the industry argues hinder innovation.",
+      "headline": "Bipartisan 'Great American AI Act' draft (June 4 2026) proposes a 3-year federal preemption of all state laws regulating the development of AI models — the most sweeping U.S. AI governance move since the Biden executive order, designed to block a patchwork of Illinois, Colorado, and California AI safety rules that the industry argues hinder innovation.",
       "source": "Roll Call / Broadband Breakfast",
       "sourceUrl": "https://rollcall.com/2026/06/04/bipartisan-ai-draft-proposes-three-year-preemption-of-state-laws/",
       "type": "Regulatory",
@@ -976,83 +989,6 @@ const FALLBACK_DATA = {
       "source": "Hackett Group / RAND Corporation / Gartner April 2026 / Folio3 / Freshworks 2026 Key Issues Study",
       "type": "Productivity Counter-Evidence",
       "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-26",
-      "headline": "SEC and DOJ expanded AI-washing enforcement in 2026 via parallel civil/criminal fraud actions tied to Nate, reinforcing that unsubstantiated AI claims now carry direct founder-level liability risk.",
-      "source": "Debevoise / White & Case / Holland & Knight",
-      "type": "Regulatory",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-26",
-      "headline": "Global VC reached about $297B in Q1 2026, with AI startups absorbing roughly $239B (~81%), keeping AI concentration near record highs and further tightening narrative-driven capital allocation.",
-      "source": "Crunchbase / KPMG / Grey Journal market summary",
-      "type": "Circular Financing",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-26",
-      "headline": "Hyperscaler infrastructure spend for 2026 remains on a steep trajectory: Big-5 consensus sits near ~$725B (+64% YoY), while broader tracker sets including China platforms point toward ~$830B.",
-      "source": "CreditSights / TrendForce / industry tracker synthesis",
-      "type": "Infrastructure Constraint",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-26",
-      "headline": "METR 2026 study confirms experienced developers take ~19% longer on complex tasks when using AI coding assistants — perceived speed gains do not translate to real delivery gains; only 29% of developers trust AI-generated code accuracy (down from 40% in 2024).",
-      "source": "METR / secondtalent.com / callsphere.ai / uvik.net AI Coding Statistics 2026",
-      "type": "Productivity Counter-Evidence",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-26",
-      "headline": "U.S. data-centre grid connection wait time climbs to a national median of ~5 years in 2026 (some markets 7–12 years); interconnection queue has grown from 1,400 GW to 2,600 GW since 2021; nearly half of planned 2026 data-centre capacity is delayed or cancelled.",
-      "source": "enkiai.com Grid Interconnection Delays 2026 / AhaSignals Interconnection Queue Tracker / DataCenter Dynamics",
-      "type": "Infrastructure Constraint",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-26",
-      "headline": "MIT NANDA, McKinsey and Stanford HAI confirm 95% pilot-to-production failure rate for enterprise GenAI in 2026 — only ~5% of firms are 'AI high performers'; the primary causes are organisational unreadiness and poor data governance, not technical limitations.",
-      "source": "MIT NANDA / McKinsey / Stanford HAI / timewell.jp GenAI Divide 2026 / folio3.ai",
-      "type": "Productivity Counter-Evidence",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-26",
-      "headline": "Shiller CAPE eases to ~39.8× (91.5% of dot-com peak) while Magnificent-7 ex-Tesla trailing P/E expands to ~38.7× average — AI-sector valuations diverge from broader market as NVDA ~58.5×, AMZN ~48.5×, MSFT ~36.5×; heat score holds at 93/100 'Boiling'.",
-      "source": "YCharts / Multpl / LongtermTrends / MacroMicro / MarketXLS",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-26",
-      "headline": "OpenAI Q1 2026 revenue $5.7B (~$25B annualised) with adjusted operating margin of –122% — the company burns $122 for every $1 earned; enterprise now >40% of revenue, IPO preparations advancing while net loss projected at ~$14B for full-year 2026.",
-      "source": "The Tech Portal / FAQ.com.tw / AI Daily Post / WinBuzzer",
-      "type": "Circular Financing",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-26",
-      "headline": "EU adopts first AI-Transparency Label for news content (May 2026); U.S. mandates pre-release testing for frontier models — AI formally reclassified as critical infrastructure, ending 'move fast and break things' era and opening new compliance and litigation exposure.",
-      "source": "imfounder.com / kersai.com / llodo.com / AI Policy Desk",
-      "type": "Regulatory",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-Q1",
-      "headline": "81% of all global VC ($242B of $297B) flowed into AI sector in Q1 2026 — record concentration",
-      "source": "Venture Capital Research",
-      "type": "Capital Concentration",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-Q1",
-      "headline": "60%+ of S&P 500 earnings calls mentioned AI in Q1 2026 — record high, up from 47% in Q4 2025",
-      "source": "FactSet / Earnings Call Analysis",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
     }
   ],
   "valuationTable": [
@@ -1112,7 +1048,7 @@ const INSIGHTS = [
   { title: '⚡ The Hard Stop: Power Grid',
     body: 'A single large-scale AI data center can require 300 MW+. Grid connection now averages about 4 years in major U.S. markets, while bottlenecked regions can still stretch to 7–12 years. Billions in GPUs are sitting idle waiting for power they may never get.' },
   { title: '📉 CAPE at 42.78 — 98.3% of Dot-Com All-Time Peak',
-    body: 'The CAPE ratio has climbed to ~42.78× as of 5 June 2026 — now 98.3% of the all-time dot-com peak of 43.5×, the highest reading in this 2026 series. Only 0.72 points separate current U.S. equity valuations from the most extreme bubble on record, keeping correction risk near maximum.' },
+    body: 'The CAPE ratio holds at ~42.78× as of 6 June 2026 — now 98.3% of the all-time dot-com peak of 43.5×, the highest reading in this 2026 series. Only 0.72 points separate current U.S. equity valuations from the most extreme bubble on record, keeping correction risk near maximum.' },
   { title: '🤖 AI Slop & Productivity Paradox',
     body: 'Studies show AI coding assistants made programming 19% slower due to time spent fixing AI-generated bugs. Up to 95% of enterprise Gen AI implementations have reportedly failed.' },
   { title: '💰 "Chief AI Officer" is Already Dead',
