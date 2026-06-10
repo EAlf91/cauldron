@@ -1,25 +1,25 @@
 {
-  "lastUpdated": "2026-06-06",
+  "lastUpdated": "2026-06-10",
   "heatScore": 94,
   "heatLabel": "Boiling",
-  "summary": "As of 6 June 2026, the AI bubble cauldron holds at 'Boiling' 94/100. The day's dominant story is Google's $30B compute deal with SpaceX ($920M/month for 110,000 NVIDIA GPUs), disclosed in SpaceX's SEC S-1 amendment on 5 June — the largest compute-outsourcing contract in history, confirming that even Google can no longer build data-centre capacity fast enough to meet its own Gemini Enterprise demand. NVIDIA launched Cosmos 3 at Computex 2026 on 1 June, the world's first open omnimodel combining vision reasoning, world simulation, and action generation. Florida's AG filed the first state-level lawsuit against OpenAI and Sam Altman (1 June), claiming concealed ChatGPT safety risks linked to violent incidents. The Shiller CAPE ratio holds near ~42.78× (~98.3% of the dot-com all-time peak), S&P 500 forward P/E is ~22.7×, hyperscaler capex consensus sits at ~$725B (+64% YoY), VC→AI concentration is ~80%, and OpenAI annualised revenue stays at ~$25B with its IPO advancing.",
+  "summary": "As of 10 June 2026, the AI bubble cauldron holds at 'Boiling' 94/100. The standout events for 9–10 June are Anthropic's release of Claude Fable 5 (9 June) — its first public Mythos-class model, surpassing all prior Claude versions on coding, research and vision — and the Financial Stability Board's 10 June consultation calling for tighter global controls on agentic AI in finance, noting that 52% of financial firms already deploy autonomous AI agents at scale. The week's dominant financing story is Alphabet raising $80B (including $10B from Berkshire Hathaway) to fund AI infrastructure, part of a stunning $390B in AI data-centre capital commitments announced in a single week (2–9 June). The Shiller CAPE ticks up to ~43.0× (~98.8% of the dot-com peak of 43.5×); S&P 500 forward P/E eases to ~21.1× on earnings-estimate upgrades (FactSet early-June 2026); hyperscaler capex consensus holds at ~$725B (+64% YoY); VC→AI concentration remains ~80%; and the AI unicorn count since 2024 climbs to ~232 after a June surge of new entrants including Thinking Machines Lab ($12B), Decagon ($1.5B), and Seekr ($1.2B).",
   "kpis": {
     "capeRatio": {
-      "value": 42.78,
+      "value": 43.0,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for the U.S. market — early-June 2026 readings have climbed to ~42.78× (~98.3% of the all-time dot-com peak of 43.5×), the highest reading in this 2026 series and keeping U.S. equity valuation heat at near-record historical extremes (Finanzapedia, June 2026).",
+      "description": "Cyclically adjusted P/E for the U.S. market — June 9-10 2026 readings have ticked up to ~43.0× (~98.8% of the all-time dot-com peak of 43.5×), the highest reading in this 2026 series, as the AI-driven equity rally continued with Alphabet's $80B capital raise and Anthropic's Fable 5 launch; U.S. equity valuation heat remains at near-record historical extremes (Finanzapedia / LongTermTrends, June 2026).",
       "weight": 20,
       "score": 20
     },
     "sp500ForwardPE": {
-      "value": 22.8,
+      "value": 21.1,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for the S&P 500 — month-end May 2026 trackers show around ~22.8× (MacroMicro), materially above long-run norms and still consistent with late-cycle AI-led valuation expansion.",
+      "description": "Forward price-to-earnings ratio for the S&P 500 — FactSet Earnings Insight for early June 2026 shows ~21.1× (MacroMicro June 9: 20.93×), easing from ~22.7× in early June as aggressive upward revisions to Q2/Q3 earnings estimates outpaced price gains; still materially above the 16× long-run average and consistent with late-cycle AI-led valuation expansion.",
       "weight": 10,
       "score": 10
     },
@@ -81,10 +81,10 @@
       "score": 5
     },
     "aiUnicornsSince2024": {
-      "value": 207,
+      "value": 232,
       "unit": "companies",
       "label": "AI Unicorns (Global)",
-      "description": "Current tracker consensus still points to about 207 AI-focused companies reaching $1B+ valuation since 2024, with AI representing a large share of newly minted unicorns.",
+      "description": "AI-focused companies reaching $1B+ valuation since 2024 climbs to ~232 after a June 2026 surge of new entrants including Thinking Machines Lab ($12B), Decagon ($1.5B), Seekr ($1.2B), and Fireflies.ai ($1B); total active AI unicorn count globally now stands at ~308 according to Failory 2026 tracker, with AI representing >25% of all newly minted unicorns in 2026 (Crunchbase / Worldef / Failory, June 2026).",
       "weight": 5,
       "score": 5
     },
@@ -185,9 +185,55 @@
       "hyperscalerCapexBn": 725,
       "gridDelayYears": 5,
       "aiUnicorns": 207
+    },
+    {
+      "date": "2026-06-09",
+      "heatScore": 94,
+      "heatLabel": "Boiling",
+      "capeRatio": 43.0,
+      "sp500ForwardPE": 21.1,
+      "vcAiSharePct": 80,
+      "hyperscalerCapexBn": 725,
+      "gridDelayYears": 5,
+      "aiUnicorns": 232
+    },
+    {
+      "date": "2026-06-10",
+      "heatScore": 94,
+      "heatLabel": "Boiling",
+      "capeRatio": 43.0,
+      "sp500ForwardPE": 21.1,
+      "vcAiSharePct": 80,
+      "hyperscalerCapexBn": 725,
+      "gridDelayYears": 5,
+      "aiUnicorns": 232
     }
   ],
   "topStories": [
+    {
+      "date": "2026-06-10",
+      "headline": "Financial Stability Board releases consultation on agentic AI in finance (10 June 2026), warning that 52% of surveyed financial firms already deploy autonomous AI agents and urging 12 'sound practices' — including mandatory human approval for high-risk transactions, hard capability limits, and treating AI systems as 'synthetic employees'; the report highlights AI agents can 'materialise risks at great speed' across interconnected financial systems, with public consultation open until 22 July 2026.",
+      "source": "Financial Stability Board / US News / Channel News Asia",
+      "sourceUrl": "https://money.usnews.com/investing/news/articles/2026-06-10/global-watchdog-calls-for-tighter-controls-on-agentic-ai-in-finance",
+      "type": "Regulatory",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-06-09",
+      "headline": "Anthropic releases Claude Fable 5 on 9 June 2026 — its first publicly available Mythos-class model, state-of-the-art on software engineering, vision, and scientific research tasks; a more capable restricted version (Claude Mythos 5) simultaneously launches for cyberdefenders and critical-infrastructure partners via Project Glasswing; the dual-tier release signals a new escalation in AI capability arms race as Anthropic's annualised revenue run-rate has hit ~$47B at its $965B post-money valuation.",
+      "source": "TechCrunch / MacRumors / 9to5Mac",
+      "sourceUrl": "https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-06-09",
+      "headline": "Alphabet raises $80 billion (9 June 2026) — $30B equity offering, $40B ATM program, and $10B private placement from Berkshire Hathaway — to fund its 2026 capex target of $180–190B; part of a record $390B in AI data-centre capital commitments announced in the week of 2–9 June, including Schneider Electric ($290M) and Cipher Mining ($810M Texas DC), confirming that AI infrastructure has become the world's most in-demand institutional asset class.",
+      "source": "CNBC / TechCrunch / InforCapital",
+      "sourceUrl": "https://techcrunch.com/2026/06/01/alphabet-plans-to-raise-80-billion-to-pay-for-ai-buildout/",
+      "type": "Circular Financing",
+      "sentiment": "extreme_bullish"
+    },
     {
       "date": "2026-06-06",
       "headline": "Google signs $30B compute deal with SpaceX ($920M/month for 110,000 NVIDIA GPUs, Oct 2026–Jun 2029) as 'bridge capacity' for surging Gemini Enterprise demand — disclosed in SpaceX's S-1 amendment on June 5; the largest compute-outsourcing contract in history confirms even Big-5 hyperscalers can no longer build infrastructure fast enough to meet their own AI demand, amplifying the circular financing loop.",
@@ -382,13 +428,13 @@
     {
       "metric": "CAPE Ratio",
       "value1999Peak": 43.5,
-      "value2026": 42.78,
+      "value2026": 43.0,
       "historicalAvg": 17.6
     },
     {
       "metric": "S&P 500 Forward P/E",
       "value1999Peak": 25,
-      "value2026": 22.8,
+      "value2026": 21.1,
       "historicalAvg": 16
     },
     {
