@@ -1,34 +1,34 @@
 {
-  "lastUpdated": "2026-06-10",
-  "heatScore": 94,
+  "lastUpdated": "2026-06-19",
+  "heatScore": 93,
   "heatLabel": "Boiling",
-  "summary": "As of 10 June 2026, the AI bubble cauldron holds at 'Boiling' 94/100. The standout events for 9–10 June are Anthropic's release of Claude Fable 5 (9 June) — its first public Mythos-class model, surpassing all prior Claude versions on coding, research and vision — and the Financial Stability Board's 10 June consultation calling for tighter global controls on agentic AI in finance, noting that 52% of financial firms already deploy autonomous AI agents at scale. The week's dominant financing story is Alphabet raising $80B (including $10B from Berkshire Hathaway) to fund AI infrastructure, part of a stunning $390B in AI data-centre capital commitments announced in a single week (2–9 June). The Shiller CAPE ticks up to ~43.0× (~98.8% of the dot-com peak of 43.5×); S&P 500 forward P/E eases to ~21.1× on earnings-estimate upgrades (FactSet early-June 2026); hyperscaler capex consensus holds at ~$725B (+64% YoY); VC→AI concentration remains ~80%; and the AI unicorn count since 2024 climbs to ~232 after a June surge of new entrants including Thinking Machines Lab ($12B), Decagon ($1.5B), and Seekr ($1.2B).",
+  "summary": "As of 19 June 2026, the AI bubble cauldron holds at 'Boiling' 93/100. The dominant story of the week is OpenAI's imminent release of GPT-5.6 — described by OpenAI Chief Scientist Jakub Pachocki as a 'meaningful improvement' over GPT-5.5, featuring a 1.5M-token context window and fixes for alignment issues discovered in GPT-5.5; late-stage internal testing confirmed with a late-June release expected. The EU AI Act countdown intensifies: full GPAI penalty enforcement (fines up to €35M or 7% of global turnover for providers like OpenAI, Google, and Anthropic) activates on August 2, 2026, while high-risk AI obligations are postponed to 2027–2028 per the Digital Omnibus. New Relic's 'State of AI Coding 2026' finds 78% of companies reporting increased production incidents from AI-generated code, with AI code introducing 1.7× more issues than human-written code. The Shiller CAPE eases slightly to ~42.78× (98.3% of the all-time dot-com peak of 43.5×); S&P 500 forward P/E compresses to ~20.1× per FactSet Earnings Insight (June 12 2026); Magnificent-7 full average P/E rises to ~80.7× as Tesla surges to ~385.2× (ex-TSLA: ~29.9×); hyperscaler capex consensus dips slightly to ~$715B; VC→AI concentration steady at ~80%.",
   "kpis": {
     "capeRatio": {
-      "value": 43.0,
+      "value": 42.78,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for the U.S. market — June 9-10 2026 readings have ticked up to ~43.0× (~98.8% of the all-time dot-com peak of 43.5×), the highest reading in this 2026 series, as the AI-driven equity rally continued with Alphabet's $80B capital raise and Anthropic's Fable 5 launch; U.S. equity valuation heat remains at near-record historical extremes (Finanzapedia / LongTermTrends, June 2026).",
+      "description": "Cyclically adjusted P/E for the U.S. market — Finanzapedia June 2026 reading eases slightly to ~42.78× (98.3% of the all-time dot-com peak of 43.5×); U.S. equity valuation heat remains at near-record historical extremes driven by AI-led equity rally and continued mega-round infrastructure financing commitments (Finanzapedia / LongTermTrends, June 2026).",
       "weight": 20,
       "score": 20
     },
     "sp500ForwardPE": {
-      "value": 21.1,
+      "value": 20.1,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for the S&P 500 — FactSet Earnings Insight for early June 2026 shows ~21.1× (MacroMicro June 9: 20.93×), easing from ~22.7× in early June as aggressive upward revisions to Q2/Q3 earnings estimates outpaced price gains; still materially above the 16× long-run average and consistent with late-cycle AI-led valuation expansion.",
+      "description": "Forward price-to-earnings ratio for the S&P 500 — FactSet Earnings Insight (June 12, 2026) shows ~20.1×, compressing from ~21.1× earlier in June as upward Q2/Q3 earnings estimate revisions outpaced price gains; still materially above the 16× long-run average (5-year avg: 19.9×; 10-year avg: 19.0×) and consistent with late-cycle AI-led valuation expansion (FactSet, June 2026).",
       "weight": 10,
       "score": 10
     },
     "top7StocksPE": {
-      "value": 73.3,
+      "value": 80.7,
       "historicalAvg": 20,
       "unit": "x",
       "label": "Top 7 Stocks P/E",
-      "description": "Magnificent-7 trailing P/E average surges to ~73.3× on 30 May 2026 as TSLA spikes to ~326× on thin earnings; ex-TSLA average compresses to ~31.1× as NVDA (~38.6×), AAPL (~37.7×), AMZN (~33.4×), GOOGL (~29.8×), MSFT (~24.0×) and META (~23.0×) see P/E multiples contract on strong earnings growth (BearSavings.com / financecharts.com Mag-7 Valuation Dashboard May 2026).",
+      "description": "Magnificent-7 trailing P/E full average rises to ~80.7× as of June 19, 2026, with TSLA surging to ~385.2× on thin earnings; ex-TSLA average compresses to ~29.9× as NVDA (~34.1×), AAPL (~38.2×), AMZN (~31.6×), GOOGL (~27.6×), MSFT (~26.3×) and META (~21.7×) see P/E multiples contract on strong earnings growth (BearSavings.com Mag-7 Valuation Dashboard, June 2026).",
       "weight": 10,
       "score": 10
     },
@@ -43,11 +43,11 @@
       "score": 16
     },
     "hyperscalerCapexBn": {
-      "value": 725,
-      "yoyGrowth": 64,
+      "value": 715,
+      "yoyGrowth": 62,
       "unit": "billion USD",
       "label": "Hyperscaler Capex 2026",
-      "description": "Big-5 hyperscaler 2026 capex consensus clusters around ~$725B (+64% YoY); ByteDance's planned $70B AI capex (May 27–28 2026) pushes the broader global tracker including major China cloud platforms above ~$900B; AI infrastructure remains the dominant spend driver.",
+      "description": "Big-4 hyperscaler (Microsoft, Google, Amazon, Meta) 2026 capex consensus dips slightly to ~$715B as Amazon (~$200B), Alphabet (~$175–190B), Microsoft (~$120–190B), and Meta (~$115–145B) update mid-year guidance; 60–75% of this spend is AI-specific infrastructure; broader tracker including ByteDance ($70B) and other China platforms still pushes global AI capex above ~$900B (OfficeChai / CreditSights / Futurum, June 2026).",
       "weight": 10,
       "score": 9
     },
@@ -207,9 +207,44 @@
       "hyperscalerCapexBn": 725,
       "gridDelayYears": 5,
       "aiUnicorns": 232
+    },
+    {
+      "date": "2026-06-19",
+      "heatScore": 93,
+      "heatLabel": "Boiling",
+      "capeRatio": 42.78,
+      "sp500ForwardPE": 20.1,
+      "vcAiSharePct": 80,
+      "hyperscalerCapexBn": 715,
+      "gridDelayYears": 5,
+      "aiUnicorns": 232
     }
   ],
   "topStories": [
+    {
+      "date": "2026-06-19",
+      "headline": "OpenAI's GPT-5.6 enters late-stage internal testing (June 19, 2026) with OpenAI Chief Scientist Jakub Pachocki calling it a 'meaningful improvement' over GPT-5.5; expected features include a 1.5M-token context window, UltraFast Codex Mode for developers, and critical alignment fixes for a reward-hacking error found in GPT-5.5; prediction markets overwhelmingly expect a public release before end of June 2026, with codenames 'ember-alpha', 'beacon-alpha', and 'kindle-alpha' surfacing in internal testing — signalling OpenAI's fastest-ever model iteration cadence of 40–60 days as it races Anthropic's Claude Opus 4.8 and Google's Gemini 3.5 Pro.",
+      "source": "TechTimes / Geeky Gadgets / CometAPI",
+      "sourceUrl": "https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-06-19",
+      "headline": "EU AI Act penalty-phase enforcement for GPAI providers — including OpenAI (GPT-5), Google (Gemini), and Anthropic (Claude) — activates August 2, 2026: fines up to €35M or 7% of global turnover for non-compliance; high-risk AI obligations under the Digital Omnibus are postponed to December 2027 (stand-alone) and August 2028 (embedded systems); Article 50 AI-content transparency requirements take effect for new EU-market systems by August 2026; Meta is the sole major GPAI provider that has NOT signed the Code of Practice, facing additional regulatory scrutiny.",
+      "source": "Axis Intelligence / GLACIS / AI Policy Desk",
+      "sourceUrl": "https://axis-intelligence.com/eu-ai-act-news/",
+      "type": "Regulatory",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-06-19",
+      "headline": "New Relic 'State of AI Coding 2026' report finds 78% of companies report increased production incidents tied to AI-generated code; 82% faced at least one major failure from AI-authored code in a 6-month period; AI-generated code introduces 1.7× more issues than human-written code on average; 67% of developers spend more time debugging AI code than expected; only 3% highly trust AI-generated code in production — deepening the AI productivity paradox as 30–75% of production code at leading tech firms is now AI-generated.",
+      "source": "New Relic / Second Talent",
+      "sourceUrl": "https://newrelic.com/blog/ai/state-of-ai-coding-2026",
+      "type": "Productivity Counter-Evidence",
+      "sentiment": "bearish_signal"
+    },
     {
       "date": "2026-06-10",
       "headline": "Financial Stability Board releases consultation on agentic AI in finance (10 June 2026), warning that 52% of surveyed financial firms already deploy autonomous AI agents and urging 12 'sound practices' — including mandatory human approval for high-risk transactions, hard capability limits, and treating AI systems as 'synthetic employees'; the report highlights AI agents can 'materialise risks at great speed' across interconnected financial systems, with public consultation open until 22 July 2026.",
@@ -305,142 +340,25 @@
       "sourceUrl": "https://www.nbcnews.com/tech/tech-news/illinois-legislature-passes-historic-ai-bill-rcna347191",
       "type": "Regulatory",
       "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-31",
-      "headline": "Month-end valuation check: Shiller CAPE remains around ~41.06× while S&P 500 forward P/E prints ~22.8×, keeping U.S. equity multiples in a historically stretched regime as AI leadership continues to dominate index pricing.",
-      "source": "Finanzapedia / MacroMicro",
-      "sourceUrl": "https://en.macromicro.me/series/20052/sp500-forward-pe-ratio",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-31",
-      "headline": "Crunchbase reports Q1 2026 as a record VC quarter (~$300B globally), with AI capturing roughly 80% (~$242B), reinforcing narrative-driven capital concentration and mega-round dependency.",
-      "source": "Crunchbase",
-      "sourceUrl": "https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/",
-      "type": "Circular Financing",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-31",
-      "headline": "Stanford HAI AI Index 2026 documents continued frontier-model progress and deployment acceleration, while governance, reliability, and enterprise execution constraints remain central risk factors.",
-      "source": "Stanford HAI AI Index",
-      "sourceUrl": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
-      "type": "Productivity Counter-Evidence",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-30",
-      "headline": "OpenAI's reasoning model autonomously disproves Paul Erdős's 80-year-old unit distance conjecture in discrete geometry — the first time an AI has independently solved a central open problem in mathematics; the proof was verified by Fields Medalist Tim Gowers and Princeton's Will Sawin; underscores AI's accelerating shift from research assistant to autonomous originator.",
-      "source": "OpenAI Blog / AI Weekly / explainx.ai",
-      "sourceUrl": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-30",
-      "headline": "Illinois passes the US's first law (SB 315) requiring annual independent third-party safety audits of frontier AI labs — OpenAI, Google DeepMind, and Anthropic must undergo external safety verification, publish pre-release risk reports, and report critical incidents within 72 hours; up to $3M fines for violations; effective January 2027.",
-      "source": "NBC News / Illinois Legislature / NBC Chicago",
-      "sourceUrl": "https://www.nbcnews.com/tech/tech-news/illinois-legislature-passes-historic-ai-bill-rcna347191",
-      "type": "Regulatory",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-30",
-      "headline": "Shiller CAPE ticks up to ~40.1× (92.2% of dot-com peak) while S&P 500 forward P/E eases to ~21.2×; Magnificent-7 P/E reshuffles — TSLA surges to ~326× on thin earnings, NVDA compresses to ~38.6× on massive earnings growth; full-7 average now ~73.3×, ex-TSLA ~31.1×; heat score holds at 93/100 'Boiling'.",
-      "source": "Finanzapedia / MacroMicro / BearSavings.com / FactSet",
-      "sourceUrl": "https://finanzapedia.com/en/sp500/sp500-cape-ratio",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-29",
-      "headline": "Shiller CAPE crosses 40× for only the second time in 100 years (first: dot-com bubble 2000) — closing at ~40.0× on May 29 2026, or 91.9% of the all-time peak; Motley Fool warns this rare signal historically precedes decade-long periods of low returns or sharp corrections as mean-reversion pressures mount.",
-      "source": "The Motley Fool",
-      "sourceUrl": "https://www.fool.com/investing/2026/05/28/the-sp-500-just-did-something-for-the-3rd-time-in/",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-29",
-      "headline": "CloudBees study (May 2026): 81% of enterprise technology leaders report a rise in production failures directly linked to AI-generated code — only 31% of AI spend is tied to measurable business outcomes; AI-written PRs take 4.6× longer to review and introduce 15–18% more security vulnerabilities, deepening the AI productivity paradox.",
-      "source": "The Register / CloudBees / Business Insider",
-      "sourceUrl": "https://www.theregister.com/ai-ml/2026/05/20/ai-code-boom-drives-production-failures-higher-spending/5243787",
-      "type": "Productivity Counter-Evidence",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-29",
-      "headline": "NVIDIA market cap reaches $5.1 trillion as AI hardware demand intensifies — Micron and SK Hynix join the '$1 trillion club'; AI stocks lead the May 2026 broad market rally with tech sector hitting new all-time highs, driven by hyperscaler capex surging toward ~$725B and AI IPO pipeline (OpenAI, Anthropic) heating up.",
-      "source": "Yahoo Finance / AI Tools Recap",
-      "sourceUrl": "https://aitoolsrecap.com/Blog/ai-news-may-2026",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-28",
-      "headline": "Anthropic raises $65B Series H at a $965B post-money valuation (May 28 2026), surpassing OpenAI as the world's most valuable AI startup; led by Altimeter, Dragoneer, Greenoaks, Sequoia + Amazon/Blackstone participation — Anthropic revenue run-rate hit ~$47B, making this likely its final private funding round before IPO.",
-      "source": "Bloomberg / CNBC / TechCrunch",
-      "sourceUrl": "https://www.bloomberg.com/news/articles/2026-05-28/anthropic-raises-at-965-billion-valuation-eclipsing-openai",
-      "type": "Circular Financing",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-28",
-      "headline": "OpenAI confidentially filed its S-1 IPO registration with the SEC (May 22 2026), targeting a September 2026 public listing at a $852B–$1T valuation led by Goldman Sachs and Morgan Stanley — the company generates ~$25B in annualised revenue but loses $1.22 for every $1 earned, making it one of the most expensive unprofitable IPOs in history.",
-      "source": "CNBC / Roborhythms / TechJournal",
-      "sourceUrl": "https://www.roborhythms.com/openai-ipo-filing-2026/",
-      "type": "Circular Financing",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-28",
-      "headline": "ByteDance plans $70B AI capex in 2026 — more than double the prior year, funded from ~$50B 2025 profit — pushing the broader global AI infrastructure spend (including China platforms) above ~$900B; amplifies the circular financing loop as TikTok's parent accelerates competition with U.S. hyperscalers.",
-      "source": "Bloomberg / AI Tools Recap / rallies.ai",
-      "sourceUrl": "https://www.bloomberg.com/news/articles/2026-05-27/bytedance-weighs-capex-of-as-much-as-70-billion-in-ai-push",
-      "type": "Infrastructure Constraint",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-27",
-      "headline": "S&P 500 and Nasdaq Composite hit fresh all-time highs on 27 May 2026 as AI and memory chip stocks surged — Micron Technology breached a $1 trillion market cap after a 19% rally, with knock-on gains in Seagate and Western Digital; AI infrastructure ETFs posted new records.",
-      "source": "CNBC / AI Chronicle / Morgan Stanley AI Market Trends 2026",
-      "type": "Hype Cycle",
-      "sentiment": "extreme_bullish"
-    },
-    {
-      "date": "2026-05-27",
-      "headline": "FTC settled with Cox Media Group and two smaller firms for ~$1M over false 'AI-powered' marketing claims (May 21 2026); FTC warned Amazon, Meta, Apple and 12 other platforms via letters — signalling shift from warnings to active AI-washing enforcement with immediate effect.",
-      "source": "FTC Press Release / launch-legal.com / AI Policy Desk",
-      "type": "Regulatory",
-      "sentiment": "bearish_signal"
-    },
-    {
-      "date": "2026-05-27",
-      "headline": "Hackett Group (2026): 91% of enterprise AI pilots stall and never scale to business value; RAND/Gartner confirm 80–85% overall AI project failure rate — only 19.7% of AI projects achieve or exceed their objectives, deepening the AI productivity paradox.",
-      "source": "Hackett Group / RAND Corporation / Gartner April 2026 / Folio3 / Freshworks 2026 Key Issues Study",
-      "type": "Productivity Counter-Evidence",
-      "sentiment": "bearish_signal"
     }
   ],
   "valuationTable": [
     {
       "metric": "CAPE Ratio",
       "value1999Peak": 43.5,
-      "value2026": 43.0,
+      "value2026": 42.78,
       "historicalAvg": 17.6
     },
     {
       "metric": "S&P 500 Forward P/E",
       "value1999Peak": 25,
-      "value2026": 21.1,
+      "value2026": 20.1,
       "historicalAvg": 16
     },
     {
       "metric": "Top 7 Stocks P/E",
       "value1999Peak": 66,
-      "value2026": 31.1,
+      "value2026": 29.9,
       "historicalAvg": 20
     }
   ],
