@@ -612,36 +612,36 @@ async function loadData() {
 }
 
 const FALLBACK_DATA = {
-  "lastUpdated": "2026-06-19",
+  "lastUpdated": "2026-06-30",
   "heatScore": 93,
   "heatLabel": "Boiling",
-  "summary": "As of 19 June 2026, the AI bubble cauldron holds at 'Boiling' 93/100. The dominant story of the week is OpenAI's imminent release of GPT-5.6 — described by OpenAI Chief Scientist Jakub Pachocki as a 'meaningful improvement' over GPT-5.5, featuring a 1.5M-token context window and fixes for alignment issues found in GPT-5.5. The EU AI Act countdown intensifies: full GPAI penalty enforcement activates on August 2, 2026. New Relic's 'State of AI Coding 2026' finds 78% of companies reporting increased production incidents from AI-generated code. The Shiller CAPE eases to ~42.78×; S&P 500 forward P/E compresses to ~20.1× per FactSet; Mag-7 full average P/E rises to ~80.7× as TSLA surges to ~385.2×; hyperscaler capex consensus at ~$715B; VC→AI concentration steady at ~80%.",
+  "summary": "As of 30 June 2026, the AI bubble cauldron holds at 'Boiling' 93/100. The defining story of the week is GPT-5.6's restricted launch: OpenAI unveiled Sol / Terra / Luna on June 26, but the Trump administration's first-ever executive order requiring 30-day government review limited rollout to ~20 approved partners. The Shiller CAPE eases to ~41.02× (94.3% of dot-com peak); S&P 500 forward P/E edges up to ~21.1×; Mag-7 full average P/E compresses to ~77.4× as TSLA retreats; hyperscaler capex at ~$715B; VC→AI at ~80%; EU AI Act August 2 GPAI enforcement deadline is 33 days away with ~78% of organisations not yet compliant; OpenAI also unveiled its 'Jalapeño' inference chip.",
   "kpis": {
     "capeRatio": {
-      "value": 42.78,
+      "value": 41.02,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for the U.S. market — Finanzapedia June 2026 reading eases slightly to ~42.78× (98.3% of the all-time dot-com peak of 43.5×); U.S. equity valuation heat remains at near-record historical extremes driven by AI-led equity rally and continued mega-round infrastructure financing commitments (Finanzapedia / LongTermTrends, June 2026).",
+      "description": "Cyclically adjusted P/E for the U.S. market — LongTermTrends / ycharts reading for end-June 2026 eases to ~41.02×, down from the mid-June peak of ~43×, but still 94.3% of the all-time dot-com peak of 43.5×; U.S. equity valuations remain at near-record historical extremes (LongTermTrends / ycharts, June 30, 2026).",
       "weight": 20,
       "score": 20
     },
     "sp500ForwardPE": {
-      "value": 20.1,
+      "value": 21.1,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for the S&P 500 — FactSet Earnings Insight (June 12, 2026) shows ~20.1×, compressing from ~21.1× as upward Q2/Q3 earnings estimate revisions outpaced price gains; still materially above the 16× long-run average (5-year avg: 19.9×; 10-year avg: 19.0×) (FactSet, June 2026).",
+      "description": "Forward price-to-earnings ratio for the S&P 500 — MacroMicro reading as of June 30, 2026 shows ~21.1×, recovering from the mid-June FactSet reading of ~20.1×; still materially above the 16× long-run average (5-year avg: 19.9×; 10-year avg: 19.0×) (MacroMicro / FactSet, June 2026).",
       "weight": 10,
       "score": 10
     },
     "top7StocksPE": {
-      "value": 80.7,
+      "value": 77.4,
       "historicalAvg": 20,
       "unit": "x",
       "label": "Top 7 Stocks P/E",
-      "description": "Magnificent-7 trailing P/E full average rises to ~80.7× as of June 19, 2026, with TSLA surging to ~385.2× on thin earnings; ex-TSLA average compresses to ~29.9× as NVDA (~34.1×), AAPL (~38.2×), AMZN (~31.6×), GOOGL (~27.6×), MSFT (~26.3×) and META (~21.7×) see P/E multiples contract on strong earnings growth (BearSavings.com Mag-7 Valuation Dashboard, June 2026).",
+      "description": "Magnificent-7 trailing P/E full average compresses to ~77.4× as of June 30, 2026, as TSLA retreats from its ~385.2× peak to ~360× following AI-semiconductor profit-taking; ex-TSLA average edges down to ~29.7× as NVDA (~34.1×), AAPL (~38.2×), AMZN (~31.6×), GOOGL (~27.6×), MSFT (~26.3×) and META (~21.7×) remain broadly stable (BearSavings.com Mag-7 Valuation Dashboard, June 30, 2026).",
       "weight": 10,
       "score": 10
     },
@@ -831,9 +831,44 @@ const FALLBACK_DATA = {
       "hyperscalerCapexBn": 715,
       "gridDelayYears": 5,
       "aiUnicorns": 232
+    },
+    {
+      "date": "2026-06-30",
+      "heatScore": 93,
+      "heatLabel": "Boiling",
+      "capeRatio": 41.02,
+      "sp500ForwardPE": 21.1,
+      "vcAiSharePct": 80,
+      "hyperscalerCapexBn": 715,
+      "gridDelayYears": 5,
+      "aiUnicorns": 232
     }
   ],
   "topStories": [
+    {
+      "date": "2026-06-26",
+      "headline": "OpenAI launches GPT-5.6 as a three-tier family (Sol / Terra / Luna) on June 26, 2026, but access is restricted to ~20 government-approved partner organisations after the Trump administration requested a 30-day pre-release review — the first time the U.S. government has directly gated a commercial AI model rollout; Sol Ultra scores 91.9% on Terminal-Bench 2.1 and introduces parallel-subagent 'ultra' reasoning mode for agentic workflows, setting a new frontier capability benchmark even as its public availability remains delayed.",
+      "source": "TechCrunch / Politico / ExplainX.ai",
+      "sourceUrl": "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-06-25",
+      "headline": "Trump administration signs executive order requiring AI companies to submit frontier models for mandatory government review up to 30 days before public release — establishing a de facto involuntary licensing regime for advanced AI in the United States; the order was invoked immediately against GPT-5.6 and previously against Anthropic's Claude Fable 5, raising concerns that U.S. regulatory intervention could cede AI leadership to China.",
+      "source": "Politico / CryptoBriefing / TechCrunch",
+      "sourceUrl": "https://www.politico.com/news/2026/06/25/openai-gpt-model-goverment-approval-00977551",
+      "type": "Regulatory",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-06-26",
+      "headline": "OpenAI deploys Cerebras wafer-scale chips for production inference and unveils its own 'Jalapeño' custom inference chip (June 26, 2026), signalling a deliberate move to reduce Nvidia GPU dependence; higher on-chip memory bandwidth slashes inference latency and positions OpenAI — alongside Google's TPUs, Amazon's Trainium 3 and Microsoft's Maia 2 — as a vertically integrated compute entity, deepening the circular financing loop.",
+      "source": "TechTimes / CyberSecurityNews",
+      "sourceUrl": "https://www.techtimes.com/articles/319172/20260626/openai-cerebras-bet-spawns-jalapeno-chip-gpt-56-faces-government-gate.htm",
+      "type": "Circular Financing",
+      "sentiment": "extreme_bullish"
+    },
     {
       "date": "2026-06-19",
       "headline": "OpenAI's GPT-5.6 enters late-stage internal testing (June 19, 2026) with OpenAI Chief Scientist Jakub Pachocki calling it a 'meaningful improvement' over GPT-5.5; expected features include a 1.5M-token context window, UltraFast Codex Mode for developers, and critical alignment fixes; prediction markets expect a public release before end of June 2026 — signalling OpenAI's fastest-ever model iteration cadence of 40–60 days.",
@@ -959,19 +994,19 @@ const FALLBACK_DATA = {
     {
       "metric": "CAPE Ratio",
       "value1999Peak": 43.5,
-      "value2026": 42.78,
+      "value2026": 41.02,
       "historicalAvg": 17.6
     },
     {
       "metric": "S&P 500 Forward P/E",
       "value1999Peak": 25,
-      "value2026": 20.1,
+      "value2026": 21.1,
       "historicalAvg": 16
     },
     {
       "metric": "Top 7 Stocks P/E",
       "value1999Peak": 66,
-      "value2026": 29.9,
+      "value2026": 29.7,
       "historicalAvg": 20
     }
   ],

@@ -1,41 +1,41 @@
 {
-  "lastUpdated": "2026-06-19",
+  "lastUpdated": "2026-06-30",
   "heatScore": 93,
   "heatLabel": "Boiling",
-  "summary": "As of 19 June 2026, the AI bubble cauldron holds at 'Boiling' 93/100. The dominant story of the week is OpenAI's imminent release of GPT-5.6 — described by OpenAI Chief Scientist Jakub Pachocki as a 'meaningful improvement' over GPT-5.5, featuring a 1.5M-token context window and fixes for alignment issues discovered in GPT-5.5; late-stage internal testing confirmed with a late-June release expected. The EU AI Act countdown intensifies: full GPAI penalty enforcement (fines up to €35M or 7% of global turnover for providers like OpenAI, Google, and Anthropic) activates on August 2, 2026, while high-risk AI obligations are postponed to 2027–2028 per the Digital Omnibus. New Relic's 'State of AI Coding 2026' finds 78% of companies reporting increased production incidents from AI-generated code, with AI code introducing 1.7× more issues than human-written code. The Shiller CAPE eases slightly to ~42.78× (98.3% of the all-time dot-com peak of 43.5×); S&P 500 forward P/E compresses to ~20.1× per FactSet Earnings Insight (June 12 2026); Magnificent-7 full average P/E rises to ~80.7× as Tesla surges to ~385.2× (ex-TSLA: ~29.9×); hyperscaler capex consensus dips slightly to ~$715B; VC→AI concentration steady at ~80%.",
+  "summary": "As of 30 June 2026, the AI bubble cauldron holds at 'Boiling' 93/100. The defining story of the week is GPT-5.6's restricted launch: OpenAI unveiled a three-tier family (Sol / Terra / Luna) on June 26, but the Trump administration's first-ever executive order requiring 30-day government review of frontier AI models limited rollout to ~20 approved partners, setting a de facto involuntary licensing regime for advanced AI. The Shiller CAPE eases further to ~41.02\u00d7 (94.3% of the dot-com peak of 43.5\u00d7); S&P 500 forward P/E edges up to ~21.1\u00d7 per MacroMicro (June 30); Magnificent-7 full average P/E compresses slightly to ~77.4\u00d7 as Tesla retreats from its extreme ~385\u00d7 high; hyperscaler 2026 capex consensus holds at ~$715B with Amazon, Google, Meta and Microsoft on track; VC\u2192AI concentration steady at ~80% for Q1 2026; EU AI Act August 2, 2026 GPAI enforcement deadline is only 33 days away with ~78% of organisations not yet compliant; OpenAI also began deploying Cerebras wafer-scale chips and unveiled its own 'Jalape\u00f1o' inference chip, signalling a deliberate shift away from Nvidia GPU dependence.",
   "kpis": {
     "capeRatio": {
-      "value": 42.78,
+      "value": 41.02,
       "historicalAvg": 17.6,
       "dotComPeak": 43.5,
       "unit": "x",
       "label": "CAPE Ratio",
-      "description": "Cyclically adjusted P/E for the U.S. market — Finanzapedia June 2026 reading eases slightly to ~42.78× (98.3% of the all-time dot-com peak of 43.5×); U.S. equity valuation heat remains at near-record historical extremes driven by AI-led equity rally and continued mega-round infrastructure financing commitments (Finanzapedia / LongTermTrends, June 2026).",
+      "description": "Cyclically adjusted P/E for the U.S. market \u2014 LongTermTrends / ycharts reading for end-June 2026 eases to ~41.02\u00d7, down from the mid-June peak of ~43\u00d7, but still 94.3% of the all-time dot-com peak of 43.5\u00d7; U.S. equity valuations remain at near-record historical extremes driven by AI-led equity rally and continued mega-round infrastructure financing commitments (LongTermTrends / ycharts, June 30, 2026).",
       "weight": 20,
       "score": 20
     },
     "sp500ForwardPE": {
-      "value": 20.1,
+      "value": 21.1,
       "historicalAvg": 16,
       "unit": "x",
       "label": "S&P 500 Forward P/E",
-      "description": "Forward price-to-earnings ratio for the S&P 500 — FactSet Earnings Insight (June 12, 2026) shows ~20.1×, compressing from ~21.1× earlier in June as upward Q2/Q3 earnings estimate revisions outpaced price gains; still materially above the 16× long-run average (5-year avg: 19.9×; 10-year avg: 19.0×) and consistent with late-cycle AI-led valuation expansion (FactSet, June 2026).",
+      "description": "Forward price-to-earnings ratio for the S&P 500 \u2014 MacroMicro reading as of June 30, 2026 shows ~21.1\u00d7, recovering from the mid-June FactSet reading of ~20.1\u00d7; still materially above the 16\u00d7 long-run average (5-year avg: 19.9\u00d7; 10-year avg: 19.0\u00d7) and consistent with late-cycle AI-led valuation expansion (MacroMicro / FactSet, June 2026).",
       "weight": 10,
       "score": 10
     },
     "top7StocksPE": {
-      "value": 80.7,
+      "value": 77.4,
       "historicalAvg": 20,
       "unit": "x",
       "label": "Top 7 Stocks P/E",
-      "description": "Magnificent-7 trailing P/E full average rises to ~80.7× as of June 19, 2026, with TSLA surging to ~385.2× on thin earnings; ex-TSLA average compresses to ~29.9× as NVDA (~34.1×), AAPL (~38.2×), AMZN (~31.6×), GOOGL (~27.6×), MSFT (~26.3×) and META (~21.7×) see P/E multiples contract on strong earnings growth (BearSavings.com Mag-7 Valuation Dashboard, June 2026).",
+      "description": "Magnificent-7 trailing P/E full average compresses to ~77.4\u00d7 as of June 30, 2026, as TSLA retreats from its ~385.2\u00d7 peak to ~360\u00d7 following AI-semiconductor profit-taking; ex-TSLA average edges down to ~29.7\u00d7 as NVDA (~34.1\u00d7), AAPL (~38.2\u00d7), AMZN (~31.6\u00d7), GOOGL (~27.6\u00d7), MSFT (~26.3\u00d7) and META (~21.7\u00d7) remain broadly stable (BearSavings.com Mag-7 Valuation Dashboard, June 30, 2026).",
       "weight": 10,
       "score": 10
     },
     "vcAiConcentration": {
       "value": 80,
       "unit": "%",
-      "label": "VC → AI Share",
+      "label": "VC \u2192 AI Share",
       "description": "Share of global Q1 2026 VC investment flowing into AI is still around ~80% (roughly $242B of ~$300B, depending on tracker), indicating continued extreme capital concentration in AI.",
       "totalVcBn": 300,
       "aiVcBn": 242,
@@ -47,7 +47,7 @@
       "yoyGrowth": 62,
       "unit": "billion USD",
       "label": "Hyperscaler Capex 2026",
-      "description": "Big-4 hyperscaler (Microsoft, Google, Amazon, Meta) 2026 capex consensus dips slightly to ~$715B as Amazon (~$200B), Alphabet (~$175–190B), Microsoft (~$120–190B), and Meta (~$115–145B) update mid-year guidance; 60–75% of this spend is AI-specific infrastructure; broader tracker including ByteDance ($70B) and other China platforms still pushes global AI capex above ~$900B (OfficeChai / CreditSights / Futurum, June 2026).",
+      "description": "Big-4 hyperscaler (Microsoft, Google, Amazon, Meta) 2026 capex consensus dips slightly to ~$715B as Amazon (~$200B), Alphabet (~$175\u2013190B), Microsoft (~$120\u2013190B), and Meta (~$115\u2013145B) update mid-year guidance; 60\u201375% of this spend is AI-specific infrastructure; broader tracker including ByteDance ($70B) and other China platforms still pushes global AI capex above ~$900B (OfficeChai / CreditSights / Futurum, June 2026).",
       "weight": 10,
       "score": 9
     },
@@ -55,7 +55,7 @@
       "value": 25,
       "unit": "billion USD (annual)",
       "label": "OpenAI Annual Revenue",
-      "description": "OpenAI Q1 2026 revenue: $5.7B (~$25B annualised run-rate), adjusted operating margin –122% (burning $122 per $1 earned). Enterprise now >40% of revenue. Committed infrastructure spend ~$600B through 2030.",
+      "description": "OpenAI Q1 2026 revenue: $5.7B (~$25B annualised run-rate), adjusted operating margin \u2013122% (burning $122 per $1 earned). Enterprise now >40% of revenue. Committed infrastructure spend ~$600B through 2030.",
       "committedSpendBn": 600,
       "committedThrough": 2030,
       "weight": 5,
@@ -66,7 +66,7 @@
       "unit": "years",
       "baseline2023": 1.5,
       "label": "Grid Connection Delay",
-      "description": "National median wait for large U.S. data-centre grid connections has risen to ~5 years in 2026, with severely constrained markets (Northern Virginia, etc.) stretching to 7–12 years; nearly half of 2026 planned capacity is delayed or cancelled (Grid Interconnection Delays 2026 / AhaSignals / DataCenter Dynamics).",
+      "description": "National median wait for large U.S. data-centre grid connections has risen to ~5 years in 2026, with severely constrained markets (Northern Virginia, etc.) stretching to 7\u201312 years; nearly half of 2026 planned capacity is delayed or cancelled (Grid Interconnection Delays 2026 / AhaSignals / DataCenter Dynamics).",
       "weight": 10,
       "score": 8
     },
@@ -218,12 +218,47 @@
       "hyperscalerCapexBn": 715,
       "gridDelayYears": 5,
       "aiUnicorns": 232
+    },
+    {
+      "date": "2026-06-30",
+      "heatScore": 93,
+      "heatLabel": "Boiling",
+      "capeRatio": 41.02,
+      "sp500ForwardPE": 21.1,
+      "vcAiSharePct": 80,
+      "hyperscalerCapexBn": 715,
+      "gridDelayYears": 5,
+      "aiUnicorns": 232
     }
   ],
   "topStories": [
     {
+      "date": "2026-06-26",
+      "headline": "OpenAI launches GPT-5.6 as a three-tier family (Sol / Terra / Luna) on June 26, 2026, but access is restricted to ~20 government-approved partner organisations after the Trump administration requested a 30-day pre-release review \u2014 the first time the U.S. government has directly gated a commercial AI model rollout; Sol Ultra scores 91.9% on Terminal-Bench 2.1 and introduces parallel-subagent 'ultra' reasoning mode for agentic workflows, setting a new frontier capability benchmark even as its public availability remains delayed.",
+      "source": "TechCrunch / Politico / ExplainX.ai",
+      "sourceUrl": "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/",
+      "type": "Hype Cycle",
+      "sentiment": "extreme_bullish"
+    },
+    {
+      "date": "2026-06-25",
+      "headline": "Trump administration signs executive order requiring AI companies to submit frontier models for mandatory government review up to 30 days before public release \u2014 establishing a de facto involuntary licensing regime for advanced AI in the United States; the order was invoked immediately against GPT-5.6 and previously against Anthropic's Claude Fable 5, raising concerns that U.S. regulatory intervention could cede AI leadership to China while OpenAI states the restrictions 'should not become the norm'.",
+      "source": "Politico / CryptoBriefing / TechCrunch",
+      "sourceUrl": "https://www.politico.com/news/2026/06/25/openai-gpt-model-goverment-approval-00977551",
+      "type": "Regulatory",
+      "sentiment": "bearish_signal"
+    },
+    {
+      "date": "2026-06-26",
+      "headline": "OpenAI deploys Cerebras wafer-scale chips for production inference and unveils its own 'Jalape\u00f1o' custom inference chip (June 26, 2026), signalling a deliberate move to reduce dependence on Nvidia GPU supply chains; higher on-chip memory bandwidth slashes inference latency and positions OpenAI \u2014 alongside Google's TPUs, Amazon's Trainium 3 and Microsoft's Maia 2 \u2014 as a vertically integrated compute entity, deepening the circular financing loop as AI labs both build and consume the infrastructure they fund.",
+      "source": "TechTimes / CyberSecurityNews",
+      "sourceUrl": "https://www.techtimes.com/articles/319172/20260626/openai-cerebras-bet-spawns-jalapeno-chip-gpt-56-faces-government-gate.htm",
+      "type": "Circular Financing",
+      "sentiment": "extreme_bullish"
+    },
+    {
       "date": "2026-06-19",
-      "headline": "OpenAI's GPT-5.6 enters late-stage internal testing (June 19, 2026) with OpenAI Chief Scientist Jakub Pachocki calling it a 'meaningful improvement' over GPT-5.5; expected features include a 1.5M-token context window, UltraFast Codex Mode for developers, and critical alignment fixes for a reward-hacking error found in GPT-5.5; prediction markets overwhelmingly expect a public release before end of June 2026, with codenames 'ember-alpha', 'beacon-alpha', and 'kindle-alpha' surfacing in internal testing — signalling OpenAI's fastest-ever model iteration cadence of 40–60 days as it races Anthropic's Claude Opus 4.8 and Google's Gemini 3.5 Pro.",
+      "headline": "OpenAI's GPT-5.6 enters late-stage internal testing (June 19, 2026) with OpenAI Chief Scientist Jakub Pachocki calling it a 'meaningful improvement' over GPT-5.5; expected features include a 1.5M-token context window, UltraFast Codex Mode for developers, and critical alignment fixes for a reward-hacking error found in GPT-5.5; prediction markets overwhelmingly expect a public release before end of June 2026, with codenames 'ember-alpha', 'beacon-alpha', and 'kindle-alpha' surfacing in internal testing \u2014 signalling OpenAI's fastest-ever model iteration cadence of 40\u201360 days as it races Anthropic's Claude Opus 4.8 and Google's Gemini 3.5 Pro.",
       "source": "TechTimes / Geeky Gadgets / CometAPI",
       "sourceUrl": "https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm",
       "type": "Hype Cycle",
@@ -231,7 +266,7 @@
     },
     {
       "date": "2026-06-19",
-      "headline": "EU AI Act penalty-phase enforcement for GPAI providers — including OpenAI (GPT-5), Google (Gemini), and Anthropic (Claude) — activates August 2, 2026: fines up to €35M or 7% of global turnover for non-compliance; high-risk AI obligations under the Digital Omnibus are postponed to December 2027 (stand-alone) and August 2028 (embedded systems); Article 50 AI-content transparency requirements take effect for new EU-market systems by August 2026; Meta is the sole major GPAI provider that has NOT signed the Code of Practice, facing additional regulatory scrutiny.",
+      "headline": "EU AI Act penalty-phase enforcement for GPAI providers \u2014 including OpenAI (GPT-5), Google (Gemini), and Anthropic (Claude) \u2014 activates August 2, 2026: fines up to \u20ac35M or 7% of global turnover for non-compliance; high-risk AI obligations under the Digital Omnibus are postponed to December 2027 (stand-alone) and August 2028 (embedded systems); Article 50 AI-content transparency requirements take effect for new EU-market systems by August 2026; Meta is the sole major GPAI provider that has NOT signed the Code of Practice, facing additional regulatory scrutiny.",
       "source": "Axis Intelligence / GLACIS / AI Policy Desk",
       "sourceUrl": "https://axis-intelligence.com/eu-ai-act-news/",
       "type": "Regulatory",
@@ -239,7 +274,7 @@
     },
     {
       "date": "2026-06-19",
-      "headline": "New Relic 'State of AI Coding 2026' report finds 78% of companies report increased production incidents tied to AI-generated code; 82% faced at least one major failure from AI-authored code in a 6-month period; AI-generated code introduces 1.7× more issues than human-written code on average; 67% of developers spend more time debugging AI code than expected; only 3% highly trust AI-generated code in production — deepening the AI productivity paradox as 30–75% of production code at leading tech firms is now AI-generated.",
+      "headline": "New Relic 'State of AI Coding 2026' report finds 78% of companies report increased production incidents tied to AI-generated code; 82% faced at least one major failure from AI-authored code in a 6-month period; AI-generated code introduces 1.7\u00d7 more issues than human-written code on average; 67% of developers spend more time debugging AI code than expected; only 3% highly trust AI-generated code in production \u2014 deepening the AI productivity paradox as 30\u201375% of production code at leading tech firms is now AI-generated.",
       "source": "New Relic / Second Talent",
       "sourceUrl": "https://newrelic.com/blog/ai/state-of-ai-coding-2026",
       "type": "Productivity Counter-Evidence",
@@ -247,7 +282,7 @@
     },
     {
       "date": "2026-06-10",
-      "headline": "Financial Stability Board releases consultation on agentic AI in finance (10 June 2026), warning that 52% of surveyed financial firms already deploy autonomous AI agents and urging 12 'sound practices' — including mandatory human approval for high-risk transactions, hard capability limits, and treating AI systems as 'synthetic employees'; the report highlights AI agents can 'materialise risks at great speed' across interconnected financial systems, with public consultation open until 22 July 2026.",
+      "headline": "Financial Stability Board releases consultation on agentic AI in finance (10 June 2026), warning that 52% of surveyed financial firms already deploy autonomous AI agents and urging 12 'sound practices' \u2014 including mandatory human approval for high-risk transactions, hard capability limits, and treating AI systems as 'synthetic employees'; the report highlights AI agents can 'materialise risks at great speed' across interconnected financial systems, with public consultation open until 22 July 2026.",
       "source": "Financial Stability Board / US News / Channel News Asia",
       "sourceUrl": "https://money.usnews.com/investing/news/articles/2026-06-10/global-watchdog-calls-for-tighter-controls-on-agentic-ai-in-finance",
       "type": "Regulatory",
@@ -255,7 +290,7 @@
     },
     {
       "date": "2026-06-09",
-      "headline": "Anthropic releases Claude Fable 5 on 9 June 2026 — its first publicly available Mythos-class model, state-of-the-art on software engineering, vision, and scientific research tasks; a more capable restricted version (Claude Mythos 5) simultaneously launches for cyberdefenders and critical-infrastructure partners via Project Glasswing; the dual-tier release signals a new escalation in AI capability arms race as Anthropic's annualised revenue run-rate has hit ~$47B at its $965B post-money valuation.",
+      "headline": "Anthropic releases Claude Fable 5 on 9 June 2026 \u2014 its first publicly available Mythos-class model, state-of-the-art on software engineering, vision, and scientific research tasks; a more capable restricted version (Claude Mythos 5) simultaneously launches for cyberdefenders and critical-infrastructure partners via Project Glasswing; the dual-tier release signals a new escalation in AI capability arms race as Anthropic's annualised revenue run-rate has hit ~$47B at its $965B post-money valuation.",
       "source": "TechCrunch / MacRumors / 9to5Mac",
       "sourceUrl": "https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/",
       "type": "Hype Cycle",
@@ -263,7 +298,7 @@
     },
     {
       "date": "2026-06-09",
-      "headline": "Alphabet raises $80 billion (9 June 2026) — $30B equity offering, $40B ATM program, and $10B private placement from Berkshire Hathaway — to fund its 2026 capex target of $180–190B; part of a record $390B in AI data-centre capital commitments announced in the week of 2–9 June, including Schneider Electric ($290M) and Cipher Mining ($810M Texas DC), confirming that AI infrastructure has become the world's most in-demand institutional asset class.",
+      "headline": "Alphabet raises $80 billion (9 June 2026) \u2014 $30B equity offering, $40B ATM program, and $10B private placement from Berkshire Hathaway \u2014 to fund its 2026 capex target of $180\u2013190B; part of a record $390B in AI data-centre capital commitments announced in the week of 2\u20139 June, including Schneider Electric ($290M) and Cipher Mining ($810M Texas DC), confirming that AI infrastructure has become the world's most in-demand institutional asset class.",
       "source": "CNBC / TechCrunch / InforCapital",
       "sourceUrl": "https://techcrunch.com/2026/06/01/alphabet-plans-to-raise-80-billion-to-pay-for-ai-buildout/",
       "type": "Circular Financing",
@@ -271,7 +306,7 @@
     },
     {
       "date": "2026-06-06",
-      "headline": "Google signs $30B compute deal with SpaceX ($920M/month for 110,000 NVIDIA GPUs, Oct 2026–Jun 2029) as 'bridge capacity' for surging Gemini Enterprise demand — disclosed in SpaceX's S-1 amendment on June 5; the largest compute-outsourcing contract in history confirms even Big-5 hyperscalers can no longer build infrastructure fast enough to meet their own AI demand, amplifying the circular financing loop.",
+      "headline": "Google signs $30B compute deal with SpaceX ($920M/month for 110,000 NVIDIA GPUs, Oct 2026\u2013Jun 2029) as 'bridge capacity' for surging Gemini Enterprise demand \u2014 disclosed in SpaceX's S-1 amendment on June 5; the largest compute-outsourcing contract in history confirms even Big-5 hyperscalers can no longer build infrastructure fast enough to meet their own AI demand, amplifying the circular financing loop.",
       "source": "TechCrunch / CNBC / Bloomberg",
       "sourceUrl": "https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/",
       "type": "Circular Financing",
@@ -279,7 +314,7 @@
     },
     {
       "date": "2026-06-06",
-      "headline": "Florida AG files first U.S. state-level lawsuit against OpenAI and CEO Sam Altman (June 1 2026), claiming ChatGPT concealed serious safety risks — including alleged links to a 2025 mass shooting at Florida State University and two student deaths at USF — and violated Florida's Deceptive and Unfair Trade Practices Act; seeks billions in damages and operational restrictions, directly threatening OpenAI's $852B–$1T IPO plans.",
+      "headline": "Florida AG files first U.S. state-level lawsuit against OpenAI and CEO Sam Altman (June 1 2026), claiming ChatGPT concealed serious safety risks \u2014 including alleged links to a 2025 mass shooting at Florida State University and two student deaths at USF \u2014 and violated Florida's Deceptive and Unfair Trade Practices Act; seeks billions in damages and operational restrictions, directly threatening OpenAI's $852B\u2013$1T IPO plans.",
       "source": "CNBC / TechCrunch / CBS News",
       "sourceUrl": "https://www.cnbc.com/2026/06/01/florida-ag-open-ai-altman-lawsuit.html",
       "type": "Regulatory",
@@ -287,7 +322,7 @@
     },
     {
       "date": "2026-06-06",
-      "headline": "NVIDIA launches Cosmos 3 at Computex 2026 (June 1 2026) — the world's first fully open 'omnimodel' for physical AI, unifying vision reasoning, world simulation, and action generation in a single mixture-of-transformers model; Jensen Huang calls it a 'generational leap' for robotics and autonomous vehicles; immediately available in Nano and Super sizes on Hugging Face with the NVIDIA Cosmos Coalition of leading AI and robotics labs.",
+      "headline": "NVIDIA launches Cosmos 3 at Computex 2026 (June 1 2026) \u2014 the world's first fully open 'omnimodel' for physical AI, unifying vision reasoning, world simulation, and action generation in a single mixture-of-transformers model; Jensen Huang calls it a 'generational leap' for robotics and autonomous vehicles; immediately available in Nano and Super sizes on Hugging Face with the NVIDIA Cosmos Coalition of leading AI and robotics labs.",
       "source": "NVIDIA / HuggingFace / datanorth.ai",
       "sourceUrl": "https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai",
       "type": "Hype Cycle",
@@ -295,7 +330,7 @@
     },
     {
       "date": "2026-06-05",
-      "headline": "Google I/O 2026 launches Gemini 3.5 Flash as the new default in AI Mode in Search (1B+ users) and Gemini app (900M MAU), while Gemini Omni and Spark debut as agentic 'world model' and personal-agent services — Sundar Pichai declares the 'agentic Gemini era', doubling down on the AI capability and adoption narrative at scale.",
+      "headline": "Google I/O 2026 launches Gemini 3.5 Flash as the new default in AI Mode in Search (1B+ users) and Gemini app (900M MAU), while Gemini Omni and Spark debut as agentic 'world model' and personal-agent services \u2014 Sundar Pichai declares the 'agentic Gemini era', doubling down on the AI capability and adoption narrative at scale.",
       "source": "Google Keyword Blog / Mashable / Explainx.ai",
       "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/",
       "type": "Hype Cycle",
@@ -303,7 +338,7 @@
     },
     {
       "date": "2026-06-05",
-      "headline": "Bipartisan 'Great American AI Act' draft (June 4 2026) proposes a 3-year federal preemption of all state laws regulating the development of AI models — the most sweeping U.S. AI governance move since the Biden executive order, designed to block a patchwork of Illinois, Colorado, and California AI safety rules that the industry argues hinder innovation.",
+      "headline": "Bipartisan 'Great American AI Act' draft (June 4 2026) proposes a 3-year federal preemption of all state laws regulating the development of AI models \u2014 the most sweeping U.S. AI governance move since the Biden executive order, designed to block a patchwork of Illinois, Colorado, and California AI safety rules that the industry argues hinder innovation.",
       "source": "Roll Call / Broadband Breakfast",
       "sourceUrl": "https://rollcall.com/2026/06/04/bipartisan-ai-draft-proposes-three-year-preemption-of-state-laws/",
       "type": "Regulatory",
@@ -311,7 +346,7 @@
     },
     {
       "date": "2026-06-05",
-      "headline": "Microsoft launches MAI-Thinking-1 at Build 2026 — its first fully in-house reasoning model (35B active / ~1T total MoE parameters, 256K context) trained entirely without OpenAI data, matching Claude Opus 4.6 on coding benchmarks; signals Microsoft's deliberate move to reduce OpenAI dependency and own the full AI stack from chip to model to enterprise product.",
+      "headline": "Microsoft launches MAI-Thinking-1 at Build 2026 \u2014 its first fully in-house reasoning model (35B active / ~1T total MoE parameters, 256K context) trained entirely without OpenAI data, matching Claude Opus 4.6 on coding benchmarks; signals Microsoft's deliberate move to reduce OpenAI dependency and own the full AI stack from chip to model to enterprise product.",
       "source": "TechTimes / The Letter Two / mer.vin",
       "sourceUrl": "https://www.techtimes.com/articles/317631/20260602/microsoft-build-2026-mai-thinking-1-first-house-reasoning-model-trained-without-openai-data.htm",
       "type": "Hype Cycle",
@@ -319,7 +354,7 @@
     },
     {
       "date": "2026-06-01",
-      "headline": "GitHub Copilot shifts to usage-based billing on 1 June 2026, replacing premium-request quotas with token-based GitHub AI Credits across plans — a direct signal that AI coding demand is now being monetized with explicit compute economics.",
+      "headline": "GitHub Copilot shifts to usage-based billing on 1 June 2026, replacing premium-request quotas with token-based GitHub AI Credits across plans \u2014 a direct signal that AI coding demand is now being monetized with explicit compute economics.",
       "source": "GitHub Blog",
       "sourceUrl": "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
       "type": "Circular Financing",
@@ -327,7 +362,7 @@
     },
     {
       "date": "2026-06-01",
-      "headline": "Stanford HAI's 2026 AI Index reports frontier-model performance on SWE-bench Verified rising from 60% to near 100% in a year, organizational AI adoption reaching 88%, and 4 in 5 university students using generative AI — reinforcing how fast capability and adoption expectations are compounding.",
+      "headline": "Stanford HAI's 2026 AI Index reports frontier-model performance on SWE-bench Verified rising from 60% to near 100% in a year, organizational AI adoption reaching 88%, and 4 in 5 university students using generative AI \u2014 reinforcing how fast capability and adoption expectations are compounding.",
       "source": "Stanford HAI AI Index",
       "sourceUrl": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
       "type": "Hype Cycle",
@@ -335,7 +370,7 @@
     },
     {
       "date": "2026-06-01",
-      "headline": "Illinois lawmakers advanced the first U.S. bill requiring annual third-party safety audits for frontier AI labs, pre-release risk reporting, and 72-hour incident disclosure — a sign that AI governance is hardening as capability claims keep escalating.",
+      "headline": "Illinois lawmakers advanced the first U.S. bill requiring annual third-party safety audits for frontier AI labs, pre-release risk reporting, and 72-hour incident disclosure \u2014 a sign that AI governance is hardening as capability claims keep escalating.",
       "source": "NBC News / Illinois Legislature",
       "sourceUrl": "https://www.nbcnews.com/tech/tech-news/illinois-legislature-passes-historic-ai-bill-rcna347191",
       "type": "Regulatory",
@@ -346,19 +381,19 @@
     {
       "metric": "CAPE Ratio",
       "value1999Peak": 43.5,
-      "value2026": 42.78,
+      "value2026": 41.02,
       "historicalAvg": 17.6
     },
     {
       "metric": "S&P 500 Forward P/E",
       "value1999Peak": 25,
-      "value2026": 20.1,
+      "value2026": 21.1,
       "historicalAvg": 16
     },
     {
       "metric": "Top 7 Stocks P/E",
       "value1999Peak": 66,
-      "value2026": 29.9,
+      "value2026": 29.7,
       "historicalAvg": 20
     }
   ],
@@ -383,7 +418,7 @@
     },
     {
       "metric": "Grid Connection Delay",
-      "y2023": "1–2 yrs",
+      "y2023": "1\u20132 yrs",
       "y2026": "5 yrs",
       "y2030": "7+ yrs"
     }
